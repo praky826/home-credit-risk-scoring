@@ -1,0 +1,10 @@
+-r requirements.txt
+
+pytest==8.2.2
+pytest-cov==5.0.0
+black==24.4.2
+isort==5.13.2
+mypy==1.10.0
+jupyter==1.0.0
+kaggle==1.6.17
+setuptools==70.0.0
