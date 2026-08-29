@@ -1,0 +1,38 @@
+version: "3.9"
+
+services:
+  serving:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.serving
+    ports:
+      - "8080:8080"
+    environment:
+      - MODEL_TYPE=${MODEL_TYPE:-xgboost}
+      - REGISTRY_MODEL_NAME=${REGISTRY_MODEL_NAME:-home_credit_default_risk}
+      - REGISTRY_STAGE=${REGISTRY_STAGE:-Production}
+      - MODEL_VERSION=${MODEL_VERSION:-local}
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_DEFAULT_REGION=${AWS_DEFAULT_REGION:-us-east-1}
+    volumes:
+      - ../data/processed:/app/data/processed:ro
+      - ../data/drift:/app/data/drift:ro
+      - ../mlflow_artifacts:/app/mlflow_artifacts:ro
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  mlflow-ui:
+    image: python:3.11-slim
+    working_dir: /mlruns
+    command: >
+      sh -c "pip install mlflow -q &&
+             mlflow ui --host 0.0.0.0 --port 5000"
+    ports:
+      - "5000:5000"
+    volumes:
+      - ../mlruns:/mlruns

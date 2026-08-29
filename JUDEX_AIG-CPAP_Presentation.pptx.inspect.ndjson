@@ -1,0 +1,1435 @@
+{"kind":"deck","id":"pr/bimibl","name":"Deck"}
+{"kind":"layout","layoutId":"36e5762b-7937-4398-8522-fbabc24bf576","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"5ae79b04-4b82-4dd9-94a3-0e49df179bc6","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/v3380a","slide":1,"title":"RESTRICTED / JUDEX-v1.0","textShapes":10}
+{"kind":"shape","id":"sh/329knu94","slide":1,"bbox":[0,0,1.4,720]}
+{"kind":"shape","id":"sh/43i1wzqp","slide":1,"bbox":[64,0,1.4,720]}
+{"kind":"shape","id":"sh/54r2p4ra","slide":1,"bbox":[128,0,1.4,720]}
+{"kind":"shape","id":"sh/udgjqp8n","slide":1,"bbox":[192,0,1.4,720]}
+{"kind":"shape","id":"sh/vypkju9s","slide":1,"bbox":[256,0,1.4,720]}
+{"kind":"shape","id":"sh/gzy1szqd","slide":1,"bbox":[320,0,1.4,720]}
+{"kind":"shape","id":"sh/h072l4ry","slide":1,"bbox":[384,0,1.4,720]}
+{"kind":"shape","id":"sh/69wjmp8b","slide":1,"bbox":[448,0,1.4,720]}
+{"kind":"shape","id":"sh/7apkfa9w","slide":1,"bbox":[512,0,1.4,720]}
+{"kind":"shape","id":"sh/fuhgvyp4","slide":1,"bbox":[576,0,1.4,720]}
+{"kind":"shape","id":"sh/ut8zmt8j","slide":1,"bbox":[640,0,1.4,720]}
+{"kind":"shape","id":"sh/hgzyx87u","slide":1,"bbox":[704,0,1.4,720]}
+{"kind":"shape","id":"sh/gvqho3qp","slide":1,"bbox":[768,0,1.4,720]}
+{"kind":"shape","id":"sh/3ihgzyp0","slide":1,"bbox":[832,0,1.4,720]}
+{"kind":"shape","id":"sh/2h8zqt8f","slide":1,"bbox":[896,0,1.4,720]}
+{"kind":"shape","id":"sh/pkzi1876","slide":1,"bbox":[960,0,1.4,720]}
+{"kind":"shape","id":"sh/4jqhs3ql","slide":1,"bbox":[1024,0,1.4,720]}
+{"kind":"shape","id":"sh/jmxgne9w","slide":1,"bbox":[1088,0,1.4,720]}
+{"kind":"shape","id":"sh/yl4ze98b","slide":1,"bbox":[1152,0,1.4,720]}
+{"kind":"shape","id":"sh/mhcjmhsz","slide":1,"bbox":[1216,0,1.4,720]}
+{"kind":"shape","id":"sh/nilkvm9k","slide":1,"bbox":[0,0,1280,1.4]}
+{"kind":"shape","id":"sh/oju1orap","slide":1,"bbox":[0,64,1280,1.4]}
+{"kind":"shape","id":"sh/9kn2xcra","slide":1,"bbox":[0,128,1280,1.4]}
+{"kind":"shape","id":"sh/edcjixsn","slide":1,"bbox":[0,192,1280,1.4]}
+{"kind":"shape","id":"sh/zelkr298","slide":1,"bbox":[0,256,1280,1.4]}
+{"kind":"shape","id":"sh/0fu1k7at","slide":1,"bbox":[0,320,1280,1.4]}
+{"kind":"shape","id":"sh/1g32tcre","slide":1,"bbox":[0,384,1280,1.4]}
+{"kind":"shape","id":"sh/q9sjexsr","slide":1,"bbox":[0,448,1280,1.4]}
+{"kind":"shape","id":"sh/ra1kn29c","slide":1,"bbox":[0,512,1280,1.4]}
+{"kind":"shape","id":"sh/tgbe9kf6","slide":1,"bbox":[0,576,1280,1.4]}
+{"kind":"shape","id":"sh/sfidgzyl","slide":1,"bbox":[0,640,1280,1.4]}
+{"kind":"shape","id":"sh/7e9w7ux0","slide":1,"bbox":[0,704,1280,1.4]}
+{"kind":"shape","id":"sh/6d0vepgf","slide":1,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/5cre5kfu","slide":1,"text":"RESTRICTED / JUDEX-v1.0","textPreview":"RESTRICTED / JUDEX-v1.0","textChars":23,"textLines":1,"bbox":[58,28,360,22]}
+{"kind":"textbox","id":"sh/kbidcfy9","slide":1,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[1160,26,60,24]}
+{"kind":"shape","id":"sh/ja9w3axo","slide":1,"bbox":[58,58,1080,48]}
+{"kind":"shape","id":"sh/ip0va5g3","slide":1,"bbox":[58,118,1164,1.4]}
+{"kind":"textbox","id":"sh/wnyd8fyd","slide":1,"text":"JUDEX","textPreview":"JUDEX","textChars":5,"textLines":1,"bbox":[88,180,620,90]}
+{"kind":"textbox","id":"sh/cfqdsfux","slide":1,"text":"Jurisdiction-aware · Unified · Defense · Evaluation · eXposure","textPreview":"Jurisdiction-aware · Unified · Defense · Evaluation · eXposure","textChars":62,"textLines":1,"bbox":[92,272,680,44]}
+{"kind":"textbox","id":"sh/xgzelkbi","slide":1,"text":"AI Government Cybersecurity Posture Assessment Platform (AIG-CPAP)","textPreview":"AI Government Cybersecurity Posture Assessment Platform (AIG-CPAP)","textChars":66,"textLines":1,"bbox":[92,342,760,54]}
+{"kind":"shape","id":"sh/adovq5c7","slide":1,"bbox":[92,438,156,34]}
+{"kind":"textbox","id":"sh/bexcjatc","slide":1,"text":"TEAM NO. 6","textPreview":"TEAM NO. 6","textChars":10,"textLines":1,"bbox":[102,445,136,26]}
+{"kind":"shape","id":"sh/k3qdwzu9","slide":1,"bbox":[268,438,286,34]}
+{"kind":"textbox","id":"sh/l4zepkbu","slide":1,"text":"CLASSIFICATION: RESTRICTED","textPreview":"CLASSIFICATION: RESTRICTED","textChars":26,"textLines":1,"bbox":[278,445,266,26]}
+{"kind":"shape","id":"sh/yh8vupc3","slide":1,"bbox":[574,438,244,34]}
+{"kind":"textbox","id":"sh/zihwnuto","slide":1,"text":"REFERENCE: JUDEX-v1.0","textPreview":"REFERENCE: JUDEX-v1.0","textChars":21,"textLines":1,"bbox":[584,445,224,26]}
+{"kind":"textbox","id":"sh/076dkvup","slide":1,"text":"Prakyath Tejsundar [24BBS0079]\nSai Pravaal [24BBS0115]\nRohit Kanna [24BBS0212]\nFaculty: Harini N","textPreview":"Prakyath Tejsundar [24BBS0079] | Sai Pravaal [24BBS0115] | Rohit Kanna [24BBS0212] | Faculty: Harini N","textChars":96,"textLines":4,"bbox":[92,510,660,108]}
+{"kind":"shape","id":"sh/18fud0ba","slide":1,"bbox":[880,176,260,260]}
+{"kind":"textbox","id":"sh/32lgzyds","slide":1,"text":"CYBER\nPOSTURE\nINTELLIGENCE","textPreview":"CYBER | POSTURE | INTELLIGENCE","textChars":26,"textLines":3,"bbox":[908,252,205,105]}
+{"kind":"image","id":"im/2dc7epgv","slide":1,"name":"","alt":"VIT logo","bbox":[60,38,250,72]}
+{"kind":"notes","id":"nt/v3380a","slide":1,"text":"[Sources]\nSource: Final Report.docx, AI Government Cybersecurity Posture Assessment Platform (AIG-CPAP)."}
+{"kind":"slide","id":"sl/2c71kh","slide":2,"title":"JUDEX / AIG-CPAP","textShapes":17}
+{"kind":"shape","id":"sh/m1gfi1sj","slide":2,"bbox":[0,0,1.4,720]}
+{"kind":"shape","id":"sh/94redwba","slide":2,"bbox":[64,0,1.4,720]}
+{"kind":"shape","id":"sh/o3ix4bap","slide":2,"bbox":[128,0,1.4,720]}
+{"kind":"shape","id":"sh/b69gf6t0","slide":2,"bbox":[192,0,1.4,720]}
+{"kind":"shape","id":"sh/a50f61sv","slide":2,"bbox":[256,0,1.4,720]}
+{"kind":"shape","id":"sh/xsryhgb6","slide":2,"bbox":[320,0,1.4,720]}
+{"kind":"shape","id":"sh/w7ix8bal","slide":2,"bbox":[384,0,1.4,720]}
+{"kind":"shape","id":"sh/ra5w3mtw","slide":2,"bbox":[448,0,1.4,720]}
+{"kind":"shape","id":"sh/q9wfahsb","slide":2,"bbox":[512,0,1.4,720]}
+{"kind":"shape","id":"sh/cbutsbud","slide":2,"bbox":[576,0,1.4,720]}
+{"kind":"shape","id":"sh/dc3u1gvy","slide":2,"bbox":[640,0,1.4,720]}
+{"kind":"shape","id":"sh/q9cbq1c7","slide":2,"bbox":[704,0,1.4,720]}
+{"kind":"shape","id":"sh/ralcz6ds","slide":2,"bbox":[768,0,1.4,720]}
+{"kind":"shape","id":"sh/0zutwbup","slide":2,"bbox":[832,0,1.4,720]}
+{"kind":"shape","id":"sh/103u5gvu","slide":2,"bbox":[896,0,1.4,720]}
+{"kind":"shape","id":"sh/edcbulcj","slide":2,"bbox":[960,0,1.4,720]}
+{"kind":"shape","id":"sh/zylc3qd4","slide":2,"bbox":[1024,0,1.4,720]}
+{"kind":"shape","id":"sh/g3atkre5","slide":2,"bbox":[1088,0,1.4,720]}
+{"kind":"shape","id":"sh/h4jutwvq","slide":2,"bbox":[1152,0,1.4,720]}
+{"kind":"shape","id":"sh/h0bax8ne","slide":2,"bbox":[1216,0,1.4,720]}
+{"kind":"shape","id":"sh/wz29on69","slide":2,"bbox":[0,0,1280,1.4]}
+{"kind":"shape","id":"sh/vytsvi5o","slide":2,"bbox":[0,64,1280,1.4]}
+{"kind":"shape","id":"sh/ux0rmdo3","slide":2,"bbox":[0,128,1280,1.4]}
+{"kind":"shape","id":"sh/54ba1snq","slide":2,"bbox":[0,192,1280,1.4]}
+{"kind":"shape","id":"sh/4329sn65","slide":2,"bbox":[0,256,1280,1.4]}
+{"kind":"shape","id":"sh/j2tszi5k","slide":2,"bbox":[0,320,1280,1.4]}
+{"kind":"shape","id":"sh/i1krqdoz","slide":2,"bbox":[0,384,1280,1.4]}
+{"kind":"shape","id":"sh/tsva5cnm","slide":2,"bbox":[0,448,1280,1.4]}
+{"kind":"shape","id":"sh/srm9w761","slide":2,"bbox":[0,512,1280,1.4]}
+{"kind":"shape","id":"sh/qdw7qp4j","slide":2,"bbox":[0,576,1280,1.4]}
+{"kind":"shape","id":"sh/bepozul4","slide":2,"bbox":[0,640,1280,1.4]}
+{"kind":"shape","id":"sh/cfypszmp","slide":2,"bbox":[0,704,1280,1.4]}
+{"kind":"shape","id":"sh/xg76143a","slide":2,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/y1g7u94v","slide":2,"text":"JUDEX / AIG-CPAP","textPreview":"JUDEX / AIG-CPAP","textChars":16,"textLines":1,"bbox":[58,28,360,22]}
+{"kind":"textbox","id":"sh/z2ponelg","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1160,26,60,24]}
+{"kind":"textbox","id":"sh/k3ypwjm1","slide":2,"text":"Project Information","textPreview":"Project Information","textChars":19,"textLines":1,"bbox":[58,58,1080,48]}
+{"kind":"shape","id":"sh/l476po36","slide":2,"bbox":[58,118,1164,1.4]}
+{"kind":"textbox","id":"sh/m5g7y94r","slide":2,"text":"Course","textPreview":"Course","textChars":6,"textLines":1,"bbox":[110,150,220,34]}
+{"kind":"textbox","id":"sh/769orelc","slide":2,"text":"CBS3002 - Information Security","textPreview":"CBS3002 - Information Security","textChars":30,"textLines":1,"bbox":[350,150,760,52]}
+{"kind":"shape","id":"sh/vqlgvu94","slide":2,"bbox":[110,196,990,1.4]}
+{"kind":"textbox","id":"sh/upcfmpsz","slide":2,"text":"Faculty","textPreview":"Faculty","textChars":7,"textLines":1,"bbox":[110,212,220,34]}
+{"kind":"textbox","id":"sh/hc3yxkra","slide":2,"text":"Harini N","textPreview":"Harini N","textChars":8,"textLines":1,"bbox":[350,212,760,52]}
+{"kind":"shape","id":"sh/wbuxofap","slide":2,"bbox":[110,258,990,1.4]}
+{"kind":"textbox","id":"sh/jelgzu9g","slide":2,"text":"Team Members","textPreview":"Team Members","textChars":12,"textLines":1,"bbox":[110,274,220,34]}
+{"kind":"textbox","id":"sh/idcfqpsv","slide":2,"text":"Prakyath Tejsundar [24BBS0079]\nSai Pravaal [24BBS0115]\nRohit Kanna [24BBS0212]","textPreview":"Prakyath Tejsundar [24BBS0079] | Sai Pravaal [24BBS0115] | Rohit Kanna [24BBS0212]","textChars":78,"textLines":3,"bbox":[350,274,760,52]}
+{"kind":"shape","id":"sh/5gny14rm","slide":2,"bbox":[110,320,990,1.4]}
+{"kind":"textbox","id":"sh/4fexsza1","slide":2,"text":"Mission Name","textPreview":"Mission Name","textChars":12,"textLines":1,"bbox":[110,336,220,34]}
+{"kind":"textbox","id":"sh/zi1wna9c","slide":2,"text":"AI Government Cybersecurity Posture Assessment Platform (AIG-CPAP)","textPreview":"AI Government Cybersecurity Posture Assessment Platform (AIG-CPAP)","textChars":66,"textLines":1,"bbox":[350,336,760,52]}
+{"kind":"shape","id":"sh/yhsfe5sr","slide":2,"bbox":[110,382,990,1.4]}
+{"kind":"textbox","id":"sh/on6dobq9","slide":2,"text":"Classification","textPreview":"Classification","textChars":14,"textLines":1,"bbox":[110,398,220,34]}
+{"kind":"textbox","id":"sh/pozuxw7u","slide":2,"text":"Restricted","textPreview":"Restricted","textChars":10,"textLines":1,"bbox":[350,398,760,52]}
+{"kind":"shape","id":"sh/2lovm18j","slide":2,"bbox":[110,444,990,1.4]}
+{"kind":"textbox","id":"sh/3mxcv6p4","slide":2,"text":"Project Version","textPreview":"Project Version","textChars":15,"textLines":1,"bbox":[110,460,220,34]}
+{"kind":"textbox","id":"sh/gz6dkrqd","slide":2,"text":"JUDEX-v1.0","textPreview":"JUDEX-v1.0","textChars":10,"textLines":1,"bbox":[350,460,760,52]}
+{"kind":"shape","id":"sh/10futw7y","slide":2,"bbox":[110,506,990,1.4]}
+{"kind":"textbox","id":"sh/exobih87","slide":2,"text":"Academic Year","textPreview":"Academic Year","textChars":13,"textLines":1,"bbox":[110,522,220,34]}
+{"kind":"textbox","id":"sh/fyxcrmps","slide":2,"text":"2026-27","textPreview":"2026-27","textChars":7,"textLines":1,"bbox":[350,522,760,52]}
+{"kind":"shape","id":"sh/0vqdwvqh","slide":2,"bbox":[110,568,990,1.4]}
+{"kind":"notes","id":"nt/2c71kh","slide":2,"text":"[Sources]\nSource: Final Report.docx, AI Government Cybersecurity Posture Assessment Platform (AIG-CPAP)."}
+{"kind":"slide","id":"sl/v5ptoj","slide":3,"title":"JUDEX / AIG-CPAP","textShapes":18}
+{"kind":"shape","id":"sh/ydwrap0f","slide":3,"bbox":[0,0,1.4,720]}
+{"kind":"shape","id":"sh/lgna5kj6","slide":3,"bbox":[64,0,1.4,720]}
+{"kind":"shape","id":"sh/kfe9cfil","slide":3,"bbox":[128,0,1.4,720]}
+{"kind":"shape","id":"sh/7ips7u1w","slide":3,"bbox":[192,0,1.4,720]}
+{"kind":"shape","id":"sh/6hwrep0r","slide":3,"bbox":[256,0,1.4,720]}
+{"kind":"shape","id":"sh/tk7a94j2","slide":3,"bbox":[320,0,1.4,720]}
+{"kind":"shape","id":"sh/8jy9gzih","slide":3,"bbox":[384,0,1.4,720]}
+{"kind":"shape","id":"sh/nml8vq1s","slide":3,"bbox":[448,0,1.4,720]}
+{"kind":"shape","id":"sh/mlcr2507","slide":3,"bbox":[512,0,1.4,720]}
+{"kind":"shape","id":"sh/4nitsbax","slide":3,"bbox":[576,0,1.4,720]}
+{"kind":"shape","id":"sh/5oralgri","slide":3,"bbox":[640,0,1.4,720]}
+{"kind":"shape","id":"sh/il0bqls7","slide":3,"bbox":[704,0,1.4,720]}
+{"kind":"shape","id":"sh/3m9sjq9s","slide":3,"bbox":[768,0,1.4,720]}
+{"kind":"shape","id":"sh/sr2twvq9","slide":3,"bbox":[832,0,1.4,720]}
+{"kind":"shape","id":"sh/dsbup0ru","slide":3,"bbox":[896,0,1.4,720]}
+{"kind":"shape","id":"sh/qpkbuls3","slide":3,"bbox":[960,0,1.4,720]}
+{"kind":"shape","id":"sh/rqtcnq9o","slide":3,"bbox":[1024,0,1.4,720]}
+{"kind":"shape","id":"sh/8vytkra5","slide":3,"bbox":[1088,0,1.4,720]}
+{"kind":"shape","id":"sh/tw7adwra","slide":3,"bbox":[1152,0,1.4,720]}
+{"kind":"shape","id":"sh/9szqhsje","slide":3,"bbox":[1216,0,1.4,720]}
+{"kind":"shape","id":"sh/orq9on2t","slide":3,"bbox":[0,0,1280,1.4]}
+{"kind":"shape","id":"sh/nqh8fi18","slide":3,"bbox":[0,64,1280,1.4]}
+{"kind":"shape","id":"sh/mp8rmdkn","slide":3,"bbox":[0,128,1280,1.4]}
+{"kind":"shape","id":"sh/xgjqlsja","slide":3,"bbox":[0,192,1280,1.4]}
+{"kind":"shape","id":"sh/wfa9c72p","slide":3,"bbox":[0,256,1280,1.4]}
+{"kind":"shape","id":"sh/ve18j214","slide":3,"bbox":[0,320,1280,1.4]}
+{"kind":"shape","id":"sh/adsraxkz","slide":3,"bbox":[0,384,1280,1.4]}
+{"kind":"shape","id":"sh/5kjapcjm","slide":3,"bbox":[0,448,1280,1.4]}
+{"kind":"shape","id":"sh/kja9g721","slide":3,"bbox":[0,512,1280,1.4]}
+{"kind":"shape","id":"sh/2p4na90j","slide":3,"bbox":[0,576,1280,1.4]}
+{"kind":"shape","id":"sh/3qdojeh4","slide":3,"bbox":[0,640,1280,1.4]}
+{"kind":"shape","id":"sh/4rm5cji9","slide":3,"bbox":[0,704,1280,1.4]}
+{"kind":"shape","id":"sh/psv6lozu","slide":3,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/qt4ne90f","slide":3,"text":"JUDEX / AIG-CPAP","textPreview":"JUDEX / AIG-CPAP","textChars":16,"textLines":1,"bbox":[58,28,360,22]}
+{"kind":"textbox","id":"sh/ruxoneh0","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1160,26,60,24]}
+{"kind":"textbox","id":"sh/cv65gjil","slide":3,"text":"Agenda","textPreview":"Agenda","textChars":6,"textLines":1,"bbox":[58,58,1080,48]}
+{"kind":"shape","id":"sh/dwf6poz6","slide":3,"bbox":[58,118,1164,1.4]}
+{"kind":"shape","id":"sh/exo7it0r","slide":3,"bbox":[82,150,330,58]}
+{"kind":"textbox","id":"sh/zyxoryhw","slide":3,"text":"01 Abstract","textPreview":"01 Abstract","textChars":11,"textLines":1,"bbox":[100,164,296,30]}
+{"kind":"shape","id":"sh/n29wfu54","slide":3,"bbox":[462,150,330,58]}
+{"kind":"textbox","id":"sh/m10fmpoj","slide":3,"text":"02 Problem Statement","textPreview":"02 Problem Statement","textChars":20,"textLines":1,"bbox":[480,164,296,30]}
+{"kind":"shape","id":"sh/94beh4na","slide":3,"bbox":[842,150,330,58]}
+{"kind":"textbox","id":"sh/o32xoz6p","slide":3,"text":"03 Motivation","textPreview":"03 Motivation","textChars":13,"textLines":1,"bbox":[860,164,296,30]}
+{"kind":"shape","id":"sh/b6twje50","slide":3,"bbox":[82,238,330,58]}
+{"kind":"textbox","id":"sh/a5kfq9of","slide":3,"text":"04 Objectives","textPreview":"04 Objectives","textChars":13,"textLines":1,"bbox":[100,252,296,30]}
+{"kind":"shape","id":"sh/xsbel4n6","slide":3,"bbox":[462,238,330,58]}
+{"kind":"textbox","id":"sh/w72xsz6l","slide":3,"text":"05 Literature Survey","textPreview":"05 Literature Survey","textChars":20,"textLines":1,"bbox":[480,252,296,30]}
+{"kind":"shape","id":"sh/rapw7a5w","slide":3,"bbox":[842,238,330,58]}
+{"kind":"textbox","id":"sh/q9gve5ob","slide":3,"text":"06 Proposed Methodology","textPreview":"06 Proposed Methodology","textChars":23,"textLines":1,"bbox":[860,252,296,30]}
+{"kind":"shape","id":"sh/gfetobm9","slide":3,"bbox":[82,326,330,58]}
+{"kind":"textbox","id":"sh/hgnuhg3u","slide":3,"text":"07 AI Models","textPreview":"07 AI Models","textChars":12,"textLines":1,"bbox":[100,340,296,30]}
+{"kind":"shape","id":"sh/udwbm143","slide":3,"bbox":[462,326,330,58]}
+{"kind":"textbox","id":"sh/fe5cf6lo","slide":3,"text":"08 Security Standards","textPreview":"08 Security Standards","textChars":21,"textLines":1,"bbox":[480,340,296,30]}
+{"kind":"shape","id":"sh/sbutkbmx","slide":3,"bbox":[842,326,330,58]}
+{"kind":"textbox","id":"sh/tcnudw3i","slide":3,"text":"09 Workflow","textPreview":"09 Workflow","textChars":11,"textLines":1,"bbox":[860,340,296,30]}
+{"kind":"shape","id":"sh/69cbi147","slide":3,"bbox":[82,414,330,58]}
+{"kind":"textbox","id":"sh/7alcb6lc","slide":3,"text":"10 Datasets","textPreview":"10 Datasets","textChars":11,"textLines":1,"bbox":[100,428,296,30]}
+{"kind":"shape","id":"sh/c7ydwvmh","slide":3,"bbox":[462,414,330,58]}
+{"kind":"textbox","id":"sh/d87up03m","slide":3,"text":"11 System Architecture","textPreview":"11 System Architecture","textChars":22,"textLines":1,"bbox":[480,428,296,30]}
+{"kind":"shape","id":"sh/lo3u90v6","slide":3,"bbox":[842,414,330,58]}
+{"kind":"textbox","id":"sh/0nut0vel","slide":3,"text":"12 Key Innovations","textPreview":"12 Key Innovations","textChars":18,"textLines":1,"bbox":[860,428,296,30]}
+{"kind":"shape","id":"sh/z2lc7qd0","slide":3,"bbox":[82,502,330,58]}
+{"kind":"textbox","id":"sh/y1cbylwf","slide":3,"text":"13 Expected Benefits","textPreview":"13 Expected Benefits","textChars":20,"textLines":1,"bbox":[100,516,296,30]}
+{"kind":"shape","id":"sh/d03u5gvu","slide":3,"bbox":[462,502,330,58]}
+{"kind":"textbox","id":"sh/czutwbe9","slide":3,"text":"14 Conclusion","textPreview":"14 Conclusion","textChars":13,"textLines":1,"bbox":[480,516,296,30]}
+{"kind":"shape","id":"sh/by1c36do","slide":3,"bbox":[842,502,330,58]}
+{"kind":"textbox","id":"sh/qxsbulwj","slide":3,"text":"15 References","textPreview":"15 References","textChars":13,"textLines":1,"bbox":[860,516,296,30]}
+{"kind":"notes","id":"nt/v5ptoj","slide":3,"text":"[Sources]\nSource: Final Report.docx, AI Government Cybersecurity Posture Assessment Platform (AIG-CPAP)."}
+{"kind":"slide","id":"sl/cmusqh","slide":4,"title":"JUDEX / AIG-CPAP","textShapes":15}
+{"kind":"shape","id":"sh/547m10vm","slide":4,"bbox":[0,0,1.4,720]}
+{"kind":"shape","id":"sh/i1gnqlcb","slide":4,"bbox":[64,0,1.4,720]}
+{"kind":"shape","id":"sh/32p4zqdw","slide":4,"bbox":[128,0,1.4,720]}
+{"kind":"shape","id":"sh/gzy5obu5","slide":4,"bbox":[192,0,1.4,720]}
+{"kind":"shape","id":"sh/h07mxgvq","slide":4,"bbox":[256,0,1.4,720]}
+{"kind":"shape","id":"sh/uxwnmlcz","slide":4,"bbox":[320,0,1.4,720]}
+{"kind":"shape","id":"sh/vyp4v6dk","slide":4,"bbox":[384,0,1.4,720]}
+{"kind":"shape","id":"sh/8ve5kbu9","slide":4,"bbox":[448,0,1.4,720]}
+{"kind":"shape","id":"sh/twnmtgvu","slide":4,"bbox":[512,0,1.4,720]}
+{"kind":"shape","id":"sh/x0r2dgz6","slide":4,"bbox":[576,0,1.4,720]}
+{"kind":"shape","id":"sh/wfylkbyl","slide":4,"bbox":[640,0,1.4,720]}
+{"kind":"shape","id":"sh/vepkb6h0","slide":4,"bbox":[704,0,1.4,720]}
+{"kind":"shape","id":"sh/adg3i1gv","slide":4,"bbox":[768,0,1.4,720]}
+{"kind":"shape","id":"sh/9c729wza","slide":4,"bbox":[832,0,1.4,720]}
+{"kind":"shape","id":"sh/obylgryp","slide":4,"bbox":[896,0,1.4,720]}
+{"kind":"shape","id":"sh/napk76h4","slide":4,"bbox":[960,0,1.4,720]}
+{"kind":"shape","id":"sh/m9gje10j","slide":4,"bbox":[1024,0,1.4,720]}
+{"kind":"shape","id":"sh/18725wzy","slide":4,"bbox":[1088,0,1.4,720]}
+{"kind":"shape","id":"sh/07e1crid","slide":4,"bbox":[1152,0,1.4,720]}
+{"kind":"shape","id":"sh/srilsrq9","slide":4,"bbox":[1216,0,1.4,720]}
+{"kind":"shape","id":"sh/dsr2lw7u","slide":4,"bbox":[0,0,1280,1.4]}
+{"kind":"shape","id":"sh/qp03qh8j","slide":4,"bbox":[0,64,1280,1.4]}
+{"kind":"shape","id":"sh/rq9kjmpo","slide":4,"bbox":[0,128,1280,1.4]}
+{"kind":"shape","id":"sh/4nilorqd","slide":4,"bbox":[0,192,1280,1.4]}
+{"kind":"shape","id":"sh/5or2hw7y","slide":4,"bbox":[0,256,1280,1.4]}
+{"kind":"shape","id":"sh/ilg3mh87","slide":4,"bbox":[0,320,1280,1.4]}
+{"kind":"shape","id":"sh/3m9kfmps","slide":4,"bbox":[0,384,1280,1.4]}
+{"kind":"shape","id":"sh/oj2l0b6h","slide":4,"bbox":[0,448,1280,1.4]}
+{"kind":"shape","id":"sh/9kbmtg72","slide":4,"bbox":[0,512,1280,1.4]}
+{"kind":"shape","id":"sh/jqhwfedg","slide":4,"bbox":[0,576,1280,1.4]}
+{"kind":"shape","id":"sh/ipof69wv","slide":4,"bbox":[0,640,1280,1.4]}
+{"kind":"shape","id":"sh/5szeh4vm","slide":4,"bbox":[0,704,1280,1.4]}
+{"kind":"shape","id":"sh/krqx8je1","slide":4,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/7uhwjeds","slide":4,"text":"JUDEX / AIG-CPAP","textPreview":"JUDEX / AIG-CPAP","textChars":16,"textLines":1,"bbox":[58,28,360,22]}
+{"kind":"textbox","id":"sh/6t8fa9w7","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1160,26,60,24]}
+{"kind":"textbox","id":"sh/tgzelovi","slide":4,"text":"AIG-CPAP creates one offline evidence layer for government cyber posture","textPreview":"AIG-CPAP creates one offline evidence layer for government cyber posture","textChars":72,"textLines":1,"bbox":[58,58,1080,48]}
+{"kind":"shape","id":"sh/svqxcjux","slide":4,"bbox":[58,118,1164,1.4]}
+{"kind":"textbox","id":"sh/nyxw7ud8","slide":4,"text":"■","textPreview":"■","textChars":1,"textLines":1,"bbox":[90,150,20,22]}
+{"kind":"textbox","id":"sh/mx4vypwn","slide":4,"text":"Comprehensive, offline-deployable system to evaluate and quantify cybersecurity posture of government organizations.","textPreview":"Comprehensive, offline-deployable system to evaluate and quantify cybersecurity posture of government organizations.","textChars":116,"textLines":1,"bbox":[118,148,1042,78]}
+{"kind":"textbox","id":"sh/e18fup4j","slide":4,"text":"■","textPreview":"■","textChars":1,"textLines":1,"bbox":[90,222,20,22]}
+{"kind":"textbox","id":"sh/z2hwnul4","slide":4,"text":"Seven domain-specific AI agents cover source code, infrastructure configuration, API security, network architecture, identity and privilege management, security documentation, and security events.","textPreview":"Seven domain-specific AI agents cover source code, infrastructure configuration, API security, network architecture, identity and privile...","textChars":196,"textLines":1,"bbox":[118,220,1042,78]}
+{"kind":"textbox","id":"sh/03qxwzmp","slide":4,"text":"■","textPreview":"■","textChars":1,"textLines":1,"bbox":[90,294,20,22]}
+{"kind":"textbox","id":"sh/14jep43a","slide":4,"text":"Unified Cyber Knowledge Graph built on Neo4j stores assets, relationships, and findings in a shared evidence format.","textPreview":"Unified Cyber Knowledge Graph built on Neo4j stores assets, relationships, and findings in a shared evidence format.","textChars":116,"textLines":1,"bbox":[118,292,1042,78]}
+{"kind":"textbox","id":"sh/m5sfy94v","slide":4,"text":"■","textPreview":"■","textChars":1,"textLines":1,"bbox":[90,366,20,22]}
+{"kind":"textbox","id":"sh/n61wrulg","slide":4,"text":"Multi-agent coordination layer merges, deduplicates, and cross-correlates findings to identify compound risks.","textPreview":"Multi-agent coordination layer merges, deduplicates, and cross-correlates findings to identify compound risks.","textChars":110,"textLines":1,"bbox":[118,364,1042,78]}
+{"kind":"textbox","id":"sh/o7ax0zml","slide":4,"text":"■","textPreview":"■","textChars":1,"textLines":1,"bbox":[90,438,20,22]}
+{"kind":"textbox","id":"sh/98jyt436","slide":4,"text":"Explainable risk engine produces traceable evidence chains, prioritized remediation, executive dashboards, compliance-mapped reports, and department-level scores.","textPreview":"Explainable risk engine produces traceable evidence chains, prioritized remediation, executive dashboards, compliance-mapped reports, and...","textChars":162,"textLines":1,"bbox":[118,436,1042,78]}
+{"kind":"textbox","id":"sh/a9sf294r","slide":4,"text":"■","textPreview":"■","textChars":1,"textLines":1,"bbox":[90,510,20,22]}
+{"kind":"textbox","id":"sh/ba1gvelc","slide":4,"text":"Offline open-source LLMs: Qwen 3 Instruct, Qwen2.5-Coder, and DeepSeek-Coder served through Ollama.","textPreview":"Offline open-source LLMs: Qwen 3 Instruct, Qwen2.5-Coder, and DeepSeek-Coder served through Ollama.","textChars":99,"textLines":1,"bbox":[118,508,1042,78]}
+{"kind":"notes","id":"nt/cmusqh","slide":4,"text":"[Sources]\nSource: Final Report.docx, AI Government Cybersecurity Posture Assessment Platform (AIG-CPAP)."}
+{"kind":"slide","id":"sl/nd5buq","slide":5,"title":"JUDEX / AIG-CPAP","textShapes":17}
+{"kind":"shape","id":"sh/7adgvmhs","slide":5,"bbox":[0,0,1.4,720]}
+{"kind":"shape","id":"sh/8bmxoryd","slide":5,"bbox":[64,0,1.4,720]}
+{"kind":"shape","id":"sh/9cvyxwzi","slide":5,"bbox":[128,0,1.4,720]}
+{"kind":"shape","id":"sh/y5kfihgv","slide":5,"bbox":[192,0,1.4,720]}
+{"kind":"shape","id":"sh/z6tgr2hg","slide":5,"bbox":[256,0,1.4,720]}
+{"kind":"shape","id":"sh/k72xk7y1","slide":5,"bbox":[320,0,1.4,720]}
+{"kind":"shape","id":"sh/l8vytczm","slide":5,"bbox":[384,0,1.4,720]}
+{"kind":"shape","id":"sh/i1ozu1gf","slide":5,"bbox":[448,0,1.4,720]}
+{"kind":"shape","id":"sh/j2xg36h0","slide":5,"bbox":[512,0,1.4,720]}
+{"kind":"shape","id":"sh/7q1gbm58","slide":5,"bbox":[576,0,1.4,720]}
+{"kind":"shape","id":"sh/6psfihon","slide":5,"bbox":[640,0,1.4,720]}
+{"kind":"shape","id":"sh/tcjydwne","slide":5,"bbox":[704,0,1.4,720]}
+{"kind":"shape","id":"sh/8bahkrmt","slide":5,"bbox":[768,0,1.4,720]}
+{"kind":"shape","id":"sh/velgf654","slide":5,"bbox":[832,0,1.4,720]}
+{"kind":"shape","id":"sh/udszm14z","slide":5,"bbox":[896,0,1.4,720]}
+{"kind":"shape","id":"sh/hg3yhwna","slide":5,"bbox":[960,0,1.4,720]}
+{"kind":"shape","id":"sh/gfuhobmp","slide":5,"bbox":[1024,0,1.4,720]}
+{"kind":"shape","id":"sh/3ilgj65g","slide":5,"bbox":[1088,0,1.4,720]}
+{"kind":"shape","id":"sh/ihczq14v","slide":5,"bbox":[1152,0,1.4,720]}
+{"kind":"shape","id":"sh/edgji5o3","slide":5,"bbox":[1216,0,1.4,720]}
+{"kind":"shape","id":"sh/zepkbapo","slide":5,"bbox":[0,0,1280,1.4]}
+{"kind":"shape","id":"sh/0fy1kf69","slide":5,"bbox":[0,64,1280,1.4]}
+{"kind":"shape","id":"sh/1072dk7u","slide":5,"bbox":[0,128,1280,1.4]}
+{"kind":"shape","id":"sh/q9wje5o7","slide":5,"bbox":[0,192,1280,1.4]}
+{"kind":"shape","id":"sh/ra507apc","slide":5,"bbox":[0,256,1280,1.4]}
+{"kind":"shape","id":"sh/cbe1gv6x","slide":5,"bbox":[0,320,1280,1.4]}
+{"kind":"shape","id":"sh/dcni907i","slide":5,"bbox":[0,384,1280,1.4]}
+{"kind":"shape","id":"sh/a50jqpob","slide":5,"bbox":[0,448,1280,1.4]}
+{"kind":"shape","id":"sh/b69kjupw","slide":5,"bbox":[0,512,1280,1.4]}
+{"kind":"shape","id":"sh/l0bmpory","slide":5,"bbox":[0,576,1280,1.4]}
+{"kind":"shape","id":"sh/kz2lgjqd","slide":5,"bbox":[0,640,1280,1.4]}
+{"kind":"shape","id":"sh/jyt4ny9s","slide":5,"bbox":[0,704,1280,1.4]}
+{"kind":"shape","id":"sh/yxk3et8n","slide":5,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/xwrmlor2","slide":5,"text":"JUDEX / AIG-CPAP","textPreview":"JUDEX / AIG-CPAP","textChars":16,"textLines":1,"bbox":[58,28,360,22]}
+{"kind":"textbox","id":"sh/wvilcjqh","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1160,26,60,24]}
+{"kind":"textbox","id":"sh/bu94je9w","slide":5,"text":"Government risk is missed when each domain is assessed alone","textPreview":"Government risk is missed when each domain is assessed alone","textChars":60,"textLines":1,"bbox":[58,58,1080,48]}
+{"kind":"shape","id":"sh/a903a98b","slide":5,"bbox":[58,118,1164,1.4]}
+{"kind":"textbox","id":"sh/hsvmh8r6","slide":5,"text":"■","textPreview":"■","textChars":1,"textLines":1,"bbox":[78,154,20,22]}
+{"kind":"textbox","id":"sh/grm5o3ql","slide":5,"text":"Government environments span source code, cloud and on-premise infrastructure, APIs, internal networks, user accounts, and security policy documentation.","textPreview":"Government environments span source code, cloud and on-premise infrastructure, APIs, internal networks, user accounts, and security polic...","textChars":153,"textLines":1,"bbox":[106,152,582,70]}
+{"kind":"textbox","id":"sh/obado3qh","slide":5,"text":"■","textPreview":"■","textChars":1,"textLines":1,"bbox":[78,218,20,22]}
+{"kind":"textbox","id":"sh/pcjuh8r2","slide":5,"text":"Static code analyzers, CSPM platforms, and policy review tools address each domain in isolation.","textPreview":"Static code analyzers, CSPM platforms, and policy review tools address each domain in isolation.","textChars":96,"textLines":1,"bbox":[106,216,582,70]}
+{"kind":"textbox","id":"sh/29svmd8b","slide":5,"text":"■","textPreview":"■","textChars":1,"textLines":1,"bbox":[78,282,20,22]}
+{"kind":"textbox","id":"sh/na1cfi9w","slide":5,"text":"Security teams manually correlate disparate reports, creating a slow, error-prone assessment process.","textPreview":"Security teams manually correlate disparate reports, creating a slow, error-prone assessment process.","textChars":101,"textLines":1,"bbox":[106,280,582,70]}
+{"kind":"textbox","id":"sh/czadsnqd","slide":5,"text":"■","textPreview":"■","textChars":1,"textLines":1,"bbox":[78,346,20,22]}
+{"kind":"textbox","id":"sh/x03ulsry","slide":5,"text":"Compound risks emerge only at intersections: weak API authentication + contractor administrative privileges + exposed server firewall rule.","textPreview":"Compound risks emerge only at intersections: weak API authentication + contractor administrative privileges + exposed server firewall rule.","textChars":139,"textLines":1,"bbox":[106,344,582,70]}
+{"kind":"textbox","id":"sh/adsvqd87","slide":5,"text":"■","textPreview":"■","textChars":1,"textLines":1,"bbox":[78,410,20,22]}
+{"kind":"textbox","id":"sh/by1cji9s","slide":5,"text":"No existing tool in the report surfaces this compound risk automatically.","textPreview":"No existing tool in the report surfaces this compound risk automatically.","textChars":73,"textLines":1,"bbox":[106,408,582,70]}
+{"kind":"shape","id":"sh/k3udw7qp","slide":5,"bbox":[760,170,170,78]}
+{"kind":"textbox","id":"sh/l43upsru","slide":5,"text":"Weak API\nauthentication","textPreview":"Weak API | authentication","textChars":23,"textLines":2,"bbox":[772,188,146,44]}
+{"kind":"shape","id":"sh/vy5gf6tc","slide":5,"bbox":[980,265,170,78]}
+{"kind":"textbox","id":"sh/uxwfm1sr","slide":5,"text":"Contractor admin\nprivilege","textPreview":"Contractor admin | privilege","textChars":26,"textLines":2,"bbox":[992,283,146,44]}
+{"kind":"shape","id":"sh/h07yhwb2","slide":5,"bbox":[760,360,170,78]}
+{"kind":"textbox","id":"sh/wzyxorax","slide":5,"text":"Exposed server\nfirewall rule","textPreview":"Exposed server | firewall rule","textChars":28,"textLines":2,"bbox":[772,378,146,44]}
+{"kind":"shape","id":"sh/7u5gbmt0","slide":5,"bbox":[980,455,170,78]}
+{"kind":"textbox","id":"sh/mtwfihsf","slide":5,"text":"Compound\ncritical risk","textPreview":"Compound | critical risk","textChars":22,"textLines":2,"bbox":[992,473,146,44]}
+{"kind":"shape","id":"sh/9wnydwb6","slide":5,"bbox":[930,209,50,93]}
+{"kind":"shape","id":"sh/8vexkral","slide":5,"bbox":[845,248,1.4,112]}
+{"kind":"shape","id":"sh/rq9gnqtk","slide":5,"bbox":[930,399,50,93]}
+{"kind":"shape","id":"sh/6pgfulsz","slide":5,"bbox":[1065,343,1.4,112]}
+{"kind":"notes","id":"nt/nd5buq","slide":5,"text":"[Sources]\nSource: Final Report.docx, AI Government Cybersecurity Posture Assessment Platform (AIG-CPAP)."}
+{"kind":"slide","id":"sl/p3rswk","slide":6,"title":"JUDEX / AIG-CPAP","textShapes":15}
+{"kind":"shape","id":"sh/u187i50r","slide":6,"bbox":[0,0,1.4,720]}
+{"kind":"shape","id":"sh/h4jqt0z2","slide":6,"bbox":[64,0,1.4,720]}
+{"kind":"shape","id":"sh/w3apkvih","slide":6,"bbox":[128,0,1.4,720]}
+{"kind":"shape","id":"sh/jq18vah8","slide":6,"bbox":[192,0,1.4,720]}
+{"kind":"shape","id":"sh/ips7m50n","slide":6,"bbox":[256,0,1.4,720]}
+{"kind":"shape","id":"sh/5sjqxkze","slide":6,"bbox":[320,0,1.4,720]}
+{"kind":"shape","id":"sh/4rapofit","slide":6,"bbox":[384,0,1.4,720]}
+{"kind":"shape","id":"sh/zuxoj6ho","slide":6,"bbox":[448,0,1.4,720]}
+{"kind":"shape","id":"sh/y9o7al0j","slide":6,"bbox":[512,0,1.4,720]}
+{"kind":"shape","id":"sh/g3mpsni9","slide":6,"bbox":[576,0,1.4,720]}
+{"kind":"shape","id":"sh/14v6lszu","slide":6,"bbox":[640,0,1.4,720]}
+{"kind":"shape","id":"sh/e147qd0j","slide":6,"bbox":[704,0,1.4,720]}
+{"kind":"shape","id":"sh/f2dojiho","slide":6,"bbox":[768,0,1.4,720]}
+{"kind":"shape","id":"sh/or6pwnil","slide":6,"bbox":[832,0,1.4,720]}
+{"kind":"shape","id":"sh/psfqpsz6","slide":6,"bbox":[896,0,1.4,720]}
+{"kind":"shape","id":"sh/2p47ux0f","slide":6,"bbox":[960,0,1.4,720]}
+{"kind":"shape","id":"sh/3qd8nih0","slide":6,"bbox":[1024,0,1.4,720]}
+{"kind":"shape","id":"sh/4v2pk3i1","slide":6,"bbox":[1088,0,1.4,720]}
+{"kind":"shape","id":"sh/5wb6d8zm","slide":6,"bbox":[1152,0,1.4,720]}
+{"kind":"shape","id":"sh/ls3mhkbq","slide":6,"bbox":[1216,0,1.4,720]}
+{"kind":"shape","id":"sh/kru5oza5","slide":6,"bbox":[0,0,1280,1.4]}
+{"kind":"shape","id":"sh/zql4futk","slide":6,"bbox":[0,64,1280,1.4]}
+{"kind":"shape","id":"sh/ypcnmpsz","slide":6,"bbox":[0,128,1280,1.4]}
+{"kind":"shape","id":"sh/twnml4bm","slide":6,"bbox":[0,192,1280,1.4]}
+{"kind":"shape","id":"sh/8vu5sza1","slide":6,"bbox":[0,256,1280,1.4]}
+{"kind":"shape","id":"sh/7ul4jutg","slide":6,"bbox":[0,320,1280,1.4]}
+{"kind":"shape","id":"sh/mtcnqpsv","slide":6,"bbox":[0,384,1280,1.4]}
+{"kind":"shape","id":"sh/hkn6p4bi","slide":6,"bbox":[0,448,1280,1.4]}
+{"kind":"shape","id":"sh/gje5wjad","slide":6,"bbox":[0,512,1280,1.4]}
+{"kind":"shape","id":"sh/etobuh4j","slide":6,"bbox":[0,576,1280,1.4]}
+{"kind":"shape","id":"sh/fuxs3m54","slide":6,"bbox":[0,640,1280,1.4]}
+{"kind":"shape","id":"sh/gv6twrmp","slide":6,"bbox":[0,704,1280,1.4]}
+{"kind":"shape","id":"sh/1wfa5cnu","slide":6,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/2hobyh4f","slide":6,"text":"JUDEX / AIG-CPAP","textPreview":"JUDEX / AIG-CPAP","textChars":16,"textLines":1,"bbox":[58,28,360,22]}
+{"kind":"textbox","id":"sh/3ixs7m50","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1160,26,60,24]}
+{"kind":"textbox","id":"sh/oj6t0rml","slide":6,"text":"The motivation is accurate, private, explainable cross-domain reasoning","textPreview":"The motivation is accurate, private, explainable cross-domain reasoning","textChars":71,"textLines":1,"bbox":[58,58,1080,48]}
+{"kind":"shape","id":"sh/pkzu9wn6","slide":6,"bbox":[58,118,1164,1.4]}
+{"kind":"shape","id":"sh/ql8b214r","slide":6,"bbox":[82,160,520,130]}
+{"kind":"textbox","id":"sh/bmhcb65c","slide":6,"text":"▣","textPreview":"▣","textChars":1,"textLines":1,"bbox":[98,174,26,26]}
+{"kind":"textbox","id":"sh/z2dsfmdg","slide":6,"text":"Offline deployment","textPreview":"Offline deployment","textChars":18,"textLines":1,"bbox":[132,174,486,30]}
+{"kind":"textbox","id":"sh/y14bm1wv","slide":6,"text":"Sensitive government data never leaves the organization's infrastructure; no external cloud services or data exfiltration.","textPreview":"Sensitive government data never leaves the organization's infrastructure; no external cloud services or data exfiltration.","textChars":122,"textLines":1,"bbox":[100,210,484,70]}
+{"kind":"shape","id":"sh/l4vahwv6","slide":6,"bbox":[678,160,520,130]}
+{"kind":"textbox","id":"sh/k3mtore1","slide":6,"text":"◈","textPreview":"◈","textChars":1,"textLines":1,"bbox":[694,174,26,26]}
+{"kind":"textbox","id":"sh/76xsj6dc","slide":6,"text":"Government privacy","textPreview":"Government privacy","textChars":18,"textLines":1,"bbox":[728,174,486,30]}
+{"kind":"textbox","id":"sh/m54bq1wr","slide":6,"text":"The platform runs entirely offline using open-source large language models served through Ollama.","textPreview":"The platform runs entirely offline using open-source large language models served through Ollama.","textChars":97,"textLines":1,"bbox":[696,210,484,70]}
+{"kind":"shape","id":"sh/98falgvi","slide":6,"bbox":[82,340,520,130]}
+{"kind":"textbox","id":"sh/876tsbex","slide":6,"text":"◎","textPreview":"◎","textChars":1,"textLines":1,"bbox":[98,354,26,26]}
+{"kind":"textbox","id":"sh/nats72x8","slide":6,"text":"Knowledge Graph reasoning","textPreview":"Knowledge Graph reasoning","textChars":25,"textLines":1,"bbox":[132,354,486,30]}
+{"kind":"textbox","id":"sh/29krehwn","slide":6,"text":"Heterogeneous assets, relationships, and dependencies are represented naturally for automated attack-path reasoning.","textPreview":"Heterogeneous assets, relationships, and dependencies are represented naturally for automated attack-path reasoning.","textChars":116,"textLines":1,"bbox":[100,390,484,70]}
+{"kind":"shape","id":"sh/sfipo3ul","slide":6,"bbox":[678,340,520,130]}
+{"kind":"textbox","id":"sh/dgrqh8vq","slide":6,"text":"⌁","textPreview":"⌁","textChars":1,"textLines":1,"bbox":[694,354,26,26]}
+{"kind":"textbox","id":"sh/qdg7mdcf","slide":6,"text":"Cross-domain attack detection","textPreview":"Cross-domain attack detection","textChars":29,"textLines":1,"bbox":[728,354,486,30]}
+{"kind":"textbox","id":"sh/rep8fid0","slide":6,"text":"Shared graph fusion mirrors skilled human assessment by connecting weaknesses across organisational domains.","textPreview":"Shared graph fusion mirrors skilled human assessment by connecting weaknesses across organisational domains.","textChars":108,"textLines":1,"bbox":[696,390,484,70]}
+{"kind":"notes","id":"nt/p3rswk","slide":6,"text":"[Sources]\nSource: Final Report.docx, AI Government Cybersecurity Posture Assessment Platform (AIG-CPAP)."}
+{"kind":"slide","id":"sl/tffei5","slide":7,"title":"JUDEX / AIG-CPAP","textShapes":15}
+{"kind":"shape","id":"sh/5gju18nm","slide":7,"bbox":[0,0,1.4,720]}
+{"kind":"shape","id":"sh/idsbqd4v","slide":7,"bbox":[64,0,1.4,720]}
+{"kind":"shape","id":"sh/je1czi5g","slide":7,"bbox":[128,0,1.4,720]}
+{"kind":"shape","id":"sh/s3adwnmd","slide":7,"bbox":[192,0,1.4,720]}
+{"kind":"shape","id":"sh/t43u5sni","slide":7,"bbox":[256,0,1.4,720]}
+{"kind":"shape","id":"sh/6hsvud47","slide":7,"bbox":[320,0,1.4,720]}
+{"kind":"shape","id":"sh/721c3i5s","slide":7,"bbox":[384,0,1.4,720]}
+{"kind":"shape","id":"sh/g7ud0nm9","slide":7,"bbox":[448,0,1.4,720]}
+{"kind":"shape","id":"sh/h83u9snu","slide":7,"bbox":[512,0,1.4,720]}
+{"kind":"shape","id":"sh/583uho7u","slide":7,"bbox":[576,0,1.4,720]}
+{"kind":"shape","id":"sh/47utojq9","slide":7,"bbox":[640,0,1.4,720]}
+{"kind":"shape","id":"sh/361cfepo","slide":7,"bbox":[704,0,1.4,720]}
+{"kind":"shape","id":"sh/i5sbm98j","slide":7,"bbox":[768,0,1.4,720]}
+{"kind":"shape","id":"sh/dw3ul876","slide":7,"bbox":[832,0,1.4,720]}
+{"kind":"shape","id":"sh/svuts3ql","slide":7,"bbox":[896,0,1.4,720]}
+{"kind":"shape","id":"sh/rulcjyp0","slide":7,"bbox":[960,0,1.4,720]}
+{"kind":"shape","id":"sh/q9cbqt8f","slide":7,"bbox":[1024,0,1.4,720]}
+{"kind":"shape","id":"sh/t0ja947m","slide":7,"bbox":[1088,0,1.4,720]}
+{"kind":"shape","id":"sh/8zqtgzq1","slide":7,"bbox":[1152,0,1.4,720]}
+{"kind":"shape","id":"sh/0jutwzyx","slide":7,"bbox":[1216,0,1.4,720]}
+{"kind":"shape","id":"sh/lk3up4fi","slide":7,"bbox":[0,0,1280,1.4]}
+{"kind":"shape","id":"sh/yhcbu9g7","slide":7,"bbox":[0,64,1280,1.4]}
+{"kind":"shape","id":"sh/zilcnuxc","slide":7,"bbox":[0,128,1280,1.4]}
+{"kind":"shape","id":"sh/8net0jy9","slide":7,"bbox":[0,192,1280,1.4]}
+{"kind":"shape","id":"sh/9onutofu","slide":7,"bbox":[0,256,1280,1.4]}
+{"kind":"shape","id":"sh/mlwby9g3","slide":7,"bbox":[0,320,1280,1.4]}
+{"kind":"shape","id":"sh/7m5crexo","slide":7,"bbox":[0,384,1280,1.4]}
+{"kind":"shape","id":"sh/wbet4jy5","slide":7,"bbox":[0,448,1280,1.4]}
+{"kind":"shape","id":"sh/hc7uxofq","slide":7,"bbox":[0,512,1280,1.4]}
+{"kind":"shape","id":"sh/r69w3ihs","slide":7,"bbox":[0,576,1280,1.4]}
+{"kind":"shape","id":"sh/650fux0n","slide":7,"bbox":[0,640,1280,1.4]}
+{"kind":"shape","id":"sh/t8re5szy","slide":7,"bbox":[0,704,1280,1.4]}
+{"kind":"shape","id":"sh/s7ixwnid","slide":7,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/jipwzihw","slide":7,"text":"JUDEX / AIG-CPAP","textPreview":"JUDEX / AIG-CPAP","textChars":16,"textLines":1,"bbox":[58,28,360,22]}
+{"kind":"textbox","id":"sh/ihgvqd0b","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1160,26,60,24]}
+{"kind":"textbox","id":"sh/54re1sz2","slide":7,"text":"Objectives focus on multi-agent analysis, graph correlation, and auditable remediation","textPreview":"Objectives focus on multi-agent analysis, graph correlation, and auditable remediation","textChars":86,"textLines":1,"bbox":[58,58,1080,48]}
+{"kind":"shape","id":"sh/4jydsnih","slide":7,"bbox":[58,118,1164,1.4]}
+{"kind":"shape","id":"sh/3etwb2h0","slide":7,"bbox":[80,150,540,130]}
+{"kind":"textbox","id":"sh/2dkf2h0f","slide":7,"text":"AI","textPreview":"AI","textChars":2,"textLines":1,"bbox":[96,164,26,26]}
+{"kind":"textbox","id":"sh/al0zq1wz","slide":7,"text":"Multi-agent AI system","textPreview":"Multi-agent AI system","textChars":21,"textLines":1,"bbox":[130,164,506,30]}
+{"kind":"textbox","id":"sh/bm90z6xk","slide":7,"text":"Concurrently analyses source code, infrastructure configurations, APIs, network architecture, identity and privilege assignments, security policy documents, and security event logs.","textPreview":"Concurrently analyses source code, infrastructure configurations, APIs, network architecture, identity and privilege assignments, securit...","textChars":181,"textLines":1,"bbox":[98,200,504,70]}
+{"kind":"shape","id":"sh/cni1sbep","slide":7,"bbox":[660,150,540,130]}
+{"kind":"textbox","id":"sh/xori1gfa","slide":7,"text":"KG","textPreview":"KG","textChars":2,"textLines":1,"bbox":[676,164,26,26]}
+{"kind":"textbox","id":"sh/2hgzm1wn","slide":7,"text":"Cyber Knowledge Graph","textPreview":"Cyber Knowledge Graph","textChars":21,"textLines":1,"bbox":[710,164,506,30]}
+{"kind":"textbox","id":"sh/nip0vmx8","slide":7,"text":"Neo4j represents organizational assets, relationships, and security findings, enabling cross-domain risk correlation, evidence confidence scoring, and multi-hop attack path reasoning.","textPreview":"Neo4j represents organizational assets, relationships, and security findings, enabling cross-domain risk correlation, evidence confidence...","textChars":183,"textLines":1,"bbox":[678,200,504,70]}
+{"kind":"shape","id":"sh/ojihoret","slide":7,"bbox":[80,340,540,130]}
+{"kind":"textbox","id":"sh/pkrixwfe","slide":7,"text":"X","textPreview":"X","textChars":1,"textLines":1,"bbox":[96,354,26,26]}
+{"kind":"textbox","id":"sh/mdkjylw7","slide":7,"text":"Explainable risk scores","textPreview":"Explainable risk scores","textChars":23,"textLines":1,"bbox":[130,354,506,30]}
+{"kind":"textbox","id":"sh/7et07qdc","slide":7,"text":"Trace each risk conclusion to specific uploaded artifacts and graph nodes, making findings auditable and actionable for technical teams and executives.","textPreview":"Trace each risk conclusion to specific uploaded artifacts and graph nodes, making findings auditable and actionable for technical teams a...","textChars":151,"textLines":1,"bbox":[98,390,504,70]}
+{"kind":"shape","id":"sh/h8v2xkfu","slide":7,"bbox":[660,340,540,150]}
+{"kind":"textbox","id":"sh/g7mlofy9","slide":7,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[676,354,26,26]}
+{"kind":"textbox","id":"sh/v6dkvaho","slide":7,"text":"Prioritized remediation roadmap","textPreview":"Prioritized remediation roadmap","textChars":31,"textLines":1,"bbox":[710,354,506,30]}
+{"kind":"textbox","id":"sh/ul43m5g3","slide":7,"text":"Ranks fixes by asset criticality, dependency impact, risk reduction potential, and implementation effort, aligned with NIST SP 800-53, ISO/IEC 27001, NISPG, CIS Controls, and OWASP ASVS.","textPreview":"Ranks fixes by asset criticality, dependency impact, risk reduction potential, and implementation effort, aligned with NIST SP 800-53, IS...","textChars":186,"textLines":1,"bbox":[678,390,504,90]}
+{"kind":"notes","id":"nt/tffei5","slide":7,"text":"[Sources]\nSource: Final Report.docx, AI Government Cybersecurity Posture Assessment Platform (AIG-CPAP)."}
+{"kind":"slide","id":"sl/pkb1xh","slide":8,"title":"JUDEX / AIG-CPAP","textShapes":15}
+{"kind":"shape","id":"sh/21szuhof","slide":8,"bbox":[0,0,1.4,720]}
+{"kind":"shape","id":"sh/p43i5w76","slide":8,"bbox":[64,0,1.4,720]}
+{"kind":"shape","id":"sh/o3uhwr6l","slide":8,"bbox":[128,0,1.4,720]}
+{"kind":"shape","id":"sh/b6l076pw","slide":8,"bbox":[192,0,1.4,720]}
+{"kind":"shape","id":"sh/q5czy1or","slide":8,"bbox":[256,0,1.4,720]}
+{"kind":"shape","id":"sh/d83i9g72","slide":8,"bbox":[320,0,1.4,720]}
+{"kind":"shape","id":"sh/c7uh0b6h","slide":8,"bbox":[384,0,1.4,720]}
+{"kind":"shape","id":"sh/zul0b6p8","slide":8,"bbox":[448,0,1.4,720]}
+{"kind":"shape","id":"sh/ytcz21on","slide":8,"bbox":[512,0,1.4,720]}
+{"kind":"shape","id":"sh/gbm54bi1","slide":8,"bbox":[576,0,1.4,720]}
+{"kind":"shape","id":"sh/hcfmxgjm","slide":8,"bbox":[640,0,1.4,720]}
+{"kind":"shape","id":"sh/u94n210v","slide":8,"bbox":[704,0,1.4,720]}
+{"kind":"shape","id":"sh/vad4v61g","slide":8,"bbox":[768,0,1.4,720]}
+{"kind":"shape","id":"sh/4z658vix","slide":8,"bbox":[832,0,1.4,720]}
+{"kind":"shape","id":"sh/50fm10ji","slide":8,"bbox":[896,0,1.4,720]}
+{"kind":"shape","id":"sh/idon6l07","slide":8,"bbox":[960,0,1.4,720]}
+{"kind":"shape","id":"sh/3yx4zq1s","slide":8,"bbox":[1024,0,1.4,720]}
+{"kind":"shape","id":"sh/s3q5cvi9","slide":8,"bbox":[1088,0,1.4,720]}
+{"kind":"shape","id":"sh/d4z650ju","slide":8,"bbox":[1152,0,1.4,720]}
+{"kind":"shape","id":"sh/lkvmp0by","slide":8,"bbox":[1216,0,1.4,720]}
+{"kind":"shape","id":"sh/0jm5gvad","slide":8,"bbox":[0,0,1280,1.4]}
+{"kind":"shape","id":"sh/zyd4nqts","slide":8,"bbox":[0,64,1280,1.4]}
+{"kind":"shape","id":"sh/exknels7","slide":8,"bbox":[0,128,1280,1.4]}
+{"kind":"shape","id":"sh/9ovmt0bu","slide":8,"bbox":[0,192,1280,1.4]}
+{"kind":"shape","id":"sh/8nm5kfa9","slide":8,"bbox":[0,256,1280,1.4]}
+{"kind":"shape","id":"sh/nmd4rat4","slide":8,"bbox":[0,320,1280,1.4]}
+{"kind":"shape","id":"sh/ml4ni5sj","slide":8,"bbox":[0,384,1280,1.4]}
+{"kind":"shape","id":"sh/psbmhgbq","slide":8,"bbox":[0,448,1280,1.4]}
+{"kind":"shape","id":"sh/4r2l8ba5","slide":8,"bbox":[0,512,1280,1.4]}
+{"kind":"shape","id":"sh/uxgjih83","slide":8,"bbox":[0,576,1280,1.4]}
+{"kind":"shape","id":"sh/fypkrm9o","slide":8,"bbox":[0,640,1280,1.4]}
+{"kind":"shape","id":"sh/gzi1krq9","slide":8,"bbox":[0,704,1280,1.4]}
+{"kind":"shape","id":"sh/h0r2tcre","slide":8,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/210jmh8z","slide":8,"text":"JUDEX / AIG-CPAP","textPreview":"JUDEX / AIG-CPAP","textChars":16,"textLines":1,"bbox":[58,28,360,22]}
+{"kind":"textbox","id":"sh/329kvm9k","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1160,26,60,24]}
+{"kind":"textbox","id":"sh/43i1orq5","slide":8,"text":"Fifteen recent papers frame the platform's graph, AI, XAI, CSPM, and compliance choices","textPreview":"Fifteen recent papers frame the platform's graph, AI, XAI, CSPM, and compliance choices","textChars":87,"textLines":1,"bbox":[58,58,1080,48]}
+{"kind":"shape","id":"sh/p4r2xwrq","slide":8,"bbox":[58,118,1164,1.4]}
+{"kind":"textbox","id":"sh/i5wjax8v","slide":8,"text":"■","textPreview":"■","textChars":1,"textLines":1,"bbox":[90,160,20,22]}
+{"kind":"textbox","id":"sh/j65kj29g","slide":8,"text":"Research scope: cybersecurity knowledge-graph construction, AI-driven attack-path and risk-assessment automation, cloud security posture management, XAI for cybersecurity, and cyber-physical/ICS threat analytics.","textPreview":"Research scope: cybersecurity knowledge-graph construction, AI-driven attack-path and risk-assessment automation, cloud security posture ...","textChars":212,"textLines":1,"bbox":[118,158,1002,68]}
+{"kind":"textbox","id":"sh/zqx8ruxs","slide":8,"text":"■","textPreview":"■","textChars":1,"textLines":1,"bbox":[90,222,20,22]}
+{"kind":"textbox","id":"sh/yp4rypg7","slide":8,"text":"Publication years reviewed: 2023-2026.","textPreview":"Publication years reviewed: 2023-2026.","textChars":38,"textLines":1,"bbox":[118,220,1002,68]}
+{"kind":"textbox","id":"sh/lcfqt4fy","slide":8,"text":"■","textPreview":"■","textChars":1,"textLines":1,"bbox":[90,284,20,22]}
+{"kind":"textbox","id":"sh/0b690zed","slide":8,"text":"Sources: IEEE, Springer, Elsevier, ACM.","textPreview":"Sources: IEEE, Springer, Elsevier, ACM.","textChars":39,"textLines":1,"bbox":[118,282,1002,68]}
+{"kind":"textbox","id":"sh/nex8vux4","slide":8,"text":"■","textPreview":"■","textChars":1,"textLines":1,"bbox":[90,346,20,22]}
+{"kind":"textbox","id":"sh/mdor29wj","slide":8,"text":"Fifteen recent peer-reviewed publications were reviewed and mapped to AIG-CPAP design decisions.","textPreview":"Fifteen recent peer-reviewed publications were reviewed and mapped to AIG-CPAP design decisions.","textChars":96,"textLines":1,"bbox":[118,344,1002,68]}
+{"kind":"shape","id":"sh/9gfqx4fa","slide":8,"bbox":[182,520,170,44]}
+{"kind":"textbox","id":"sh/8f694zep","slide":8,"text":"IEEE","textPreview":"IEEE","textChars":4,"textLines":1,"bbox":[192,527,150,36]}
+{"kind":"shape","id":"sh/vih8zex0","slide":8,"bbox":[412,520,170,44]}
+{"kind":"textbox","id":"sh/ahor69wf","slide":8,"text":"Springer","textPreview":"Springer","textChars":8,"textLines":1,"bbox":[422,527,150,36]}
+{"kind":"shape","id":"sh/snqpwjut","slide":8,"bbox":[642,520,170,44]}
+{"kind":"textbox","id":"sh/t8zqpove","slide":8,"text":"Elsevier","textPreview":"Elsevier","textChars":8,"textLines":1,"bbox":[652,527,150,36]}
+{"kind":"shape","id":"sh/6l87u9cn","slide":8,"bbox":[872,520,170,44]}
+{"kind":"textbox","id":"sh/7mh8ned8","slide":8,"text":"ACM","textPreview":"ACM","textChars":3,"textLines":1,"bbox":[882,527,150,36]}
+{"kind":"notes","id":"nt/pkb1xh","slide":8,"text":"[Sources]\nSource: Final Report.docx, AI Government Cybersecurity Posture Assessment Platform (AIG-CPAP)."}
+{"kind":"slide","id":"sl/dw74gd","slide":9,"title":"JUDEX / AIG-CPAP","textShapes":9}
+{"kind":"shape","id":"sh/1cb2dcri","slide":9,"bbox":[0,0,1.4,720]}
+{"kind":"shape","id":"sh/e90jihs7","slide":9,"bbox":[64,0,1.4,720]}
+{"kind":"shape","id":"sh/za9kbm9c","slide":9,"bbox":[128,0,1.4,720]}
+{"kind":"shape","id":"sh/c7i1g7a1","slide":9,"bbox":[192,0,1.4,720]}
+{"kind":"shape","id":"sh/d8r29crm","slide":9,"bbox":[256,0,1.4,720]}
+{"kind":"shape","id":"sh/q50jexsv","slide":9,"bbox":[320,0,1.4,720]}
+{"kind":"shape","id":"sh/r69k729g","slide":9,"bbox":[384,0,1.4,720]}
+{"kind":"shape","id":"sh/w3mlsbq5","slide":9,"bbox":[448,0,1.4,720]}
+{"kind":"shape","id":"sh/x4v2lwrq","slide":9,"bbox":[512,0,1.4,720]}
+{"kind":"shape","id":"sh/5kbi983y","slide":9,"bbox":[576,0,1.4,720]}
+{"kind":"shape","id":"sh/kj2h03md","slide":9,"bbox":[640,0,1.4,720]}
+{"kind":"shape","id":"sh/jitg7yl8","slide":9,"bbox":[704,0,1.4,720]}
+{"kind":"shape","id":"sh/ihkzyt4n","slide":9,"bbox":[768,0,1.4,720]}
+{"kind":"shape","id":"sh/xgby5o32","slide":9,"bbox":[832,0,1.4,720]}
+{"kind":"shape","id":"sh/wfihwjmh","slide":9,"bbox":[896,0,1.4,720]}
+{"kind":"shape","id":"sh/ve9g3elw","slide":9,"bbox":[960,0,1.4,720]}
+{"kind":"shape","id":"sh/ad0zut4b","slide":9,"bbox":[1024,0,1.4,720]}
+{"kind":"shape","id":"sh/hcvihs36","slide":9,"bbox":[1088,0,1.4,720]}
+{"kind":"shape","id":"sh/gbmh8nml","slide":9,"bbox":[1152,0,1.4,720]}
+{"kind":"shape","id":"sh/0ret0vy9","slide":9,"bbox":[1216,0,1.4,720]}
+{"kind":"shape","id":"sh/lsnatgfu","slide":9,"bbox":[0,0,1280,1.4]}
+{"kind":"shape","id":"sh/e5wbylg3","slide":9,"bbox":[0,64,1280,1.4]}
+{"kind":"shape","id":"sh/zq5srqxo","slide":9,"bbox":[0,128,1280,1.4]}
+{"kind":"shape","id":"sh/c3utwbyx","slide":9,"bbox":[0,192,1280,1.4]}
+{"kind":"shape","id":"sh/d43apgfi","slide":9,"bbox":[0,256,1280,1.4]}
+{"kind":"shape","id":"sh/q1cru1g7","slide":9,"bbox":[0,320,1280,1.4]}
+{"kind":"shape","id":"sh/r2lsn6xc","slide":9,"bbox":[0,384,1280,1.4]}
+{"kind":"shape","id":"sh/4zu9sby1","slide":9,"bbox":[0,448,1280,1.4]}
+{"kind":"shape","id":"sh/p03alwfm","slide":9,"bbox":[0,512,1280,1.4]}
+{"kind":"shape","id":"sh/7u1cv618","slide":9,"bbox":[0,576,1280,1.4]}
+{"kind":"shape","id":"sh/6tsb210n","slide":9,"bbox":[0,640,1280,1.4]}
+{"kind":"shape","id":"sh/twjuxwze","slide":9,"bbox":[0,704,1280,1.4]}
+{"kind":"shape","id":"sh/svat4rit","slide":9,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/fylcz6hk","slide":9,"text":"JUDEX / AIG-CPAP","textPreview":"JUDEX / AIG-CPAP","textChars":16,"textLines":1,"bbox":[58,28,360,22]}
+{"kind":"textbox","id":"sh/uxsb610z","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1160,26,60,24]}
+{"kind":"textbox","id":"sh/h03u1gza","slide":9,"text":"Research Papers 1-3: KG construction and graph quality","textPreview":"Research Papers 1-3: KG construction and graph quality","textChars":54,"textLines":1,"bbox":[58,58,1080,48]}
+{"kind":"shape","id":"sh/gzut8bip","slide":9,"bbox":[58,118,1164,1.4]}
+{"kind":"shape","id":"sh/32lc3qhg","slide":9,"bbox":[58,142,370,520]}
+{"kind":"textbox","id":"sh/21cbal0v","slide":9,"text":"Paper 1: Building a Cybersecurity Knowledge Graph with CyberGraph","textPreview":"Paper 1: Building a Cybersecurity Knowledge Graph with CyberGraph","textChars":65,"textLines":1,"bbox":[74,158,338,64]}
+{"kind":"textbox","id":"sh/m5kv6p87","slide":9,"text":"Authors/Year: Falcarin & Dainese (2024)\nMethodology: Automated pipeline scraping CVE, CWE, CAPEC, and CTI feeds into Neo4j using entity-resolution and cross-reference matching; Cypher-based analytical queries.\nAdvantages: Continuously updated; integrates multiple heterogeneous public repositories; enables fast cross-source vulnerability-to-attack-pattern queries.\nLimitations: Limited to publicly available technical data; no organisational or procedural risk coverage; entity-linking noise not deeply evaluated.\nContribution to AIG-CPAP: Informs Neo4j-based Cyber Knowledge Graph construction and cross-source vulnerability-to-attack-pattern queries.","textPreview":"Authors/Year: Falcarin & Dainese (2024) | Methodology: Automated pipeline scraping CVE, CWE, CAPEC, and CTI feeds into Neo4j using entity...","textChars":653,"textLines":5,"bbox":[74,232,338,402]}
+{"kind":"shape","id":"sh/n6twzups","slide":9,"bbox":[466,142,370,520]}
+{"kind":"textbox","id":"sh/o72d8zqd","slide":9,"text":"Paper 2: Cybersecurity Knowledge Graphs Construction and Quality Assessment","textPreview":"Paper 2: Cybersecurity Knowledge Graphs Construction and Quality Assessment","textChars":75,"textLines":1,"bbox":[482,158,338,64]}
+{"kind":"textbox","id":"sh/98be147i","slide":9,"text":"Authors/Year: Li, Shi, Pan, Zhao & Sun (2023)\nMethodology: Manually curated CS13K KG on extended UCO ontology; AttTucker Transformer multi-head self-attention + Tucker-decomposition to score triple confidence.\nAdvantages: High-quality verified triples; robust to injected noise (10-50%); improves F1 by 5.2% over TransR baseline.\nLimitations: Dataset small relative to production KGs; manual annotation limits scalability; cubic time complexity of AttTucker.\nContribution to AIG-CPAP: Supports evidence confidence scoring and KG quality assessment in AIG-CPAP.","textPreview":"Authors/Year: Li, Shi, Pan, Zhao & Sun (2023) | Methodology: Manually curated CS13K KG on extended UCO ontology; AttTucker Transformer mu...","textChars":560,"textLines":5,"bbox":[482,232,338,402]}
+{"kind":"shape","id":"sh/a94vap83","slide":9,"bbox":[874,142,370,520]}
+{"kind":"textbox","id":"sh/badw3upo","slide":9,"text":"Paper 3: Practical Applications of Cybersecurity: Knowledge Graphs for Real-World Security Solutions","textPreview":"Paper 3: Practical Applications of Cybersecurity: Knowledge Graphs for Real-World Security Solutions","textChars":100,"textLines":1,"bbox":[890,158,338,64]}
+{"kind":"textbox","id":"sh/wvmdczq9","slide":9,"text":"Authors/Year: IEEE Conference Publication (2024)\nMethodology: Improves existing cybersecurity ontology; assembles CS13K-based graph in Neo4j; introduces AttTucker quality-evaluation model.\nAdvantages: Targets noise/conflict problems that undermine downstream KG reasoning; practical Neo4j implementation.\nLimitations: Focuses on graph quality rather than end-to-end organisational risk assessment; no non-technical evidence.\nContribution to AIG-CPAP: Guides practical Neo4j implementation and conflict-aware graph reasoning.","textPreview":"Authors/Year: IEEE Conference Publication (2024) | Methodology: Improves existing cybersecurity ontology; assembles CS13K-based graph in ...","textChars":524,"textLines":5,"bbox":[890,232,338,402]}
+{"kind":"notes","id":"nt/dw74gd","slide":9,"text":"[Sources]\nSource: Final Report.docx, AI Government Cybersecurity Posture Assessment Platform (AIG-CPAP)."}
+{"kind":"slide","id":"sl/ub5lfp","slide":10,"title":"JUDEX / AIG-CPAP","textShapes":9}
+{"kind":"shape","id":"sh/ipgvqtkr","slide":10,"bbox":[0,0,1.4,720]}
+{"kind":"shape","id":"sh/5c7e18ji","slide":10,"bbox":[64,0,1.4,720]}
+{"kind":"shape","id":"sh/4byxs32x","slide":10,"bbox":[128,0,1.4,720]}
+{"kind":"shape","id":"sh/re9w3i1o","slide":10,"bbox":[192,0,1.4,720]}
+{"kind":"shape","id":"sh/6dgfudk3","slide":10,"bbox":[256,0,1.4,720]}
+{"kind":"shape","id":"sh/tgre58je","slide":10,"bbox":[320,0,1.4,720]}
+{"kind":"shape","id":"sh/sfixw329","slide":10,"bbox":[384,0,1.4,720]}
+{"kind":"shape","id":"sh/fi9wri1k","slide":10,"bbox":[448,0,1.4,720]}
+{"kind":"shape","id":"sh/eh0fydkz","slide":10,"bbox":[512,0,1.4,720]}
+{"kind":"shape","id":"sh/ovqpg72d","slide":10,"bbox":[576,0,1.4,720]}
+{"kind":"shape","id":"sh/pwzq9cjy","slide":10,"bbox":[640,0,1.4,720]}
+{"kind":"shape","id":"sh/2t87exk7","slide":10,"bbox":[704,0,1.4,720]}
+{"kind":"shape","id":"sh/nuh8721s","slide":10,"bbox":[768,0,1.4,720]}
+{"kind":"shape","id":"sh/czq9kr29","slide":10,"bbox":[832,0,1.4,720]}
+{"kind":"shape","id":"sh/x0zqdcju","slide":10,"bbox":[896,0,1.4,720]}
+{"kind":"shape","id":"sh/ax87ihk3","slide":10,"bbox":[960,0,1.4,720]}
+{"kind":"shape","id":"sh/byh8bm1o","slide":10,"bbox":[1024,0,1.4,720]}
+{"kind":"shape","id":"sh/kna9or2l","slide":10,"bbox":[1088,0,1.4,720]}
+{"kind":"shape","id":"sh/lojqhwjq","slide":10,"bbox":[1152,0,1.4,720]}
+{"kind":"shape","id":"sh/tkfq1wba","slide":10,"bbox":[1216,0,1.4,720]}
+{"kind":"shape","id":"sh/8j6p8rap","slide":10,"bbox":[0,0,1280,1.4]}
+{"kind":"shape","id":"sh/7ix8zmt4","slide":10,"bbox":[0,64,1280,1.4]}
+{"kind":"shape","id":"sh/6ho76hcj","slide":10,"bbox":[0,128,1280,1.4]}
+{"kind":"shape","id":"sh/h8zq5wb6","slide":10,"bbox":[0,192,1280,1.4]}
+{"kind":"shape","id":"sh/g7qpcral","slide":10,"bbox":[0,256,1280,1.4]}
+{"kind":"shape","id":"sh/vmx83mt0","slide":10,"bbox":[0,320,1280,1.4]}
+{"kind":"shape","id":"sh/ulo7a1sf","slide":10,"bbox":[0,384,1280,1.4]}
+{"kind":"shape","id":"sh/xcvqtcb2","slide":10,"bbox":[0,448,1280,1.4]}
+{"kind":"shape","id":"sh/wrmp07uh","slide":10,"bbox":[0,512,1280,1.4]}
+{"kind":"shape","id":"sh/mxknadsf","slide":10,"bbox":[0,576,1280,1.4]}
+{"kind":"shape","id":"sh/nit43i9k","slide":10,"bbox":[0,640,1280,1.4]}
+{"kind":"shape","id":"sh/oj25c3a5","slide":10,"bbox":[0,704,1280,1.4]}
+{"kind":"shape","id":"sh/9kbm58rq","slide":10,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/alkned8b","slide":10,"text":"JUDEX / AIG-CPAP","textPreview":"JUDEX / AIG-CPAP","textChars":16,"textLines":1,"bbox":[58,28,360,22]}
+{"kind":"textbox","id":"sh/bmto7i9w","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1160,26,60,24]}
+{"kind":"textbox","id":"sh/wn25gnqh","slide":10,"text":"Research Papers 4-6: temporal reasoning, KG surveys, and OSCAL risk","textPreview":"Research Papers 4-6: temporal reasoning, KG surveys, and OSCAL risk","textChars":67,"textLines":1,"bbox":[58,58,1080,48]}
+{"kind":"shape","id":"sh/xov69sr2","slide":10,"bbox":[58,118,1164,1.4]}
+{"kind":"shape","id":"sh/qp0n2ts7","slide":10,"bbox":[58,142,370,520]}
+{"kind":"textbox","id":"sh/rq94vy9s","slide":10,"text":"Paper 4: TCGFormer: Time-Aware Cybersecurity Knowledge Graph Reasoning for Vulnerability Analysis","textPreview":"Paper 4: TCGFormer: Time-Aware Cybersecurity Knowledge Graph Reasoning for Vulnerability Analysis","textChars":97,"textLines":1,"bbox":[74,158,338,64]}
+{"kind":"textbox","id":"sh/7ahcjqx4","slide":10,"text":"Authors/Year: IEEE Journals & Magazine (2025)\nMethodology: Time-aware KG reasoning with entity encoding, temporal-relation attention, co-exploitation modelling, and link prediction.\nAdvantages: Captures temporal co-exploitation of multiple vulnerabilities; improves exploit-chain realism over static CVSS-style scoring.\nLimitations: Requires reliable timestamped vulnerability data; evaluated mainly on software vulnerabilities.\nContribution to AIG-CPAP: Informs attack-path reasoning beyond static severity scores.","textPreview":"Authors/Year: IEEE Journals & Magazine (2025) | Methodology: Time-aware KG reasoning with entity encoding, temporal-relation attention, c...","textChars":515,"textLines":5,"bbox":[74,232,338,402]}
+{"kind":"shape","id":"sh/698balgj","slide":10,"bbox":[466,142,370,520]}
+{"kind":"textbox","id":"sh/tczulgfa","slide":10,"text":"Paper 5: A Survey on Cybersecurity Knowledge Graph Construction","textPreview":"Paper 5: A Survey on Cybersecurity Knowledge Graph Construction","textChars":63,"textLines":1,"bbox":[482,158,338,64]}
+{"kind":"textbox","id":"sh/8bqtcvyp","slide":10,"text":"Authors/Year: Zhao, Jiang, Han, Li & Peng (2024)\nMethodology: Systematic survey of entity extraction, relation extraction, ontology alignment, embedding, and proactive cyber-risk assessment.\nAdvantages: Comprehensive taxonomy connecting KG construction techniques to situational-awareness and risk-assessment tasks.\nLimitations: No new experimental system; does not resolve heterogeneity and scalability challenges.\nContribution to AIG-CPAP: Frames the KG fusion pipeline for heterogeneous government artifacts.","textPreview":"Authors/Year: Zhao, Jiang, Han, Li & Peng (2024) | Methodology: Systematic survey of entity extraction, relation extraction, ontology ali...","textChars":511,"textLines":5,"bbox":[482,232,338,402]}
+{"kind":"shape","id":"sh/vehcnqxg","slide":10,"bbox":[874,142,370,520]}
+{"kind":"textbox","id":"sh/ud8belgv","slide":10,"text":"Paper 6: Towards the Automation of Attack Graph-Based Risk Assessment with OSCAL","textPreview":"Paper 6: Towards the Automation of Attack Graph-Based Risk Assessment with OSCAL","textChars":80,"textLines":1,"bbox":[890,158,338,64]}
+{"kind":"textbox","id":"sh/h0jup0f6","slide":10,"text":"Authors/Year: Koufos, Christopoulou, Xilouris, Kourtis, Souvalioti & Trakadas (2025)\nMethodology: Automates attack-graph generation from asset/vulnerability inventories and maps results to NIST OSCAL artifacts.\nAdvantages: Bridges technical attack-graph analysis with standardized compliance documentation.\nLimitations: Limited case studies; scalability to large government environments not demonstrated; no procedural risk.\nContribution to AIG-CPAP: Supports compliance-mapped reporting and attack graph risk assessment.","textPreview":"Authors/Year: Koufos, Christopoulou, Xilouris, Kourtis, Souvalioti & Trakadas (2025) | Methodology: Automates attack-graph generation fro...","textChars":521,"textLines":5,"bbox":[890,232,338,402]}
+{"kind":"notes","id":"nt/ub5lfp","slide":10,"text":"[Sources]\nSource: Final Report.docx, AI Government Cybersecurity Posture Assessment Platform (AIG-CPAP)."}
+{"kind":"slide","id":"sl/8g9bed","slide":11,"title":"JUDEX / AIG-CPAP","textShapes":9}
+{"kind":"shape","id":"sh/z2h07u50","slide":11,"bbox":[0,0,1.4,720]}
+{"kind":"shape","id":"sh/03qh0zml","slide":11,"bbox":[64,0,1.4,720]}
+{"kind":"shape","id":"sh/l4zi94n6","slide":11,"bbox":[128,0,1.4,720]}
+{"kind":"shape","id":"sh/qd8zu54j","slide":11,"bbox":[192,0,1.4,720]}
+{"kind":"shape","id":"sh/reh03a54","slide":11,"bbox":[256,0,1.4,720]}
+{"kind":"shape","id":"sh/cfqhwfmp","slide":11,"bbox":[320,0,1.4,720]}
+{"kind":"shape","id":"sh/d0zi5kna","slide":11,"bbox":[384,0,1.4,720]}
+{"kind":"shape","id":"sh/29ozq54n","slide":11,"bbox":[448,0,1.4,720]}
+{"kind":"shape","id":"sh/3ax0za58","slide":11,"bbox":[512,0,1.4,720]}
+{"kind":"shape","id":"sh/jypc3qt0","slide":11,"bbox":[576,0,1.4,720]}
+{"kind":"shape","id":"sh/ixgvalsf","slide":11,"bbox":[640,0,1.4,720]}
+{"kind":"shape","id":"sh/50ru50b6","slide":11,"bbox":[704,0,1.4,720]}
+{"kind":"shape","id":"sh/4zydcval","slide":11,"bbox":[768,0,1.4,720]}
+{"kind":"shape","id":"sh/r29w7q9c","slide":11,"bbox":[832,0,1.4,720]}
+{"kind":"shape","id":"sh/610velsr","slide":11,"bbox":[896,0,1.4,720]}
+{"kind":"shape","id":"sh/tore90r2","slide":11,"bbox":[960,0,1.4,720]}
+{"kind":"shape","id":"sh/s3idgvax","slide":11,"bbox":[1024,0,1.4,720]}
+{"kind":"shape","id":"sh/n65cv6ts","slide":11,"bbox":[1088,0,1.4,720]}
+{"kind":"shape","id":"sh/m5wv21s7","slide":11,"bbox":[1152,0,1.4,720]}
+{"kind":"shape","id":"sh/ql4fa9cv","slide":11,"bbox":[1216,0,1.4,720]}
+{"kind":"shape","id":"sh/bmdg3etg","slide":11,"bbox":[0,0,1280,1.4]}
+{"kind":"shape","id":"sh/cnmxcju1","slide":11,"bbox":[0,64,1280,1.4]}
+{"kind":"shape","id":"sh/dovy54bm","slide":11,"bbox":[0,128,1280,1.4]}
+{"kind":"shape","id":"sh/2hkf6pcz","slide":11,"bbox":[0,192,1280,1.4]}
+{"kind":"shape","id":"sh/3itgzudk","slide":11,"bbox":[0,256,1280,1.4]}
+{"kind":"shape","id":"sh/oj2x8zu5","slide":11,"bbox":[0,320,1280,1.4]}
+{"kind":"shape","id":"sh/pkvy14ba","slide":11,"bbox":[0,384,1280,1.4]}
+{"kind":"shape","id":"sh/etkf2pcn","slide":11,"bbox":[0,448,1280,1.4]}
+{"kind":"shape","id":"sh/futgvud8","slide":11,"bbox":[0,512,1280,1.4]}
+{"kind":"shape","id":"sh/x8zi1svq","slide":11,"bbox":[0,576,1280,1.4]}
+{"kind":"shape","id":"sh/w7q18ne5","slide":11,"bbox":[0,640,1280,1.4]}
+{"kind":"shape","id":"sh/vmh0zid0","slide":11,"bbox":[0,704,1280,1.4]}
+{"kind":"shape","id":"sh/al8j6dwf","slide":11,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/9kzix8vu","slide":11,"text":"JUDEX / AIG-CPAP","textPreview":"JUDEX / AIG-CPAP","textChars":16,"textLines":1,"bbox":[58,28,360,22]}
+{"kind":"textbox","id":"sh/8jq14ne9","slide":11,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[1160,26,60,24]}
+{"kind":"textbox","id":"sh/nix0vido","slide":11,"text":"Research Papers 7-9: AI risk, CSPM automation, and XAI trust","textPreview":"Research Papers 7-9: AI risk, CSPM automation, and XAI trust","textChars":60,"textLines":1,"bbox":[58,58,1080,48]}
+{"kind":"shape","id":"sh/mhoj2dw3","slide":11,"bbox":[58,118,1164,1.4]}
+{"kind":"shape","id":"sh/lgfit8fi","slide":11,"bbox":[58,142,370,520]}
+{"kind":"textbox","id":"sh/0f6103ed","slide":11,"text":"Paper 7: AI-Integrated Cyber Security Risk Management Framework for IT Projects","textPreview":"Paper 7: AI-Integrated Cyber Security Risk Management Framework for IT Projects","textChars":79,"textLines":1,"bbox":[74,158,338,64]}
+{"kind":"textbox","id":"sh/0jy907e9","slide":11,"text":"Authors/Year: Jabbar, Al-Janabi & Syms (2024)\nMethodology: Conceptual AI-driven risk management combining ISO 31000/27032, ML-based prediction, and COBIT-aligned governance controls.\nAdvantages: Aligns AI risk prediction with governance/GRC standards, improving executive and audit acceptance.\nLimitations: Conceptual; lacks concrete model architecture, dataset, or quantitative validation.\nContribution to AIG-CPAP: Connects AI risk scoring with governance and executive reporting.","textPreview":"Authors/Year: Jabbar, Al-Janabi & Syms (2024) | Methodology: Conceptual AI-driven risk management combining ISO 31000/27032, ML-based pre...","textChars":482,"textLines":5,"bbox":[74,232,338,402]}
+{"kind":"shape","id":"sh/1k7a9cvu","slide":11,"bbox":[466,142,370,520]}
+{"kind":"textbox","id":"sh/ehgryxw3","slide":11,"text":"Paper 8: Cloud Security Posture Management: Automating Risk Detection, Compliance Enforcement and Vulnerability Remediation","textPreview":"Paper 8: Cloud Security Posture Management: Automating Risk Detection, Compliance Enforcement and Vulnerability Remediation","textChars":123,"textLines":1,"bbox":[482,158,338,64]}
+{"kind":"textbox","id":"sh/zips72do","slide":11,"text":"Authors/Year: IEEE Conference Publication (2025)\nMethodology: Automated CSPM pipeline scans IAM policies, storage, NSGs against baselines using rule- and ML-based drift/misconfiguration detectors.\nAdvantages: Reduces mean-time-to-detect; integrates continuous compliance enforcement with remediation automation.\nLimitations: Primarily cloud/IaC; does not correlate cloud findings with application-layer or organisational controls.\nContribution to AIG-CPAP: Informs Infrastructure Agent detection for IaC, cloud drift, and remediation.","textPreview":"Authors/Year: IEEE Conference Publication (2025) | Methodology: Automated CSPM pipeline scans IAM policies, storage, NSGs against baselin...","textChars":534,"textLines":5,"bbox":[482,232,338,402]}
+{"kind":"shape","id":"sh/oni94re5","slide":11,"bbox":[874,142,370,520]}
+{"kind":"textbox","id":"sh/9oradcvq","slide":11,"text":"Paper 9: Explainable AI for Cybersecurity Automation, Intelligence and Trustworthiness in Digital Twin","textPreview":"Paper 9: Explainable AI for Cybersecurity Automation, Intelligence and Trustworthiness in Digital Twin","textChars":102,"textLines":1,"bbox":[890,158,338,64]}
+{"kind":"textbox","id":"sh/mlgr2hwf","slide":11,"text":"Authors/Year: Sarker, Janicke, Mohsin, Gill & Maglaras (2024)\nMethodology: XAI-driven cybersecurity automation using SHAP/LIME-style feature attribution over ML/DL detectors in digital-twin representations.\nAdvantages: Links explainability methods to trust and governance; supports physical/cyber-physical asset modelling.\nLimitations: Conceptual; SHAP/LIME overhead and adversarial instability.\nContribution to AIG-CPAP: Supports explainable risk scoring and trustworthiness requirements.","textPreview":"Authors/Year: Sarker, Janicke, Mohsin, Gill & Maglaras (2024) | Methodology: XAI-driven cybersecurity automation using SHAP/LIME-style fe...","textChars":489,"textLines":5,"bbox":[890,232,338,402]}
+{"kind":"notes","id":"nt/8g9bed","slide":11,"text":"[Sources]\nSource: Final Report.docx, AI Government Cybersecurity Posture Assessment Platform (AIG-CPAP)."}
+{"kind":"slide","id":"sl/46na7h","slide":12,"title":"JUDEX / AIG-CPAP","textShapes":9}
+{"kind":"shape","id":"sh/qt8fydgn","slide":12,"bbox":[0,0,1.4,720]}
+{"kind":"shape","id":"sh/dwze9sfy","slide":12,"bbox":[64,0,1.4,720]}
+{"kind":"shape","id":"sh/cvqx0nyd","slide":12,"bbox":[128,0,1.4,720]}
+{"kind":"shape","id":"sh/3qxw3ixw","slide":12,"bbox":[192,0,1.4,720]}
+{"kind":"shape","id":"sh/2povudgb","slide":12,"bbox":[256,0,1.4,720]}
+{"kind":"shape","id":"sh/psfe58f2","slide":12,"bbox":[320,0,1.4,720]}
+{"kind":"shape","id":"sh/or6dw3yh","slide":12,"bbox":[384,0,1.4,720]}
+{"kind":"shape","id":"sh/f2xwzyx0","slide":12,"bbox":[448,0,1.4,720]}
+{"kind":"shape","id":"sh/e14vqtgf","slide":12,"bbox":[512,0,1.4,720]}
+{"kind":"shape","id":"sh/8fi5g3up","slide":12,"bbox":[576,0,1.4,720]}
+{"kind":"shape","id":"sh/9grm9ova","slide":12,"bbox":[640,0,1.4,720]}
+{"kind":"shape","id":"sh/md0netcj","slide":12,"bbox":[704,0,1.4,720]}
+{"kind":"shape","id":"sh/7e947yd4","slide":12,"bbox":[768,0,1.4,720]}
+{"kind":"shape","id":"sh/kby5cjed","slide":12,"bbox":[832,0,1.4,720]}
+{"kind":"shape","id":"sh/lcrm5ovy","slide":12,"bbox":[896,0,1.4,720]}
+{"kind":"shape","id":"sh/y9gna9wn","slide":12,"bbox":[960,0,1.4,720]}
+{"kind":"shape","id":"sh/zap43eds","slide":12,"bbox":[1024,0,1.4,720]}
+{"kind":"shape","id":"sh/4725onux","slide":12,"bbox":[1088,0,1.4,720]}
+{"kind":"shape","id":"sh/58b6h8v2","slide":12,"bbox":[1152,0,1.4,720]}
+{"kind":"shape","id":"sh/do7m18nm","slide":12,"bbox":[1216,0,1.4,720]}
+{"kind":"shape","id":"sh/cny583m1","slide":12,"bbox":[0,0,1280,1.4]}
+{"kind":"shape","id":"sh/r2p4zy5g","slide":12,"bbox":[0,64,1280,1.4]}
+{"kind":"shape","id":"sh/q1gn6d4v","slide":12,"bbox":[0,128,1280,1.4]}
+{"kind":"shape","id":"sh/p07mx8na","slide":12,"bbox":[0,192,1280,1.4]}
+{"kind":"shape","id":"sh/4zy543mp","slide":12,"bbox":[0,256,1280,1.4]}
+{"kind":"shape","id":"sh/3yp4vy54","slide":12,"bbox":[0,320,1280,1.4]}
+{"kind":"shape","id":"sh/2xwn2t4z","slide":12,"bbox":[0,384,1280,1.4]}
+{"kind":"shape","id":"sh/hwnmtone","slide":12,"bbox":[0,448,1280,1.4]}
+{"kind":"shape","id":"sh/gve50jmt","slide":12,"bbox":[0,512,1280,1.4]}
+{"kind":"shape","id":"sh/mpsbe5gf","slide":12,"bbox":[0,576,1280,1.4]}
+{"kind":"shape","id":"sh/7q1snah0","slide":12,"bbox":[0,640,1280,1.4]}
+{"kind":"shape","id":"sh/8ratgvy5","slide":12,"bbox":[0,704,1280,1.4]}
+{"kind":"shape","id":"sh/9sjap0zq","slide":12,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/y18balg3","slide":12,"text":"JUDEX / AIG-CPAP","textPreview":"JUDEX / AIG-CPAP","textChars":16,"textLines":1,"bbox":[58,28,360,22]}
+{"kind":"textbox","id":"sh/zm1sjqho","slide":12,"text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[1160,26,60,24]}
+{"kind":"textbox","id":"sh/knatcvy9","slide":12,"text":"Research Papers 10-12: XAI, GenAI risk lifecycle, and CVE-CWE-CPE graphs","textPreview":"Research Papers 10-12: XAI, GenAI risk lifecycle, and CVE-CWE-CPE graphs","textChars":72,"textLines":1,"bbox":[58,58,1080,48]}
+{"kind":"shape","id":"sh/lojal0zu","slide":12,"bbox":[58,118,1164,1.4]}
+{"kind":"shape","id":"sh/ax8b6lg7","slide":12,"bbox":[58,142,370,520]}
+{"kind":"textbox","id":"sh/byhsfqhs","slide":12,"text":"Paper 10: A Comprehensive Review of Explainable AI in Cybersecurity: Decoding the Black Box","textPreview":"Paper 10: A Comprehensive Review of Explainable AI in Cybersecurity: Decoding the Black Box","textChars":91,"textLines":1,"bbox":[74,158,338,64]}
+{"kind":"textbox","id":"sh/3a18rml8","slide":12,"text":"Authors/Year: ScienceDirect / Computers & Security (2025)\nMethodology: Reviews SHAP, LIME, attention visualisation, and counterfactuals across IDS, malware classification, and vulnerability triage.\nAdvantages: Consolidates XAI literature; proposes criteria for explanation fidelity and usefulness.\nLimitations: Survey-level contribution; no deployable system; does not solve accuracy-interpretability trade-off at scale.\nContribution to AIG-CPAP: Shapes evidence traces and explanation quality criteria.","textPreview":"Authors/Year: ScienceDirect / Computers & Security (2025) | Methodology: Reviews SHAP, LIME, attention visualisation, and counterfactuals...","textChars":503,"textLines":5,"bbox":[74,232,338,402]}
+{"kind":"shape","id":"sh/2ps7ihk3","slide":12,"bbox":[466,142,370,520]}
+{"kind":"textbox","id":"sh/pcjqtw3e","slide":12,"text":"Paper 11: Cybersecurity in the Age of Generative AI: A Systematic Taxonomy of AI-Powered Vulnerability Assessment and Risk Management","textPreview":"Paper 11: Cybersecurity in the Age of Generative AI: A Systematic Taxonomy of AI-Powered Vulnerability Assessment and Risk Management","textChars":133,"textLines":1,"bbox":[482,158,338,64]}
+{"kind":"textbox","id":"sh/obapkr2t","slide":12,"text":"Authors/Year: ScienceDirect / Elsevier (2025)\nMethodology: Systematic review of 100+ publications building a taxonomy of GenAI applications across detection, remediation, governance, patch generation, and SOAR.\nAdvantages: Broad lifecycle coverage; surfaces explainability/trustworthiness as prioritisation requirement.\nLimitations: Taxonomy-level survey; no model benchmarking; dual-use risks noted but not mitigated.\nContribution to AIG-CPAP: Supports GenAI-assisted vulnerability assessment and remediation planning.","textPreview":"Authors/Year: ScienceDirect / Elsevier (2025) | Methodology: Systematic review of 100+ publications building a taxonomy of GenAI applicat...","textChars":519,"textLines":5,"bbox":[482,232,338,402]}
+{"kind":"shape","id":"sh/fmhon2lc","slide":12,"bbox":[874,142,370,520]}
+{"kind":"textbox","id":"sh/el87ehkr","slide":12,"text":"Paper 12: Empowering Cybersecurity Analysis: Unifying CVE, CWE and CPE through Knowledge Graphs","textPreview":"Paper 12: Empowering Cybersecurity Analysis: Unifying CVE, CWE and CPE through Knowledge Graphs","textChars":95,"textLines":1,"bbox":[890,158,338,64]}
+{"kind":"textbox","id":"sh/1oj6pc3i","slide":12,"text":"Authors/Year: ScienceDirect / Computers & Security (2025)\nMethodology: Neo4j KG unifies CVE, CWE, and CPE feeds with CVSS-weighted Cypher risk aggregation.\nAdvantages: Simplifies cross-standard querying for vulnerability paths; supports custom aggregated risk metrics.\nLimitations: Restricted to public vulnerability-management standards; lacks organisational architecture context and compliance mapping.\nContribution to AIG-CPAP: Informs vulnerability-product-weakness graph traversal and risk aggregation.","textPreview":"Authors/Year: ScienceDirect / Computers & Security (2025) | Methodology: Neo4j KG unifies CVE, CWE, and CPE feeds with CVSS-weighted Cyph...","textChars":507,"textLines":5,"bbox":[890,232,338,402]}
+{"kind":"notes","id":"nt/46na7h","slide":12,"text":"[Sources]\nSource: Final Report.docx, AI Government Cybersecurity Posture Assessment Platform (AIG-CPAP)."}
+{"kind":"slide","id":"sl/z5eebd","slide":13,"title":"JUDEX / AIG-CPAP","textShapes":9}
+{"kind":"shape","id":"sh/5sjmt0n2","slide":13,"bbox":[0,0,1.4,720]}
+{"kind":"shape","id":"sh/ipsny54b","slide":13,"bbox":[64,0,1.4,720]}
+{"kind":"shape","id":"sh/jq14ra5w","slide":13,"bbox":[128,0,1.4,720]}
+{"kind":"shape","id":"sh/svu54fmd","slide":13,"bbox":[192,0,1.4,720]}
+{"kind":"shape","id":"sh/dw3mxkny","slide":13,"bbox":[256,0,1.4,720]}
+{"kind":"shape","id":"sh/qtcn254n","slide":13,"bbox":[320,0,1.4,720]}
+{"kind":"shape","id":"sh/rul4va5s","slide":13,"bbox":[384,0,1.4,720]}
+{"kind":"shape","id":"sh/8zqlsbm9","slide":13,"bbox":[448,0,1.4,720]}
+{"kind":"shape","id":"sh/90zmlgnu","slide":13,"bbox":[512,0,1.4,720]}
+{"kind":"shape","id":"sh/50zitozu","slide":13,"bbox":[576,0,1.4,720]}
+{"kind":"shape","id":"sh/4zqhk3i9","slide":13,"bbox":[640,0,1.4,720]}
+{"kind":"shape","id":"sh/jyh0ryho","slide":13,"bbox":[704,0,1.4,720]}
+{"kind":"shape","id":"sh/ixozyt03","slide":13,"bbox":[768,0,1.4,720]}
+{"kind":"shape","id":"sh/t4zix8zq","slide":13,"bbox":[832,0,1.4,720]}
+{"kind":"shape","id":"sh/s3q1o3i5","slide":13,"bbox":[896,0,1.4,720]}
+{"kind":"shape","id":"sh/r2h0vyhk","slide":13,"bbox":[960,0,1.4,720]}
+{"kind":"shape","id":"sh/618zmt0z","slide":13,"bbox":[1024,0,1.4,720]}
+{"kind":"shape","id":"sh/1sji18z2","slide":13,"bbox":[1088,0,1.4,720]}
+{"kind":"shape","id":"sh/gra1snyh","slide":13,"bbox":[1152,0,1.4,720]}
+{"kind":"shape","id":"sh/072tkbap","slide":13,"bbox":[1216,0,1.4,720]}
+{"kind":"shape","id":"sh/l8budgba","slide":13,"bbox":[0,0,1280,1.4]}
+{"kind":"shape","id":"sh/yl0bilsj","slide":13,"bbox":[0,64,1280,1.4]}
+{"kind":"shape","id":"sh/zm9cb6t4","slide":13,"bbox":[0,128,1280,1.4]}
+{"kind":"shape","id":"sh/8b2tova1","slide":13,"bbox":[0,192,1280,1.4]}
+{"kind":"shape","id":"sh/9cbuh0b6","slide":13,"bbox":[0,256,1280,1.4]}
+{"kind":"shape","id":"sh/m9kbmlsv","slide":13,"bbox":[0,320,1280,1.4]}
+{"kind":"shape","id":"sh/natcfqtg","slide":13,"bbox":[0,384,1280,1.4]}
+{"kind":"shape","id":"sh/ofitcrah","slide":13,"bbox":[0,448,1280,1.4]}
+{"kind":"shape","id":"sh/pgra5wb2","slide":13,"bbox":[0,512,1280,1.4]}
+{"kind":"shape","id":"sh/raxwrudk","slide":13,"bbox":[0,576,1280,1.4]}
+{"kind":"shape","id":"sh/69ofi9cz","slide":13,"bbox":[0,640,1280,1.4]}
+{"kind":"shape","id":"sh/twfet4vq","slide":13,"bbox":[0,704,1280,1.4]}
+{"kind":"shape","id":"sh/sb6xkzu5","slide":13,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/j6xwnudo","slide":13,"text":"JUDEX / AIG-CPAP","textPreview":"JUDEX / AIG-CPAP","textChars":16,"textLines":1,"bbox":[58,28,360,22]}
+{"kind":"textbox","id":"sh/i54vepc3","slide":13,"text":"13","textPreview":"13","textChars":2,"textLines":1,"bbox":[1160,26,60,24]}
+{"kind":"textbox","id":"sh/58fep4ve","slide":13,"text":"Research Papers 13-15: ICS analytics, APT attribution, and critical infrastructure response","textPreview":"Research Papers 13-15: ICS analytics, APT attribution, and critical infrastructure response","textChars":91,"textLines":1,"bbox":[58,58,1080,48]}
+{"kind":"shape","id":"sh/476dgzu9","slide":13,"bbox":[58,118,1164,1.4]}
+{"kind":"shape","id":"sh/v2dwjadc","slide":13,"bbox":[58,142,370,520]}
+{"kind":"textbox","id":"sh/a14va5cr","slide":13,"text":"Paper 13: BRIDG-ICS: AI-Grounded Knowledge Graphs for Intelligent Threat Analytics in Industry 5.0 Cyber-Physical Systems","textPreview":"Paper 13: BRIDG-ICS: AI-Grounded Knowledge Graphs for Intelligent Threat Analytics in Industry 5.0 Cyber-Physical Systems","textChars":121,"textLines":1,"bbox":[74,158,338,64]}
+{"kind":"textbox","id":"sh/a9ozed8b","slide":13,"text":"Authors/Year: Nandiya, Mohsin, Ibrahim, Sarker & Janicke (2026)\nMethodology: Fuses ICS/OT asset, vulnerability, and adversarial-behaviour data using domain-specific LLMs for entity/relation extraction.\nAdvantages: Bridges cyber and physical/OT security; LLM enrichment reduces manual ontology population.\nLimitations: Validated on simulated industrial scenarios; OT focus does not extend to general government IT governance risk.\nContribution to AIG-CPAP: Supports LLM-assisted KG enrichment from unstructured threat text.","textPreview":"Authors/Year: Nandiya, Mohsin, Ibrahim, Sarker & Janicke (2026) | Methodology: Fuses ICS/OT asset, vulnerability, and adversarial-behavio...","textChars":522,"textLines":5,"bbox":[74,232,338,402]}
+{"kind":"shape","id":"sh/bax0ni9w","slide":13,"bbox":[466,142,370,520]}
+{"kind":"textbox","id":"sh/cb6hgnqh","slide":13,"text":"Paper 14: CSKG4APT: A Cybersecurity Knowledge Graph for Advanced Persistent Threat Organization Attribution","textPreview":"Paper 14: CSKG4APT: A Cybersecurity Knowledge Graph for Advanced Persistent Threat Organization Attribution","textChars":107,"textLines":1,"bbox":[482,158,338,64]}
+{"kind":"textbox","id":"sh/xczipsr2","slide":13,"text":"Authors/Year: Ren, Xiao, Zhou, Zhang & Tian (2023)\nMethodology: APT-focused KG links threat actor, malware, TTP, and campaign entities; graph embeddings attribute observed evidence to APT organisations.\nAdvantages: Strong empirical attribution accuracy; supports attack-path and threat-actor reasoning.\nLimitations: Relies on rich labelled APT reports, unevenly available across sectors and regions.\nContribution to AIG-CPAP: Informs threat-actor reasoning and advanced persistent threat context.","textPreview":"Authors/Year: Ren, Xiao, Zhou, Zhang & Tian (2023) | Methodology: APT-focused KG links threat actor, malware, TTP, and campaign entities;...","textChars":496,"textLines":5,"bbox":[482,232,338,402]}
+{"kind":"shape","id":"sh/2lozad8f","slide":13,"bbox":[874,142,370,520]}
+{"kind":"textbox","id":"sh/nmx0jy90","slide":13,"text":"Paper 15: AI-Driven Threat Detection and Response Framework for Protecting U.S. Critical Infrastructure from Cyberattacks","textPreview":"Paper 15: AI-Driven Threat Detection and Response Framework for Protecting U.S. Critical Infrastructure from Cyberattacks","textChars":121,"textLines":1,"bbox":[890,158,338,64]}
+{"kind":"textbox","id":"sh/on6hc3ql","slide":13,"text":"Authors/Year: International Cybersecurity Law Review / Springer (2026)\nMethodology: AI/ML threat-detection and automated-response framework aligned with NIST CSF 2.0 and sector-specific critical-infrastructure regulation.\nAdvantages: Connects technical AI outputs to regulatory/compliance obligations for critical infrastructure.\nLimitations: Framework-level proposal with limited quantitative benchmarking; centered on critical infrastructure.\nContribution to AIG-CPAP: Supports compliance-aware detection and government-ready response framing.","textPreview":"Authors/Year: International Cybersecurity Law Review / Springer (2026) | Methodology: AI/ML threat-detection and automated-response frame...","textChars":545,"textLines":5,"bbox":[890,232,338,402]}
+{"kind":"notes","id":"nt/z5eebd","slide":13,"text":"[Sources]\nSource: Final Report.docx, AI Government Cybersecurity Posture Assessment Platform (AIG-CPAP)."}
+{"kind":"slide","id":"sl/4v5yr8","slide":14,"title":"JUDEX / AIG-CPAP","textShapes":21}
+{"kind":"shape","id":"sh/0zeh0vi1","slide":14,"bbox":[0,0,1.4,720]}
+{"kind":"shape","id":"sh/fy50rq1g","slide":14,"bbox":[64,0,1.4,720]}
+{"kind":"shape","id":"sh/exwzyl0v","slide":14,"bbox":[128,0,1.4,720]}
+{"kind":"shape","id":"sh/dwnipgja","slide":14,"bbox":[192,0,1.4,720]}
+{"kind":"shape","id":"sh/svehwbi5","slide":14,"bbox":[256,0,1.4,720]}
+{"kind":"shape","id":"sh/ru5gnq1k","slide":14,"bbox":[320,0,1.4,720]}
+{"kind":"shape","id":"sh/qtwzul0z","slide":14,"bbox":[384,0,1.4,720]}
+{"kind":"shape","id":"sh/xsri1kju","slide":14,"bbox":[448,0,1.4,720]}
+{"kind":"shape","id":"sh/crih8fi9","slide":14,"bbox":[512,0,1.4,720]}
+{"kind":"shape","id":"sh/e14ri90j","slide":14,"bbox":[576,0,1.4,720]}
+{"kind":"shape","id":"sh/z2xsbe14","slide":14,"bbox":[640,0,1.4,720]}
+{"kind":"shape","id":"sh/0369kjip","slide":14,"bbox":[704,0,1.4,720]}
+{"kind":"shape","id":"sh/14fadoju","slide":14,"bbox":[768,0,1.4,720]}
+{"kind":"shape","id":"sh/qx4re907","slide":14,"bbox":[832,0,1.4,720]}
+{"kind":"shape","id":"sh/ryds7u1s","slide":14,"bbox":[896,0,1.4,720]}
+{"kind":"shape","id":"sh/czm9gzid","slide":14,"bbox":[960,0,1.4,720]}
+{"kind":"shape","id":"sh/d0va94jy","slide":14,"bbox":[1024,0,1.4,720]}
+{"kind":"shape","id":"sh/atobqt0r","slide":14,"bbox":[1088,0,1.4,720]}
+{"kind":"shape","id":"sh/buhsjyhc","slide":14,"bbox":[1152,0,1.4,720]}
+{"kind":"shape","id":"sh/72pgvmdc","slide":14,"bbox":[1216,0,1.4,720]}
+{"kind":"shape","id":"sh/61gfm1cr","slide":14,"bbox":[0,0,1280,1.4]}
+{"kind":"shape","id":"sh/t47yxwvi","slide":14,"bbox":[0,64,1280,1.4]}
+{"kind":"shape","id":"sh/83yxorux","slide":14,"bbox":[0,128,1280,1.4]}
+{"kind":"shape","id":"sh/vq9gz6d8","slide":14,"bbox":[0,192,1280,1.4]}
+{"kind":"shape","id":"sh/upgfq1c3","slide":14,"bbox":[0,256,1280,1.4]}
+{"kind":"shape","id":"sh/hsry1gve","slide":14,"bbox":[0,320,1280,1.4]}
+{"kind":"shape","id":"sh/grihsbut","slide":14,"bbox":[0,384,1280,1.4]}
+{"kind":"shape","id":"sh/3u9g3qdk","slide":14,"bbox":[0,448,1280,1.4]}
+{"kind":"shape","id":"sh/it0zulcz","slide":14,"bbox":[0,512,1280,1.4]}
+{"kind":"shape","id":"sh/0z2xkvad","slide":14,"bbox":[0,576,1280,1.4]}
+{"kind":"shape","id":"sh/10bytgri","slide":14,"bbox":[0,640,1280,1.4]}
+{"kind":"shape","id":"sh/exkfils7","slide":14,"bbox":[0,704,1280,1.4]}
+{"kind":"shape","id":"sh/fytwrq9s","slide":14,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/svixgba1","slide":14,"text":"JUDEX / AIG-CPAP","textPreview":"JUDEX / AIG-CPAP","textChars":16,"textLines":1,"bbox":[58,28,360,22]}
+{"kind":"textbox","id":"sh/dwrepgrm","slide":14,"text":"14","textPreview":"14","textChars":2,"textLines":1,"bbox":[1160,26,60,24]}
+{"kind":"textbox","id":"sh/qt0fe1sv","slide":14,"text":"The methodology moves from multimodal evidence to explainable reporting in six stages","textPreview":"The methodology moves from multimodal evidence to explainable reporting in six stages","textChars":85,"textLines":1,"bbox":[58,58,1080,48]}
+{"kind":"shape","id":"sh/ru9wn69g","slide":14,"bbox":[58,118,1164,1.4]}
+{"kind":"shape","id":"sh/4rixcba5","slide":14,"bbox":[62,150,360,160]}
+{"kind":"textbox","id":"sh/5srelwrq","slide":14,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[78,164,26,26]}
+{"kind":"textbox","id":"sh/tcnuts7i","slide":14,"text":"Stage 1 - Multimodal Data Ingestion","textPreview":"Stage 1 - Multimodal Data Ingestion","textChars":35,"textLines":1,"bbox":[112,164,326,30]}
+{"kind":"textbox","id":"sh/8betk7qx","slide":14,"text":"Source code, IaC/cloud exports, architecture diagrams, security documents, SOPs, employee/permission tables, and high-value logs.","textPreview":"Source code, IaC/cloud exports, architecture diagrams, security documents, SOPs, employee/permission tables, and high-value logs.","textChars":129,"textLines":1,"bbox":[80,200,324,100]}
+{"kind":"shape","id":"sh/7a5cr2pc","slide":14,"bbox":[422,230,28,1.4]}
+{"kind":"shape","id":"sh/69wbix8r","slide":14,"bbox":[460,150,360,160]}
+{"kind":"textbox","id":"sh/h07uxc7e","slide":14,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[476,164,26,26]}
+{"kind":"textbox","id":"sh/gzydo7qt","slide":14,"text":"Stage 2 - Preprocessing and Entity Extraction","textPreview":"Stage 2 - Preprocessing and Entity Extraction","textChars":45,"textLines":1,"bbox":[510,164,326,30]}
+{"kind":"textbox","id":"sh/vypcv2p8","slide":14,"text":"Tree-sitter, IaC parsers, Docling, PyMuPDF, python-docx, and log parsers extract assets, users, permissions, vulnerabilities, configurations.","textPreview":"Tree-sitter, IaC parsers, Docling, PyMuPDF, python-docx, and log parsers extract assets, users, permissions, vulnerabilities, configurati...","textChars":141,"textLines":1,"bbox":[478,200,324,100]}
+{"kind":"shape","id":"sh/uxwvmx8n","slide":14,"bbox":[820,230,28,1.4]}
+{"kind":"shape","id":"sh/x43ul87a","slide":14,"bbox":[858,150,360,160]}
+{"kind":"textbox","id":"sh/w3utcnqp","slide":14,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[874,164,26,26]}
+{"kind":"textbox","id":"sh/29srm9on","slide":14,"text":"Stage 3 - Domain-Specific AI Analysis","textPreview":"Stage 3 - Domain-Specific AI Analysis","textChars":37,"textLines":1,"bbox":[908,164,326,30]}
+{"kind":"textbox","id":"sh/na1sfe5s","slide":14,"text":"Seven parallel agents produce structured findings with severity, confidence, affected assets, and source artifact references.","textPreview":"Seven parallel agents produce structured findings with severity, confidence, affected assets, and source artifact references.","textChars":125,"textLines":1,"bbox":[876,200,324,100]}
+{"kind":"shape","id":"sh/oba9oj6d","slide":14,"bbox":[1218,230,28,1.4]}
+{"kind":"shape","id":"sh/pcjahony","slide":14,"bbox":[62,360,360,160]}
+{"kind":"textbox","id":"sh/adsrqtoj","slide":14,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[78,374,26,26]}
+{"kind":"textbox","id":"sh/belsjy54","slide":14,"text":"Stage 4 - Knowledge Graph Fusion","textPreview":"Stage 4 - Knowledge Graph Fusion","textChars":32,"textLines":1,"bbox":[112,374,326,30]}
+{"kind":"textbox","id":"sh/cfu9s36p","slide":14,"text":"Coordinator merges, deduplicates, validates relationships, scores confidence, and updates Neo4j graph.","textPreview":"Coordinator merges, deduplicates, validates relationships, scores confidence, and updates Neo4j graph.","textChars":102,"textLines":1,"bbox":[80,410,324,100]}
+{"kind":"shape","id":"sh/xg3al8na","slide":14,"bbox":[422,440,28,1.4]}
+{"kind":"shape","id":"sh/qh8repof","slide":14,"bbox":[460,360,360,160]}
+{"kind":"textbox","id":"sh/rih87upk","slide":14,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[476,374,26,26]}
+{"kind":"textbox","id":"sh/vmdofqlc","slide":14,"text":"Stage 5 - Risk Estimation and Attack-Path Reasoning","textPreview":"Stage 5 - Risk Estimation and Attack-Path Reasoning","textChars":51,"textLines":1,"bbox":[510,374,326,30]}
+{"kind":"textbox","id":"sh/ul4nml47","slide":14,"text":"Composite risk = exploitability x impact x asset criticality; multi-hop traversal identifies exploitation chains.","textPreview":"Composite risk = exploitability x impact x asset criticality; multi-hop traversal identifies exploitation chains.","textChars":113,"textLines":1,"bbox":[478,410,324,100]}
+{"kind":"shape","id":"sh/hof6h03i","slide":14,"bbox":[820,440,28,1.4]}
+{"kind":"shape","id":"sh/gnmpovmx","slide":14,"bbox":[858,360,360,160]}
+{"kind":"textbox","id":"sh/7idobq5g","slide":14,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[874,374,26,26]}
+{"kind":"textbox","id":"sh/6x4nil4v","slide":14,"text":"Stage 6 - Explainable Prioritization and Reporting","textPreview":"Stage 6 - Explainable Prioritization and Reporting","textChars":50,"textLines":1,"bbox":[908,374,326,30]}
+{"kind":"textbox","id":"sh/tkv6d03m","slide":14,"text":"Remediation planner ranks fixes and produces dashboards, compliance mappings, PDF/HTML reports, and phased roadmaps.","textPreview":"Remediation planner ranks fixes and produces dashboards, compliance mappings, PDF/HTML reports, and phased roadmaps.","textChars":116,"textLines":1,"bbox":[876,410,324,100]}
+{"kind":"notes","id":"nt/4v5yr8","slide":14,"text":"[Sources]\nSource: Final Report.docx, AI Government Cybersecurity Posture Assessment Platform (AIG-CPAP)."}
+{"kind":"slide","id":"sl/nvp1yv","slide":15,"title":"JUDEX / AIG-CPAP","textShapes":21}
+{"kind":"shape","id":"sh/mx4zqp87","slide":15,"bbox":[0,0,1.4,720]}
+{"kind":"shape","id":"sh/90vyl47i","slide":15,"bbox":[64,0,1.4,720]}
+{"kind":"shape","id":"sh/8zmhszqx","slide":15,"bbox":[128,0,1.4,720]}
+{"kind":"shape","id":"sh/zutgfupg","slide":15,"bbox":[192,0,1.4,720]}
+{"kind":"shape","id":"sh/ytkfmp8v","slide":15,"bbox":[256,0,1.4,720]}
+{"kind":"shape","id":"sh/lwvyh47m","slide":15,"bbox":[320,0,1.4,720]}
+{"kind":"shape","id":"sh/kv2xozq1","slide":15,"bbox":[384,0,1.4,720]}
+{"kind":"shape","id":"sh/b6tgbapk","slide":15,"bbox":[448,0,1.4,720]}
+{"kind":"shape","id":"sh/a5kfi58z","slide":15,"bbox":[512,0,1.4,720]}
+{"kind":"shape","id":"sh/8ze503m9","slide":15,"bbox":[576,0,1.4,720]}
+{"kind":"shape","id":"sh/90n6983u","slide":15,"bbox":[640,0,1.4,720]}
+{"kind":"shape","id":"sh/mxwnyt4j","slide":15,"bbox":[704,0,1.4,720]}
+{"kind":"shape","id":"sh/7y5o7ylo","slide":15,"bbox":[768,0,1.4,720]}
+{"kind":"shape","id":"sh/kvu5w3md","slide":15,"bbox":[832,0,1.4,720]}
+{"kind":"shape","id":"sh/lw36583y","slide":15,"bbox":[896,0,1.4,720]}
+{"kind":"shape","id":"sh/ytcnut47","slide":15,"bbox":[960,0,1.4,720]}
+{"kind":"shape","id":"sh/zulo3yls","slide":15,"bbox":[1024,0,1.4,720]}
+{"kind":"shape","id":"sh/4ry58nmh","slide":15,"bbox":[1088,0,1.4,720]}
+{"kind":"shape","id":"sh/5s76hs32","slide":15,"bbox":[1152,0,1.4,720]}
+{"kind":"shape","id":"sh/d8361sv6","slide":15,"bbox":[1216,0,1.4,720]}
+{"kind":"shape","id":"sh/s7u5snel","slide":15,"bbox":[0,0,1280,1.4]}
+{"kind":"shape","id":"sh/rmlozid0","slide":15,"bbox":[0,64,1280,1.4]}
+{"kind":"shape","id":"sh/qlcnqdwv","slide":15,"bbox":[0,128,1280,1.4]}
+{"kind":"shape","id":"sh/5k36x8va","slide":15,"bbox":[0,192,1280,1.4]}
+{"kind":"shape","id":"sh/4ju5onep","slide":15,"bbox":[0,256,1280,1.4]}
+{"kind":"shape","id":"sh/3i14vid4","slide":15,"bbox":[0,320,1280,1.4]}
+{"kind":"shape","id":"sh/ihsnmdwj","slide":15,"bbox":[0,384,1280,1.4]}
+{"kind":"shape","id":"sh/hgjmt8vy","slide":15,"bbox":[0,448,1280,1.4]}
+{"kind":"shape","id":"sh/gfa5k3ed","slide":15,"bbox":[0,512,1280,1.4]}
+{"kind":"shape","id":"sh/6l83u9cb","slide":15,"bbox":[0,576,1280,1.4]}
+{"kind":"shape","id":"sh/7mhknetw","slide":15,"bbox":[0,640,1280,1.4]}
+{"kind":"shape","id":"sh/8nqlwjuh","slide":15,"bbox":[0,704,1280,1.4]}
+{"kind":"shape","id":"sh/toz2pob2","slide":15,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/yxo3qpcf","slide":15,"text":"JUDEX / AIG-CPAP","textPreview":"JUDEX / AIG-CPAP","textChars":16,"textLines":1,"bbox":[58,28,360,22]}
+{"kind":"textbox","id":"sh/jixkjut0","slide":15,"text":"15","textPreview":"15","textChars":2,"textLines":1,"bbox":[1160,26,60,24]}
+{"kind":"textbox","id":"sh/kj6lszu5","slide":15,"text":"AI Models Overview","textPreview":"AI Models Overview","textChars":18,"textLines":1,"bbox":[58,58,1080,48]}
+{"kind":"shape","id":"sh/lkz2l4bq","slide":15,"bbox":[58,118,1164,1.4]}
+{"kind":"shape","id":"sh/atojmpc3","slide":15,"bbox":[62,148,360,112]}
+{"kind":"textbox","id":"sh/buxkfuto","slide":15,"text":"Qwen 3 Instruct","textPreview":"Qwen 3 Instruct","textChars":15,"textLines":1,"bbox":[80,162,326,30]}
+{"kind":"textbox","id":"sh/36hgrqxk","slide":15,"text":"General reasoning for infrastructure, API, network, identity, event, document, and coordination tasks.","textPreview":"General reasoning for infrastructure, API, network, identity, event, document, and coordination tasks.","textChars":102,"textLines":1,"bbox":[80,198,324,52]}
+{"kind":"shape","id":"sh/258zylwz","slide":15,"bbox":[460,148,360,112]}
+{"kind":"textbox","id":"sh/p8zyt0fa","slide":15,"text":"Qwen2.5-Coder","textPreview":"Qwen2.5-Coder","textChars":13,"textLines":1,"bbox":[478,162,326,30]}
+{"kind":"textbox","id":"sh/o7qh0ve5","slide":15,"text":"Code LLM for authentication, authorization, SQL injection, secrets, crypto misuse, and insecure API patterns.","textPreview":"Code LLM for authentication, authorization, SQL injection, secrets, crypto misuse, and insecure API patterns.","textChars":109,"textLines":1,"bbox":[478,198,324,52]}
+{"kind":"shape","id":"sh/fixgnqx8","slide":15,"bbox":[858,148,360,112]}
+{"kind":"textbox","id":"sh/ehozulgn","slide":15,"text":"DeepSeek-Coder","textPreview":"DeepSeek-Coder","textChars":14,"textLines":1,"bbox":[876,162,326,30]}
+{"kind":"textbox","id":"sh/1kfypgfe","slide":15,"text":"Alternative code LLM for source-code security analysis.","textPreview":"Alternative code LLM for source-code security analysis.","textChars":55,"textLines":1,"bbox":[876,198,324,52]}
+{"kind":"shape","id":"sh/gj6hwvet","slide":15,"bbox":[62,300,360,112]}
+{"kind":"textbox","id":"sh/rexgj6xc","slide":15,"text":"Llama 3.1 Instruct","textPreview":"Llama 3.1 Instruct","textChars":18,"textLines":1,"bbox":[80,314,326,30]}
+{"kind":"textbox","id":"sh/6d4zq1gr","slide":15,"text":"General LLM option for infrastructure configuration reasoning.","textPreview":"General LLM option for infrastructure configuration reasoning.","textChars":62,"textLines":1,"bbox":[80,350,324,52]}
+{"kind":"shape","id":"sh/wj2d07ep","slide":15,"bbox":[460,300,360,112]}
+{"kind":"textbox","id":"sh/hkbetcva","slide":15,"text":"Tree-sitter","textPreview":"Tree-sitter","textChars":11,"textLines":1,"bbox":[478,314,326,30]}
+{"kind":"textbox","id":"sh/uhkvyxwj","slide":15,"text":"Language-agnostic parsing and chunking for Java, Python, and JavaScript codebases.","textPreview":"Language-agnostic parsing and chunking for Java, Python, and JavaScript codebases.","textChars":82,"textLines":1,"bbox":[478,350,324,52]}
+{"kind":"shape","id":"sh/vitwr2d4","slide":15,"bbox":[858,300,360,112]}
+{"kind":"textbox","id":"sh/4nmd4rul","slide":15,"text":"Neo4j","textPreview":"Neo4j","textChars":5,"textLines":1,"bbox":[876,314,326,30]}
+{"kind":"textbox","id":"sh/5ovexwv6","slide":15,"text":"Cyber Knowledge Graph for assets, relationships, findings, and attack-path traversal.","textPreview":"Cyber Knowledge Graph for assets, relationships, findings, and attack-path traversal.","textChars":85,"textLines":1,"bbox":[876,350,324,52]}
+{"kind":"shape","id":"sh/ilkv2hcf","slide":15,"bbox":[62,452,360,112]}
+{"kind":"textbox","id":"sh/jmdwvmd0","slide":15,"text":"PostgreSQL + pgvector","textPreview":"PostgreSQL + pgvector","textChars":21,"textLines":1,"bbox":[80,466,326,30]}
+{"kind":"textbox","id":"sh/kridsneh","slide":15,"text":"Stores BGE-M3 embeddings for RAG over standards and security documents.","textPreview":"Stores BGE-M3 embeddings for RAG over standards and security documents.","textChars":71,"textLines":1,"bbox":[80,502,324,52]}
+{"kind":"shape","id":"sh/lsrelsv2","slide":15,"bbox":[460,452,360,112]}
+{"kind":"textbox","id":"sh/1cz29kje","slide":15,"text":"Ollama","textPreview":"Ollama","textChars":6,"textLines":1,"bbox":[478,466,326,30]}
+{"kind":"textbox","id":"sh/gbql0f2t","slide":15,"text":"Offline LLM serving for air-gapped government deployments.","textPreview":"Offline LLM serving for air-gapped government deployments.","textChars":58,"textLines":1,"bbox":[478,502,324,52]}
+{"kind":"shape","id":"sh/fahk7a1o","slide":15,"bbox":[858,452,360,112]}
+{"kind":"textbox","id":"sh/e983ypk3","slide":15,"text":"FastAPI + React + Docker","textPreview":"FastAPI + React + Docker","textChars":24,"textLines":1,"bbox":[876,466,326,30]}
+{"kind":"textbox","id":"sh/p0j2d4jq","slide":15,"text":"Backend, frontend, and private-server Docker Compose deployment foundation.","textPreview":"Backend, frontend, and private-server Docker Compose deployment foundation.","textChars":75,"textLines":1,"bbox":[876,502,324,52]}
+{"kind":"notes","id":"nt/nvp1yv","slide":15,"text":"[Sources]\nSource: Final Report.docx, AI Government Cybersecurity Posture Assessment Platform (AIG-CPAP)."}
+{"kind":"slide","id":"sl/tbc4z9","slide":16,"title":"JUDEX / AIG-CPAP","textShapes":7}
+{"kind":"shape","id":"sh/its7qtcj","slide":16,"bbox":[0,0,1.4,720]}
+{"kind":"shape","id":"sh/5gjql8vu","slide":16,"bbox":[64,0,1.4,720]}
+{"kind":"shape","id":"sh/4vaps3u9","slide":16,"bbox":[128,0,1.4,720]}
+{"kind":"shape","id":"sh/vqh8fyds","slide":16,"bbox":[192,0,1.4,720]}
+{"kind":"shape","id":"sh/up87mtc7","slide":16,"bbox":[256,0,1.4,720]}
+{"kind":"shape","id":"sh/hsjqhovy","slide":16,"bbox":[320,0,1.4,720]}
+{"kind":"shape","id":"sh/grapojud","slide":16,"bbox":[384,0,1.4,720]}
+{"kind":"shape","id":"sh/fml8ridw","slide":16,"bbox":[448,0,1.4,720]}
+{"kind":"shape","id":"sh/elcrydcr","slide":16,"bbox":[512,0,1.4,720]}
+{"kind":"shape","id":"sh/s32d43ad","slide":16,"bbox":[576,0,1.4,720]}
+{"kind":"shape","id":"sh/d4bed8by","slide":16,"bbox":[640,0,1.4,720]}
+{"kind":"shape","id":"sh/q1kv2ts7","slide":16,"bbox":[704,0,1.4,720]}
+{"kind":"shape","id":"sh/r2twbyts","slide":16,"bbox":[768,0,1.4,720]}
+{"kind":"shape","id":"sh/4zid03ah","slide":16,"bbox":[832,0,1.4,720]}
+{"kind":"shape","id":"sh/50bu9obm","slide":16,"bbox":[896,0,1.4,720]}
+{"kind":"shape","id":"sh/id0vytsb","slide":16,"bbox":[960,0,1.4,720]}
+{"kind":"shape","id":"sh/3e9c7ytw","slide":16,"bbox":[1024,0,1.4,720]}
+{"kind":"shape","id":"sh/gbidwja5","slide":16,"bbox":[1088,0,1.4,720]}
+{"kind":"shape","id":"sh/hcru5obq","slide":16,"bbox":[1152,0,1.4,720]}
+{"kind":"shape","id":"sh/xgz2dgzi","slide":16,"bbox":[1216,0,1.4,720]}
+{"kind":"shape","id":"sh/wvq1kbyx","slide":16,"bbox":[0,0,1280,1.4]}
+{"kind":"shape","id":"sh/buhkb6hc","slide":16,"bbox":[0,64,1280,1.4]}
+{"kind":"shape","id":"sh/at8ji1gr","slide":16,"bbox":[0,128,1280,1.4]}
+{"kind":"shape","id":"sh/9sz29gz6","slide":16,"bbox":[0,192,1280,1.4]}
+{"kind":"shape","id":"sh/orq1gbyl","slide":16,"bbox":[0,256,1280,1.4]}
+{"kind":"shape","id":"sh/nqxk76h0","slide":16,"bbox":[0,320,1280,1.4]}
+{"kind":"shape","id":"sh/mpoje1gf","slide":16,"bbox":[0,384,1280,1.4]}
+{"kind":"shape","id":"sh/toj2l0za","slide":16,"bbox":[0,448,1280,1.4]}
+{"kind":"shape","id":"sh/8nalsvy5","slide":16,"bbox":[0,512,1280,1.4]}
+{"kind":"shape","id":"sh/qt4zmxw7","slide":16,"bbox":[0,576,1280,1.4]}
+{"kind":"shape","id":"sh/rudgf2xs","slide":16,"bbox":[0,640,1280,1.4]}
+{"kind":"shape","id":"sh/svmho7ed","slide":16,"bbox":[0,704,1280,1.4]}
+{"kind":"shape","id":"sh/dwvihcfy","slide":16,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/i5kzidwb","slide":16,"text":"JUDEX / AIG-CPAP","textPreview":"JUDEX / AIG-CPAP","textChars":16,"textLines":1,"bbox":[58,28,360,22]}
+{"kind":"textbox","id":"sh/36tgbixw","slide":16,"text":"16","textPreview":"16","textChars":2,"textLines":1,"bbox":[1160,26,60,24]}
+{"kind":"textbox","id":"sh/4r2hkneh","slide":16,"text":"AI Agents Part 1: code and infrastructure evidence become structured findings","textPreview":"AI Agents Part 1: code and infrastructure evidence become structured findings","textChars":77,"textLines":1,"bbox":[58,58,1080,48]}
+{"kind":"shape","id":"sh/5svydsf2","slide":16,"bbox":[58,118,1164,1.4]}
+{"kind":"shape","id":"sh/m1ozuhwf","slide":16,"bbox":[80,150,520,410]}
+{"kind":"textbox","id":"sh/nmx0nmx0","slide":16,"text":"Source Code Security Agent","textPreview":"Source Code Security Agent","textChars":26,"textLines":1,"bbox":[96,162,488,28]}
+{"kind":"textbox","id":"sh/7edwje1g","slide":16,"text":"Purpose: Identify code-level security weaknesses.\nInput: Java, Python, JavaScript codebases.\nProcessing: Tree-sitter parsing/chunking; LLM reasoning.\nOutput: Findings on authentication, authorization, SQL injection, secrets exposure, cryptographic misuse, insecure API patterns.\nModel Used: Qwen2.5-Coder or DeepSeek-Coder.","textPreview":"Purpose: Identify code-level security weaknesses. | Input: Java, Python, JavaScript codebases. | Processing: Tree-sitter parsing/chunking...","textChars":323,"textLines":5,"bbox":[96,200,488,352]}
+{"kind":"shape","id":"sh/mt4vq90v","slide":16,"bbox":[680,150,520,410]}
+{"kind":"textbox","id":"sh/9gvelojm","slide":16,"text":"Infrastructure Configuration Agent","textPreview":"Infrastructure Configuration Agent","textChars":34,"textLines":1,"bbox":[696,162,488,28]}
+{"kind":"textbox","id":"sh/8fmdsji1","slide":16,"text":"Purpose: Detect infrastructure and configuration risk.\nInput: Terraform HCL, YAML, Dockerfile, Kubernetes manifests, firewall configurations.\nProcessing: General LLM reasoning over IaC/cloud/on-premise configs.\nOutput: Findings on open services, missing encryption, public exposure, weak IAM settings.\nModel Used: Qwen 3 Instruct or Llama 3.1 Instruct.","textPreview":"Purpose: Detect infrastructure and configuration risk. | Input: Terraform HCL, YAML, Dockerfile, Kubernetes manifests, firewall configura...","textChars":352,"textLines":5,"bbox":[696,200,488,352]}
+{"kind":"notes","id":"nt/tbc4z9","slide":16,"text":"[Sources]\nSource: Final Report.docx, AI Government Cybersecurity Posture Assessment Platform (AIG-CPAP)."}
+{"kind":"slide","id":"sl/dygxrr","slide":17,"title":"JUDEX / AIG-CPAP","textShapes":9}
+{"kind":"shape","id":"sh/udkrqdsj","slide":17,"bbox":[0,0,1.4,720]}
+{"kind":"shape","id":"sh/h0balsbu","slide":17,"bbox":[64,0,1.4,720]}
+{"kind":"shape","id":"sh/gf29snap","slide":17,"bbox":[128,0,1.4,720]}
+{"kind":"shape","id":"sh/7a9sfits","slide":17,"bbox":[192,0,1.4,720]}
+{"kind":"shape","id":"sh/690rmds7","slide":17,"bbox":[256,0,1.4,720]}
+{"kind":"shape","id":"sh/tcrah8by","slide":17,"bbox":[320,0,1.4,720]}
+{"kind":"shape","id":"sh/8bi9onad","slide":17,"bbox":[384,0,1.4,720]}
+{"kind":"shape","id":"sh/z69sbytw","slide":17,"bbox":[448,0,1.4,720]}
+{"kind":"shape","id":"sh/y50ritsb","slide":17,"bbox":[512,0,1.4,720]}
+{"kind":"shape","id":"sh/0f2tkbi9","slide":17,"bbox":[576,0,1.4,720]}
+{"kind":"shape","id":"sh/lgbadgju","slide":17,"bbox":[640,0,1.4,720]}
+{"kind":"shape","id":"sh/ydkbi10j","slide":17,"bbox":[704,0,1.4,720]}
+{"kind":"shape","id":"sh/zetsb61o","slide":17,"bbox":[768,0,1.4,720]}
+{"kind":"shape","id":"sh/cb2tgbid","slide":17,"bbox":[832,0,1.4,720]}
+{"kind":"shape","id":"sh/dcba9gjy","slide":17,"bbox":[896,0,1.4,720]}
+{"kind":"shape","id":"sh/qp0be1k7","slide":17,"bbox":[960,0,1.4,720]}
+{"kind":"shape","id":"sh/bqts761s","slide":17,"bbox":[1024,0,1.4,720]}
+{"kind":"shape","id":"sh/w7mtsvih","slide":17,"bbox":[1088,0,1.4,720]}
+{"kind":"shape","id":"sh/h8vul0j2","slide":17,"bbox":[1152,0,1.4,720]}
+{"kind":"shape","id":"sh/5sr2pw7u","slide":17,"bbox":[1216,0,1.4,720]}
+{"kind":"shape","id":"sh/4ri1gb6p","slide":17,"bbox":[0,0,1280,1.4]}
+{"kind":"shape","id":"sh/jqpkn6p4","slide":17,"bbox":[0,64,1280,1.4]}
+{"kind":"shape","id":"sh/ipgje1oj","slide":17,"bbox":[0,128,1280,1.4]}
+{"kind":"shape","id":"sh/xo72lw7y","slide":17,"bbox":[0,192,1280,1.4]}
+{"kind":"shape","id":"sh/wny1cr6d","slide":17,"bbox":[0,256,1280,1.4]}
+{"kind":"shape","id":"sh/vmpkjmps","slide":17,"bbox":[0,320,1280,1.4]}
+{"kind":"shape","id":"sh/algjaho7","slide":17,"bbox":[0,384,1280,1.4]}
+{"kind":"shape","id":"sh/9072hc72","slide":17,"bbox":[0,448,1280,1.4]}
+{"kind":"shape","id":"sh/8zy1876h","slide":17,"bbox":[0,512,1280,1.4]}
+{"kind":"shape","id":"sh/y5czid4z","slide":17,"bbox":[0,576,1280,1.4]}
+{"kind":"shape","id":"sh/z6lgbi5k","slide":17,"bbox":[0,640,1280,1.4]}
+{"kind":"shape","id":"sh/0ruhknm5","slide":17,"bbox":[0,704,1280,1.4]}
+{"kind":"shape","id":"sh/lsnidsnq","slide":17,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/q1czed43","slide":17,"text":"JUDEX / AIG-CPAP","textPreview":"JUDEX / AIG-CPAP","textChars":16,"textLines":1,"bbox":[58,28,360,22]}
+{"kind":"textbox","id":"sh/b2lg7i5o","slide":17,"text":"17","textPreview":"17","textChars":2,"textLines":1,"bbox":[1160,26,60,24]}
+{"kind":"textbox","id":"sh/c3uhgnm9","slide":17,"text":"AI Agents Part 2: APIs, networks, and identities expose cross-domain risk","textPreview":"AI Agents Part 2: APIs, networks, and identities expose cross-domain risk","textChars":73,"textLines":1,"bbox":[58,58,1080,48]}
+{"kind":"shape","id":"sh/d43y98nu","slide":17,"bbox":[58,118,1164,1.4]}
+{"kind":"shape","id":"sh/2xszat47","slide":17,"bbox":[58,150,370,430]}
+{"kind":"textbox","id":"sh/3y1g3y5c","slide":17,"text":"API Security Agent","textPreview":"API Security Agent","textChars":18,"textLines":1,"bbox":[74,162,338,28]}
+{"kind":"textbox","id":"sh/fqlwfe98","slide":17,"text":"Purpose: Assess API-facing security.\nInput: OpenAPI/Swagger, JWT/OAuth, gateway configs, dependency manifests.\nProcessing: Qwen 3 Instruct analysis.\nOutput: Authentication strength, rate limiting, token configuration, deprecated dependency exposure.\nModel Used: Qwen 3 Instruct.","textPreview":"Purpose: Assess API-facing security. | Input: OpenAPI/Swagger, JWT/OAuth, gateway configs, dependency manifests. | Processing: Qwen 3 Ins...","textChars":278,"textLines":5,"bbox":[74,200,338,372]}
+{"kind":"shape","id":"sh/upcvm98n","slide":17,"bbox":[455,150,370,430]}
+{"kind":"textbox","id":"sh/hs3eh4re","slide":17,"text":"Network Architecture Agent","textPreview":"Network Architecture Agent","textChars":26,"textLines":1,"bbox":[471,162,338,28]}
+{"kind":"textbox","id":"sh/grudojqt","slide":17,"text":"Purpose: Reason over network architecture.\nInput: Visio/Draw.io diagrams and firewall configurations.\nProcessing: Qwen 3 Instruct reasoning.\nOutput: Flat networks, missing DMZ zones, internet-facing services, single points of failure, inadequate segmentation.\nModel Used: Qwen 3 Instruct.","textPreview":"Purpose: Reason over network architecture. | Input: Visio/Draw.io diagrams and firewall configurations. | Processing: Qwen 3 Instruct rea...","textChars":288,"textLines":5,"bbox":[471,200,338,372]}
+{"kind":"shape","id":"sh/7mlcbu9c","slide":17,"bbox":[852,150,370,430]}
+{"kind":"textbox","id":"sh/6lsvip8r","slide":17,"text":"Identity & Privilege Agent","textPreview":"Identity & Privilege Agent","textChars":26,"textLines":1,"bbox":[868,162,338,28]}
+{"kind":"textbox","id":"sh/to3ed4r2","slide":17,"text":"Purpose: Surface privilege and account risk.\nInput: Employee tables, permission tables, role tables.\nProcessing: Qwen 3 Instruct analysis.\nOutput: Excessive privilege, toxic permission combinations, orphaned/shared accounts, contractor admin access.\nModel Used: Qwen 3 Instruct.","textPreview":"Purpose: Surface privilege and account risk. | Input: Employee tables, permission tables, role tables. | Processing: Qwen 3 Instruct anal...","textChars":278,"textLines":5,"bbox":[868,200,338,372]}
+{"kind":"notes","id":"nt/dygxrr","slide":17,"text":"[Sources]\nSource: Final Report.docx, AI Government Cybersecurity Posture Assessment Platform (AIG-CPAP)."}
+{"kind":"slide","id":"sl/6onww5","slide":18,"title":"JUDEX / AIG-CPAP","textShapes":9}
+{"kind":"shape","id":"sh/6lc7i18v","slide":18,"bbox":[0,0,1.4,720]}
+{"kind":"shape","id":"sh/t83qtgrm","slide":18,"bbox":[64,0,1.4,720]}
+{"kind":"shape","id":"sh/s7upkbq1","slide":18,"bbox":[128,0,1.4,720]}
+{"kind":"shape","id":"sh/ji18nm9k","slide":18,"bbox":[192,0,1.4,720]}
+{"kind":"shape","id":"sh/yhs7eh8z","slide":18,"bbox":[256,0,1.4,720]}
+{"kind":"shape","id":"sh/5kjqpwrq","slide":18,"bbox":[320,0,1.4,720]}
+{"kind":"shape","id":"sh/kjapgrq5","slide":18,"bbox":[384,0,1.4,720]}
+{"kind":"shape","id":"sh/3e58zq9o","slide":18,"bbox":[448,0,1.4,720]}
+{"kind":"shape","id":"sh/2dwrql83","slide":18,"bbox":[512,0,1.4,720]}
+{"kind":"shape","id":"sh/cbi1cvi1","slide":18,"bbox":[576,0,1.4,720]}
+{"kind":"shape","id":"sh/xcr2l0jm","slide":18,"bbox":[640,0,1.4,720]}
+{"kind":"shape","id":"sh/a9gjal0b","slide":18,"bbox":[704,0,1.4,720]}
+{"kind":"shape","id":"sh/bapkjq1w","slide":18,"bbox":[768,0,1.4,720]}
+{"kind":"shape","id":"sh/o7y1obi5","slide":18,"bbox":[832,0,1.4,720]}
+{"kind":"shape","id":"sh/p872hgjq","slide":18,"bbox":[896,0,1.4,720]}
+{"kind":"shape","id":"sh/25gjm10z","slide":18,"bbox":[960,0,1.4,720]}
+{"kind":"shape","id":"sh/n6pkf61k","slide":18,"bbox":[1024,0,1.4,720]}
+{"kind":"shape","id":"sh/03y1kbit","slide":18,"bbox":[1088,0,1.4,720]}
+{"kind":"shape","id":"sh/147idwje","slide":18,"bbox":[1152,0,1.4,720]}
+{"kind":"shape","id":"sh/h0zihsbi","slide":18,"bbox":[1216,0,1.4,720]}
+{"kind":"shape","id":"sh/gzqh8nux","slide":18,"bbox":[0,0,1280,1.4]}
+{"kind":"shape","id":"sh/fyxgfitc","slide":18,"bbox":[0,64,1280,1.4]}
+{"kind":"shape","id":"sh/uxoz6xcr","slide":18,"bbox":[0,128,1280,1.4]}
+{"kind":"shape","id":"sh/twfydsb6","slide":18,"bbox":[0,192,1280,1.4]}
+{"kind":"shape","id":"sh/8v6h4nul","slide":18,"bbox":[0,256,1280,1.4]}
+{"kind":"shape","id":"sh/7axgbitg","slide":18,"bbox":[0,320,1280,1.4]}
+{"kind":"shape","id":"sh/69oz2dcv","slide":18,"bbox":[0,384,1280,1.4]}
+{"kind":"shape","id":"sh/dsjipcbq","slide":18,"bbox":[0,448,1280,1.4]}
+{"kind":"shape","id":"sh/crahg7a5","slide":18,"bbox":[0,512,1280,1.4]}
+{"kind":"shape","id":"sh/adkfa9sn","slide":18,"bbox":[0,576,1280,1.4]}
+{"kind":"shape","id":"sh/betwje98","slide":18,"bbox":[0,640,1280,1.4]}
+{"kind":"shape","id":"sh/wf2xcjad","slide":18,"bbox":[0,704,1280,1.4]}
+{"kind":"shape","id":"sh/xgvelory","slide":18,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/m9kv69sb","slide":18,"text":"JUDEX / AIG-CPAP","textPreview":"JUDEX / AIG-CPAP","textChars":16,"textLines":1,"bbox":[58,28,360,22]}
+{"kind":"textbox","id":"sh/natwfe9w","slide":18,"text":"18","textPreview":"18","textChars":2,"textLines":1,"bbox":[1160,26,60,24]}
+{"kind":"textbox","id":"sh/ob2d8zah","slide":18,"text":"AI Agents Part 3: documents, events, and the coordinator close the loop","textPreview":"AI Agents Part 3: documents, events, and the coordinator close the loop","textChars":71,"textLines":1,"bbox":[58,58,1080,48]}
+{"kind":"shape","id":"sh/9cbeh4r2","slide":18,"bbox":[58,118,1164,1.4]}
+{"kind":"shape","id":"sh/654fitsv","slide":18,"bbox":[58,150,370,400]}
+{"kind":"textbox","id":"sh/76dwry90","slide":18,"text":"Security Document Agent","textPreview":"Security Document Agent","textChars":23,"textLines":1,"bbox":[74,162,338,28]}
+{"kind":"textbox","id":"sh/rytsnqdg","slide":18,"text":"Purpose: Identify missing, outdated, or inconsistent controls.\nInput: Security policy and compliance documents.\nProcessing: BGE-M3 embeddings in pgvector + Qwen 3 Instruct RAG against standards.\nOutput: Missing controls, outdated policies, policy inconsistencies.\nModel Used: BGE-M3 + Qwen 3 Instruct.","textPreview":"Purpose: Identify missing, outdated, or inconsistent controls. | Input: Security policy and compliance documents. | Processing: BGE-M3 em...","textChars":301,"textLines":5,"bbox":[74,200,338,342]}
+{"kind":"shape","id":"sh/qxkbe5wv","slide":18,"bbox":[455,150,370,400]}
+{"kind":"textbox","id":"sh/d0bap0vm","slide":18,"text":"Security Event Agent","textPreview":"Security Event Agent","textChars":20,"textLines":1,"bbox":[471,162,338,28]}
+{"kind":"textbox","id":"sh/sz2tgvu1","slide":18,"text":"Purpose: Summarize high-value event evidence.\nInput: Privileged access logs, DB audit logs, sensitive file access, configuration/certificate/firewall changes.\nProcessing: Qwen 3 Instruct analysis.\nOutput: Security event summaries, anomaly indicators, Knowledge Graph updates.\nModel Used: Qwen 3 Instruct.","textPreview":"Purpose: Summarize high-value event evidence. | Input: Privileged access logs, DB audit logs, sensitive file access, configuration/certif...","textChars":304,"textLines":5,"bbox":[471,200,338,342]}
+{"kind":"shape","id":"sh/3utsjqdk","slide":18,"bbox":[852,150,370,400]}
+{"kind":"textbox","id":"sh/it0balwz","slide":18,"text":"AI Coordinator","textPreview":"AI Coordinator","textChars":14,"textLines":1,"bbox":[868,162,338,28]}
+{"kind":"textbox","id":"sh/5wbal0vq","slide":18,"text":"Purpose: Multi-agent orchestration.\nInput: Shared JSON findings: Finding ID, Category, Affected Asset, Severity, Confidence, Evidence, Source Artifact, Recommended Action.\nProcessing: Merging, deduplication, cross-domain correlation, Knowledge Graph updates.\nOutput: Confirmed findings inserted into Neo4j.\nModel Used: Qwen 3 Instruct.","textPreview":"Purpose: Multi-agent orchestration. | Input: Shared JSON findings: Finding ID, Category, Affected Asset, Severity, Confidence, Evidence, ...","textChars":335,"textLines":5,"bbox":[868,200,338,342]}
+{"kind":"notes","id":"nt/6onww5","slide":18,"text":"[Sources]\nSource: Final Report.docx, AI Government Cybersecurity Posture Assessment Platform (AIG-CPAP)."}
+{"kind":"slide","id":"sl/o6t5cj","slide":19,"title":"JUDEX / AIG-CPAP","textShapes":15}
+{"kind":"shape","id":"sh/z69ozmlk","slide":19,"bbox":[0,0,1.4,720]}
+{"kind":"shape","id":"sh/07ip8rmp","slide":19,"bbox":[64,0,1.4,720]}
+{"kind":"shape","id":"sh/18r61w3a","slide":19,"bbox":[128,0,1.4,720]}
+{"kind":"shape","id":"sh/m907a14v","slide":19,"bbox":[192,0,1.4,720]}
+{"kind":"shape","id":"sh/na9o36lg","slide":19,"bbox":[256,0,1.4,720]}
+{"kind":"shape","id":"sh/8bipcbm1","slide":19,"bbox":[320,0,1.4,720]}
+{"kind":"shape","id":"sh/9cr65w3m","slide":19,"bbox":[384,0,1.4,720]}
+{"kind":"shape","id":"sh/2dwnyx4r","slide":19,"bbox":[448,0,1.4,720]}
+{"kind":"shape","id":"sh/3epor2lc","slide":19,"bbox":[512,0,1.4,720]}
+{"kind":"shape","id":"sh/bq5cjad0","slide":19,"bbox":[576,0,1.4,720]}
+{"kind":"shape","id":"sh/apwba5cf","slide":19,"bbox":[640,0,1.4,720]}
+{"kind":"shape","id":"sh/xsnulkv6","slide":19,"bbox":[704,0,1.4,720]}
+{"kind":"shape","id":"sh/wretcful","slide":19,"bbox":[768,0,1.4,720]}
+{"kind":"shape","id":"sh/nmlcfqdo","slide":19,"bbox":[832,0,1.4,720]}
+{"kind":"shape","id":"sh/m1cb6lcj","slide":19,"bbox":[896,0,1.4,720]}
+{"kind":"shape","id":"sh/9onuh0vu","slide":19,"bbox":[960,0,1.4,720]}
+{"kind":"shape","id":"sh/onut8vu9","slide":19,"bbox":[1024,0,1.4,720]}
+{"kind":"shape","id":"sh/zylcbqds","slide":19,"bbox":[1088,0,1.4,720]}
+{"kind":"shape","id":"sh/excb2lc7","slide":19,"bbox":[1152,0,1.4,720]}
+{"kind":"shape","id":"sh/2tsvulgz","slide":19,"bbox":[1216,0,1.4,720]}
+{"kind":"shape","id":"sh/3u1cnqxk","slide":19,"bbox":[0,0,1280,1.4]}
+{"kind":"shape","id":"sh/4vadwvy5","slide":19,"bbox":[0,64,1280,1.4]}
+{"kind":"shape","id":"sh/pwjupgfq","slide":19,"bbox":[0,128,1280,1.4]}
+{"kind":"shape","id":"sh/qxcvylgb","slide":19,"bbox":[0,192,1280,1.4]}
+{"kind":"shape","id":"sh/rylcrqxw","slide":19,"bbox":[0,256,1280,1.4]}
+{"kind":"shape","id":"sh/czud0vyh","slide":19,"bbox":[0,320,1280,1.4]}
+{"kind":"shape","id":"sh/dk3et0fm","slide":19,"bbox":[0,384,1280,1.4]}
+{"kind":"shape","id":"sh/elcv25w7","slide":19,"bbox":[0,448,1280,1.4]}
+{"kind":"shape","id":"sh/zmlwvaxs","slide":19,"bbox":[0,512,1280,1.4]}
+{"kind":"shape","id":"sh/9s76ho36","slide":19,"bbox":[0,576,1280,1.4]}
+{"kind":"shape","id":"sh/8ryp83ml","slide":19,"bbox":[0,640,1280,1.4]}
+{"kind":"shape","id":"sh/nqpofyl0","slide":19,"bbox":[0,704,1280,1.4]}
+{"kind":"shape","id":"sh/mpg76t4v","slide":19,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/xwr6l83i","slide":19,"text":"JUDEX / AIG-CPAP","textPreview":"JUDEX / AIG-CPAP","textChars":16,"textLines":1,"bbox":[58,28,360,22]}
+{"kind":"textbox","id":"sh/wvipc3mx","slide":19,"text":"19","textPreview":"19","textChars":2,"textLines":1,"bbox":[1160,26,60,24]}
+{"kind":"textbox","id":"sh/vu9ojylc","slide":19,"text":"Security mechanisms make scores explainable, access-controlled, and compliance-mapped","textPreview":"Security mechanisms make scores explainable, access-controlled, and compliance-mapped","textChars":85,"textLines":1,"bbox":[58,58,1080,48]}
+{"kind":"shape","id":"sh/atg7at4r","slide":19,"bbox":[58,118,1164,1.4]}
+{"kind":"textbox","id":"sh/50rqp83e","slide":19,"text":"■","textPreview":"■","textChars":1,"textLines":1,"bbox":[80,150,20,22]}
+{"kind":"textbox","id":"sh/kzipgn2t","slide":19,"text":"Government-aligned regulatory standards: NISPG, Comprehensive Cyber Security Audit Policy Guidelines, Cyber Security Guidelines for Government Employees, NIST SP 800-53 Rev. 5, ISO/IEC 27001:2022, CIS Controls v8, OWASP ASVS v4.","textPreview":"Government-aligned regulatory standards: NISPG, Comprehensive Cyber Security Audit Policy Guidelines, Cyber Security Guidelines for Gover...","textChars":228,"textLines":1,"bbox":[108,148,1052,78]}
+{"kind":"textbox","id":"sh/gfm987m1","slide":19,"text":"■","textPreview":"■","textChars":1,"textLines":1,"bbox":[80,222,20,22]}
+{"kind":"textbox","id":"sh/1gvahcnm","slide":19,"text":"Knowledge Graph security reasoning: Neo4j traversals compute attack reachability, dependency chains, and multi-hop attack paths.","textPreview":"Knowledge Graph security reasoning: Neo4j traversals compute attack reachability, dependency chains, and multi-hop attack paths.","textChars":128,"textLines":1,"bbox":[108,220,1052,78]}
+{"kind":"textbox","id":"sh/et4r6hov","slide":19,"text":"■","textPreview":"■","textChars":1,"textLines":1,"bbox":[80,294,20,22]}
+{"kind":"textbox","id":"sh/fudsfm5g","slide":19,"text":"Evidence Confidence Scoring: 0-100% score from source type reliability, cross-agent corroboration, KG relationship validation, and optional administrator confirmation.","textPreview":"Evidence Confidence Scoring: 0-100% score from source type reliability, cross-agent corroboration, KG relationship validation, and option...","textChars":167,"textLines":1,"bbox":[108,292,1052,78]}
+{"kind":"textbox","id":"sh/sr294765","slide":19,"text":"■","textPreview":"■","textChars":1,"textLines":1,"bbox":[80,366,20,22]}
+{"kind":"textbox","id":"sh/tsbadcnq","slide":19,"text":"Explainable Risk Engine: full evidence trace to source artifacts, Knowledge Graph nodes, and agent findings.","textPreview":"Explainable Risk Engine: full evidence trace to source artifacts, Knowledge Graph nodes, and agent findings.","textChars":108,"textLines":1,"bbox":[108,364,1052,78]}
+{"kind":"textbox","id":"sh/6pkr2xoz","slide":19,"text":"■","textPreview":"■","textChars":1,"textLines":1,"bbox":[80,438,20,22]}
+{"kind":"textbox","id":"sh/rqtsb25k","slide":19,"text":"RBAC: JWT authentication with department-level data isolation.","textPreview":"RBAC: JWT authentication with department-level data isolation.","textChars":62,"textLines":1,"bbox":[108,436,1052,78]}
+{"kind":"textbox","id":"sh/cn6tgrm9","slide":19,"text":"■","textPreview":"■","textChars":1,"textLines":1,"bbox":[80,510,20,22]}
+{"kind":"textbox","id":"sh/dofapwnu","slide":19,"text":"Offline-first deployment: private server via Docker Compose using Ollama for LLM inference.","textPreview":"Offline-first deployment: private server via Docker Compose using Ollama for LLM inference.","textChars":91,"textLines":1,"bbox":[108,508,1052,78]}
+{"kind":"notes","id":"nt/o6t5cj","slide":19,"text":"[Sources]\nSource: Final Report.docx, AI Government Cybersecurity Posture Assessment Platform (AIG-CPAP)."}
+{"kind":"slide","id":"sl/rms2fe","slide":20,"title":"JUDEX / AIG-CPAP","textShapes":12}
+{"kind":"shape","id":"sh/18fypofa","slide":20,"bbox":[0,0,1.4,720]}
+{"kind":"shape","id":"sh/e5ozetwj","slide":20,"bbox":[64,0,1.4,720]}
+{"kind":"shape","id":"sh/z6xgnyx4","slide":20,"bbox":[128,0,1.4,720]}
+{"kind":"shape","id":"sh/c36hcjet","slide":20,"bbox":[192,0,1.4,720]}
+{"kind":"shape","id":"sh/d4fylofy","slide":20,"bbox":[256,0,1.4,720]}
+{"kind":"shape","id":"sh/qh4za9wn","slide":20,"bbox":[320,0,1.4,720]}
+{"kind":"shape","id":"sh/r2dgjex8","slide":20,"bbox":[384,0,1.4,720]}
+{"kind":"shape","id":"sh/4fmx8jeh","slide":20,"bbox":[448,0,1.4,720]}
+{"kind":"shape","id":"sh/pgvyh4f2","slide":20,"bbox":[512,0,1.4,720]}
+{"kind":"shape","id":"sh/5s3yh4zi","slide":20,"bbox":[576,0,1.4,720]}
+{"kind":"shape","id":"sh/4ruxozyd","slide":20,"bbox":[640,0,1.4,720]}
+{"kind":"shape","id":"sh/3qlgfuhs","slide":20,"bbox":[704,0,1.4,720]}
+{"kind":"shape","id":"sh/ipcfmpg7","slide":20,"bbox":[768,0,1.4,720]}
+{"kind":"shape","id":"sh/ho3edkzm","slide":20,"bbox":[832,0,1.4,720]}
+{"kind":"shape","id":"sh/gnuxkfy1","slide":20,"bbox":[896,0,1.4,720]}
+{"kind":"shape","id":"sh/v2lwbahg","slide":20,"bbox":[960,0,1.4,720]}
+{"kind":"shape","id":"sh/u1cfi5gv","slide":20,"bbox":[1024,0,1.4,720]}
+{"kind":"shape","id":"sh/t0je9kzq","slide":20,"bbox":[1088,0,1.4,720]}
+{"kind":"shape","id":"sh/8zaxgfy5","slide":20,"bbox":[1152,0,1.4,720]}
+{"kind":"shape","id":"sh/kfypczax","slide":20,"bbox":[1216,0,1.4,720]}
+{"kind":"shape","id":"sh/lg76l4bi","slide":20,"bbox":[0,0,1280,1.4]}
+{"kind":"shape","id":"sh/ydg7a9s7","slide":20,"bbox":[0,64,1280,1.4]}
+{"kind":"shape","id":"sh/jepojetc","slide":20,"bbox":[0,128,1280,1.4]}
+{"kind":"shape","id":"sh/wre58za1","slide":20,"bbox":[0,192,1280,1.4]}
+{"kind":"shape","id":"sh/xs76h4bm","slide":20,"bbox":[0,256,1280,1.4]}
+{"kind":"shape","id":"sh/apwn6psv","slide":20,"bbox":[0,320,1280,1.4]}
+{"kind":"shape","id":"sh/bq5ofutg","slide":20,"bbox":[0,384,1280,1.4]}
+{"kind":"shape","id":"sh/gnipk3a5","slide":20,"bbox":[0,448,1280,1.4]}
+{"kind":"shape","id":"sh/hor6tobq","slide":20,"bbox":[0,512,1280,1.4]}
+{"kind":"shape","id":"sh/ritsj2ds","slide":20,"bbox":[0,576,1280,1.4]}
+{"kind":"shape","id":"sh/qhkraxc7","slide":20,"bbox":[0,640,1280,1.4]}
+{"kind":"shape","id":"sh/d4valsvy","slide":20,"bbox":[0,704,1280,1.4]}
+{"kind":"shape","id":"sh/s3m9cnud","slide":20,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/f6dsn2d4","slide":20,"text":"JUDEX / AIG-CPAP","textPreview":"JUDEX / AIG-CPAP","textChars":16,"textLines":1,"bbox":[58,28,360,22]}
+{"kind":"textbox","id":"sh/e54rexcj","slide":20,"text":"20","textPreview":"20","textChars":2,"textLines":1,"bbox":[1160,26,60,24]}
+{"kind":"textbox","id":"sh/18vapcva","slide":20,"text":"Complete Workflow","textPreview":"Complete Workflow","textChars":17,"textLines":1,"bbox":[58,58,1080,48]}
+{"kind":"shape","id":"sh/07m9g7up","slide":20,"bbox":[58,118,1164,1.4]}
+{"kind":"shape","id":"sh/va98bidk","slide":20,"bbox":[70,190,215,80]}
+{"kind":"textbox","id":"sh/u90r2dcf","slide":20,"text":"Input","textPreview":"Input","textChars":5,"textLines":1,"bbox":[82,214,190,34]}
+{"kind":"shape","id":"sh/mt4ridkv","slide":20,"bbox":[285,230,77,1.4]}
+{"kind":"shape","id":"sh/7udsrilg","slide":20,"bbox":[365,190,215,80]}
+{"kind":"textbox","id":"sh/8vm9kn21","slide":20,"text":"Preprocessing","textPreview":"Preprocessing","textChars":13,"textLines":1,"bbox":[377,214,190,34]}
+{"kind":"shape","id":"sh/9wfat83m","slide":20,"bbox":[580,230,77,1.4]}
+{"kind":"shape","id":"sh/uxormdk7","slide":20,"bbox":[660,190,215,80]}
+{"kind":"textbox","id":"sh/vyxsvils","slide":20,"text":"Seven AI Agents","textPreview":"Seven AI Agents","textChars":15,"textLines":1,"bbox":[672,214,190,34]}
+{"kind":"shape","id":"sh/wj69on2d","slide":20,"bbox":[875,230,77,1.4]}
+{"kind":"shape","id":"sh/hkfaxs3y","slide":20,"bbox":[955,190,215,80]}
+{"kind":"textbox","id":"sh/ilorqxk3","slide":20,"text":"Knowledge Graph","textPreview":"Knowledge Graph","textChars":15,"textLines":1,"bbox":[967,214,190,34]}
+{"kind":"shape","id":"sh/jmxsz2lo","slide":20,"bbox":[70,415,215,80]}
+{"kind":"textbox","id":"sh/tgjupwn6","slide":20,"text":"Reasoning Engine","textPreview":"Reasoning Engine","textChars":16,"textLines":1,"bbox":[82,439,190,34]}
+{"kind":"shape","id":"sh/sfqdwrml","slide":20,"bbox":[285,455,77,1.4]}
+{"kind":"shape","id":"sh/rehcnm50","slide":20,"bbox":[365,415,215,80]}
+{"kind":"textbox","id":"sh/6d8vuh4f","slide":20,"text":"Risk Engine","textPreview":"Risk Engine","textChars":11,"textLines":1,"bbox":[377,439,190,34]}
+{"kind":"shape","id":"sh/1kjutwn2","slide":20,"bbox":[580,455,77,1.4]}
+{"kind":"shape","id":"sh/gjad0bmh","slide":20,"bbox":[660,415,215,80]}
+{"kind":"textbox","id":"sh/fi1cr65w","slide":20,"text":"Dashboards","textPreview":"Dashboards","textChars":10,"textLines":1,"bbox":[672,439,190,34]}
+{"kind":"shape","id":"sh/ehsvy14b","slide":20,"bbox":[875,455,77,1.4]}
+{"kind":"shape","id":"sh/p83uxgny","slide":20,"bbox":[955,415,215,80]}
+{"kind":"textbox","id":"sh/onud4bmt","slide":20,"text":"Reports","textPreview":"Reports","textChars":7,"textLines":1,"bbox":[967,439,190,34]}
+{"kind":"shape","id":"sh/8325gjy1","slide":20,"bbox":[1125,270,1.4,145]}
+{"kind":"shape","id":"sh/94v6pozm","slide":20,"bbox":[70,455,1055,1.4]}
+{"kind":"textbox","id":"sh/m1kne9gv","slide":20,"text":"Structured findings, graph updates, confidence scores, attack paths, remediation roadmaps, PDF/HTML reports","textPreview":"Structured findings, graph updates, confidence scores, attack paths, remediation roadmaps, PDF/HTML reports","textChars":107,"textLines":1,"bbox":[140,570,1000,44]}
+{"kind":"notes","id":"nt/rms2fe","slide":20,"text":"[Sources]\nSource: Final Report.docx, AI Government Cybersecurity Posture Assessment Platform (AIG-CPAP)."}
+{"kind":"slide","id":"sl/3ecz29","slide":21,"title":"JUDEX / AIG-CPAP","textShapes":3}
+{"kind":"shape","id":"sh/6lcjqxw3","slide":21,"bbox":[0,0,1.4,720]}
+{"kind":"shape","id":"sh/to32lcvu","slide":21,"bbox":[64,0,1.4,720]}
+{"kind":"shape","id":"sh/snu1s7e9","slide":21,"bbox":[128,0,1.4,720]}
+{"kind":"shape","id":"sh/jy10fids","slide":21,"bbox":[192,0,1.4,720]}
+{"kind":"shape","id":"sh/ixsjmdw7","slide":21,"bbox":[256,0,1.4,720]}
+{"kind":"shape","id":"sh/5k3ihsvi","slide":21,"bbox":[320,0,1.4,720]}
+{"kind":"shape","id":"sh/4za1oned","slide":21,"bbox":[384,0,1.4,720]}
+{"kind":"shape","id":"sh/3u5krmdw","slide":21,"bbox":[448,0,1.4,720]}
+{"kind":"shape","id":"sh/2twjyhwb","slide":21,"bbox":[512,0,1.4,720]}
+{"kind":"shape","id":"sh/czu507q1","slide":21,"bbox":[576,0,1.4,720]}
+{"kind":"shape","id":"sh/d0369c7m","slide":21,"bbox":[640,0,1.4,720]}
+{"kind":"shape","id":"sh/qdsnyx8v","slide":21,"bbox":[704,0,1.4,720]}
+{"kind":"shape","id":"sh/bylo72pg","slide":21,"bbox":[768,0,1.4,720]}
+{"kind":"shape","id":"sh/oba5wnq5","slide":21,"bbox":[832,0,1.4,720]}
+{"kind":"shape","id":"sh/pcj65s7q","slide":21,"bbox":[896,0,1.4,720]}
+{"kind":"shape","id":"sh/29snud8z","slide":21,"bbox":[960,0,1.4,720]}
+{"kind":"shape","id":"sh/3a1o3ipk","slide":21,"bbox":[1024,0,1.4,720]}
+{"kind":"shape","id":"sh/g7a5snqt","slide":21,"bbox":[1088,0,1.4,720]}
+{"kind":"shape","id":"sh/18j61s7e","slide":21,"bbox":[1152,0,1.4,720]}
+{"kind":"shape","id":"sh/xsru9kf6","slide":21,"bbox":[1216,0,1.4,720]}
+{"kind":"shape","id":"sh/wridgfel","slide":21,"bbox":[0,0,1280,1.4]}
+{"kind":"shape","id":"sh/vq9c7ax0","slide":21,"bbox":[0,64,1280,1.4]}
+{"kind":"shape","id":"sh/ap0ve5wf","slide":21,"bbox":[0,128,1280,1.4]}
+{"kind":"shape","id":"sh/9o7u50fu","slide":21,"bbox":[0,192,1280,1.4]}
+{"kind":"shape","id":"sh/8nydcve9","slide":21,"bbox":[0,256,1280,1.4]}
+{"kind":"shape","id":"sh/nmpc3qx4","slide":21,"bbox":[0,320,1280,1.4]}
+{"kind":"shape","id":"sh/mlgva5wj","slide":21,"bbox":[0,384,1280,1.4]}
+{"kind":"shape","id":"sh/tkbeh4ve","slide":21,"bbox":[0,448,1280,1.4]}
+{"kind":"shape","id":"sh/sj2dozet","slide":21,"bbox":[0,512,1280,1.4]}
+{"kind":"shape","id":"sh/q5cri1cb","slide":21,"bbox":[0,576,1280,1.4]}
+{"kind":"shape","id":"sh/bq5sb6dw","slide":21,"bbox":[0,640,1280,1.4]}
+{"kind":"shape","id":"sh/cre9kru1","slide":21,"bbox":[0,704,1280,1.4]}
+{"kind":"shape","id":"sh/dsnadwvm","slide":21,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/21crehcz","slide":21,"text":"JUDEX / AIG-CPAP","textPreview":"JUDEX / AIG-CPAP","textChars":16,"textLines":1,"bbox":[58,28,360,22]}
+{"kind":"textbox","id":"sh/32ls7mdk","slide":21,"text":"21","textPreview":"21","textChars":2,"textLines":1,"bbox":[1160,26,60,24]}
+{"kind":"textbox","id":"sh/o3u9gru5","slide":21,"text":"Datasets cover vulnerabilities, weakness taxonomies, KG triples, and vulnerable code","textPreview":"Datasets cover vulnerabilities, weakness taxonomies, KG triples, and vulnerable code","textChars":84,"textLines":1,"bbox":[58,58,1080,48]}
+{"kind":"shape","id":"sh/p43a9wvq","slide":21,"bbox":[58,118,1164,1.4]}
+{"kind":"table","id":"tb/lcfqhc7q","slide":21,"name":"","rows":5,"cols":5,"preview":"Dataset | Source | Size | Features | Class Labels","bbox":[42,145,1196,480]}
+{"kind":"notes","id":"nt/3ecz29","slide":21,"text":"[Sources]\nSource: Final Report.docx, AI Government Cybersecurity Posture Assessment Platform (AIG-CPAP)."}
+{"kind":"slide","id":"sl/utan9g","slide":22,"title":"JUDEX / AIG-CPAP","textShapes":21}
+{"kind":"shape","id":"sh/ozap8vax","slide":22,"bbox":[0,0,1.4,720]}
+{"kind":"shape","id":"sh/3yhozqtc","slide":22,"bbox":[64,0,1.4,720]}
+{"kind":"shape","id":"sh/2d8n6lsr","slide":22,"bbox":[128,0,1.4,720]}
+{"kind":"shape","id":"sh/1cz6x0b6","slide":22,"bbox":[192,0,1.4,720]}
+{"kind":"shape","id":"sh/gbq54val","slide":22,"bbox":[256,0,1.4,720]}
+{"kind":"shape","id":"sh/fahovqtg","slide":22,"bbox":[320,0,1.4,720]}
+{"kind":"shape","id":"sh/e98n2lsv","slide":22,"bbox":[384,0,1.4,720]}
+{"kind":"shape","id":"sh/l8369kbq","slide":22,"bbox":[448,0,1.4,720]}
+{"kind":"shape","id":"sh/07upgfa5","slide":22,"bbox":[512,0,1.4,720]}
+{"kind":"shape","id":"sh/ix8fa14r","slide":22,"bbox":[576,0,1.4,720]}
+{"kind":"shape","id":"sh/3ihgj65c","slide":22,"bbox":[640,0,1.4,720]}
+{"kind":"shape","id":"sh/4jahcrmx","slide":22,"bbox":[704,0,1.4,720]}
+{"kind":"shape","id":"sh/5kjylwni","slide":22,"bbox":[768,0,1.4,720]}
+{"kind":"shape","id":"sh/ut8f6h4v","slide":22,"bbox":[832,0,1.4,720]}
+{"kind":"shape","id":"sh/vuhgfm5g","slide":22,"bbox":[896,0,1.4,720]}
+{"kind":"shape","id":"sh/gvqx8rm1","slide":22,"bbox":[960,0,1.4,720]}
+{"kind":"shape","id":"sh/hwzyhwn6","slide":22,"bbox":[1024,0,1.4,720]}
+{"kind":"shape","id":"sh/epszil4z","slide":22,"bbox":[1088,0,1.4,720]}
+{"kind":"shape","id":"sh/fqlgrq5k","slide":22,"bbox":[1152,0,1.4,720]}
+{"kind":"shape","id":"sh/budc3ilw","slide":22,"bbox":[1216,0,1.4,720]}
+{"kind":"shape","id":"sh/at4vad4b","slide":22,"bbox":[0,0,1280,1.4]}
+{"kind":"shape","id":"sh/xwve5832","slide":22,"bbox":[0,64,1280,1.4]}
+{"kind":"shape","id":"sh/wvmdcn2h","slide":22,"bbox":[0,128,1280,1.4]}
+{"kind":"shape","id":"sh/jydw7il8","slide":22,"bbox":[0,192,1280,1.4]}
+{"kind":"shape","id":"sh/yx4vedkn","slide":22,"bbox":[0,256,1280,1.4]}
+{"kind":"shape","id":"sh/l0fe9s3y","slide":22,"bbox":[0,320,1280,1.4]}
+{"kind":"shape","id":"sh/kz6dgn2t","slide":22,"bbox":[0,384,1280,1.4]}
+{"kind":"shape","id":"sh/72xwb2l4","slide":22,"bbox":[0,448,1280,1.4]}
+{"kind":"shape","id":"sh/61ovixkj","slide":22,"bbox":[0,512,1280,1.4]}
+{"kind":"shape","id":"sh/4rqd87ix","slide":22,"bbox":[0,576,1280,1.4]}
+{"kind":"shape","id":"sh/5szu1cji","slide":22,"bbox":[0,640,1280,1.4]}
+{"kind":"shape","id":"sh/i5ov6x0r","slide":22,"bbox":[0,704,1280,1.4]}
+{"kind":"shape","id":"sh/3qhcz21c","slide":22,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/g36t4nil","slide":22,"text":"JUDEX / AIG-CPAP","textPreview":"JUDEX / AIG-CPAP","textChars":16,"textLines":1,"bbox":[58,28,360,22]}
+{"kind":"textbox","id":"sh/h4fuxsj6","slide":22,"text":"22","textPreview":"22","textChars":2,"textLines":1,"bbox":[1160,26,60,24]}
+{"kind":"textbox","id":"sh/u1ob2d0v","slide":22,"text":"System architecture preserves the full AIG-CPAP component chain","textPreview":"System architecture preserves the full AIG-CPAP component chain","textChars":63,"textLines":1,"bbox":[58,58,1080,48]}
+{"kind":"shape","id":"sh/v2xcvi1g","slide":22,"bbox":[58,118,1164,1.4]}
+{"kind":"shape","id":"sh/8z6t0nip","slide":22,"bbox":[555,138,180,48]}
+{"kind":"textbox","id":"sh/t0futsja","slide":22,"text":"React Frontend","textPreview":"React Frontend","textChars":14,"textLines":1,"bbox":[563,150,164,32]}
+{"kind":"shape","id":"sh/xsrilkvq","slide":22,"bbox":[548,220,195,48]}
+{"kind":"textbox","id":"sh/cri1cfu5","slide":22,"text":"FastAPI Backend","textPreview":"FastAPI Backend","textChars":15,"textLines":1,"bbox":[556,232,179,32]}
+{"kind":"shape","id":"sh/bq90jadk","slide":22,"bbox":[165,315,170,48]}
+{"kind":"textbox","id":"sh/ap0japcz","slide":22,"text":"PostgreSQL","textPreview":"PostgreSQL","textChars":10,"textLines":1,"bbox":[173,327,154,32]}
+{"kind":"shape","id":"sh/lwbip4vm","slide":22,"bbox":[165,380,145,48]}
+{"kind":"textbox","id":"sh/kv21gzuh","slide":22,"text":"pgvector","textPreview":"pgvector","textChars":8,"textLines":1,"bbox":[173,392,129,32]}
+{"kind":"shape","id":"sh/zut0nudw","slide":22,"bbox":[555,315,180,48]}
+{"kind":"textbox","id":"sh/yt0jepcb","slide":22,"text":"Neo4j Graph","textPreview":"Neo4j Graph","textChars":11,"textLines":1,"bbox":[563,327,164,32]}
+{"kind":"shape","id":"sh/107id0vi","slide":22,"bbox":[940,315,180,48]}
+{"kind":"textbox","id":"sh/gzyh4vux","slide":22,"text":"File Storage","textPreview":"File Storage","textChars":12,"textLines":1,"bbox":[948,327,164,32]}
+{"kind":"shape","id":"sh/65wfe1sv","slide":22,"bbox":[495,425,300,50]}
+{"kind":"textbox","id":"sh/r65gn6tg","slide":22,"text":"AI Orchestration Layer","textPreview":"AI Orchestration Layer","textChars":22,"textLines":1,"bbox":[503,437,284,34]}
+{"kind":"shape","id":"sh/s7exgba1","slide":22,"bbox":[70,515,145,54]}
+{"kind":"textbox","id":"sh/t8nypgbm","slide":22,"text":"Code Agent","textPreview":"Code Agent","textChars":10,"textLines":1,"bbox":[78,527,129,38]}
+{"kind":"shape","id":"sh/e9wfilsr","slide":22,"bbox":[235,515,145,54]}
+{"kind":"textbox","id":"sh/fa5gr6tc","slide":22,"text":"Infra Agent","textPreview":"Infra Agent","textChars":11,"textLines":1,"bbox":[243,527,129,38]}
+{"kind":"shape","id":"sh/gvyxkbax","slide":22,"bbox":[400,515,145,54]}
+{"kind":"textbox","id":"sh/1w7ytgbi","slide":22,"text":"API Agent","textPreview":"API Agent","textChars":9,"textLines":1,"bbox":[408,527,129,38]}
+{"kind":"shape","id":"sh/udcf6hsn","slide":22,"bbox":[565,515,145,54]}
+{"kind":"textbox","id":"sh/velwfmt8","slide":22,"text":"Network Agent","textPreview":"Network Agent","textChars":13,"textLines":1,"bbox":[573,527,129,38]}
+{"kind":"shape","id":"sh/zihc7i90","slide":22,"bbox":[730,515,145,54]}
+{"kind":"textbox","id":"sh/yh8ved8f","slide":22,"text":"Identity Agent","textPreview":"Identity Agent","textChars":14,"textLines":1,"bbox":[738,527,129,38]}
+{"kind":"shape","id":"sh/lkju9sr6","slide":22,"bbox":[895,515,145,54]}
+{"kind":"textbox","id":"sh/kjqdgnql","slide":22,"text":"Document Agent","textPreview":"Document Agent","textChars":14,"textLines":1,"bbox":[903,527,129,38]}
+{"kind":"shape","id":"sh/behc3i94","slide":22,"bbox":[1060,515,145,54]}
+{"kind":"textbox","id":"sh/ad8bad8j","slide":22,"text":"Event Agent","textPreview":"Event Agent","textChars":11,"textLines":1,"bbox":[1068,527,129,38]}
+{"kind":"shape","id":"sh/xgzu58ru","slide":22,"bbox":[310,615,190,44]}
+{"kind":"textbox","id":"sh/cfqdc3q9","slide":22,"text":"Reasoning Engine","textPreview":"Reasoning Engine","textChars":16,"textLines":1,"bbox":[318,627,174,28]}
+{"kind":"shape","id":"sh/va1cf298","slide":22,"bbox":[535,615,210,44]}
+{"kind":"textbox","id":"sh/u9svmx8n","slide":22,"text":"Confidence Scoring","textPreview":"Confidence Scoring","textChars":18,"textLines":1,"bbox":[543,627,194,28]}
+{"kind":"shape","id":"sh/svm9gz65","slide":22,"bbox":[780,615,155,44]}
+{"kind":"textbox","id":"sh/tgva947q","slide":22,"text":"Risk Engine","textPreview":"Risk Engine","textChars":11,"textLines":1,"bbox":[788,627,139,28]}
+{"kind":"shape","id":"sh/6t4repoz","slide":22,"bbox":[985,615,135,44]}
+{"kind":"textbox","id":"sh/ruds7upk","slide":22,"text":"Reports","textPreview":"Reports","textChars":7,"textLines":1,"bbox":[993,627,119,28]}
+{"kind":"shape","id":"sh/0jm9kz61","slide":22,"bbox":[645,186,1.4,34]}
+{"kind":"shape","id":"sh/1kvad47m","slide":22,"bbox":[645,268,1.4,47]}
+{"kind":"shape","id":"sh/eh4ri9ob","slide":22,"bbox":[645,363,1.4,62]}
+{"kind":"shape","id":"sh/fidsbepw","slide":22,"bbox":[250,363,1.4,62]}
+{"kind":"shape","id":"sh/on69oj6d","slide":22,"bbox":[1030,363,1.4,62]}
+{"kind":"shape","id":"sh/pofaho7y","slide":22,"bbox":[250,425,395,1.4]}
+{"kind":"shape","id":"sh/d83m58vq","slide":22,"bbox":[645,425,385,1.4]}
+{"kind":"shape","id":"sh/c7u5w3u5","slide":22,"bbox":[645,475,1.4,40]}
+{"kind":"shape","id":"sh/b6l43ydk","slide":22,"bbox":[142,569,263,46]}
+{"kind":"shape","id":"sh/q5cnudcz","slide":22,"bbox":[405,569,1.4,46]}
+{"kind":"shape","id":"sh/pk3m18ve","slide":22,"bbox":[640,569,95,46]}
+{"kind":"shape","id":"sh/oju5s3ut","slide":22,"bbox":[858,569,112,46]}
+{"kind":"shape","id":"sh/3i14zyd8","slide":22,"bbox":[250,363,1.4,17]}
+{"kind":"notes","id":"nt/utan9g","slide":22,"text":"[Sources]\nSource: Final Report.docx, AI Government Cybersecurity Posture Assessment Platform (AIG-CPAP)."}
+{"kind":"slide","id":"sl/m3oelx","slide":23,"title":"JUDEX / AIG-CPAP","textShapes":17}
+{"kind":"shape","id":"sh/618fqdof","slide":23,"bbox":[0,0,1.4,720]}
+{"kind":"shape","id":"sh/d4zylsnq","slide":23,"bbox":[64,0,1.4,720]}
+{"kind":"shape","id":"sh/s3qxsn65","slide":23,"bbox":[128,0,1.4,720]}
+{"kind":"shape","id":"sh/fqhgni5w","slide":23,"bbox":[192,0,1.4,720]}
+{"kind":"shape","id":"sh/ep8fudob","slide":23,"bbox":[256,0,1.4,720]}
+{"kind":"shape","id":"sh/1sjypsn2","slide":23,"bbox":[320,0,1.4,720]}
+{"kind":"shape","id":"sh/0rqhwnmh","slide":23,"bbox":[384,0,1.4,720]}
+{"kind":"shape","id":"sh/vuxgby5s","slide":23,"bbox":[448,0,1.4,720]}
+{"kind":"shape","id":"sh/utofito7","slide":23,"bbox":[512,0,1.4,720]}
+{"kind":"shape","id":"sh/krq14v29","slide":23,"bbox":[576,0,1.4,720]}
+{"kind":"shape","id":"sh/lszix03u","slide":23,"bbox":[640,0,1.4,720]}
+{"kind":"shape","id":"sh/yp8j25kj","slide":23,"bbox":[704,0,1.4,720]}
+{"kind":"shape","id":"sh/jqh0vqlo","slide":23,"bbox":[768,0,1.4,720]}
+{"kind":"shape","id":"sh/8va18f2l","slide":23,"bbox":[832,0,1.4,720]}
+{"kind":"shape","id":"sh/twji1k36","slide":23,"bbox":[896,0,1.4,720]}
+{"kind":"shape","id":"sh/6tsj65kf","slide":23,"bbox":[960,0,1.4,720]}
+{"kind":"shape","id":"sh/7u10zal0","slide":23,"bbox":[1024,0,1.4,720]}
+{"kind":"shape","id":"sh/oz6hwb21","slide":23,"bbox":[1088,0,1.4,720]}
+{"kind":"shape","id":"sh/90fipg3m","slide":23,"bbox":[1152,0,1.4,720]}
+{"kind":"shape","id":"sh/5k76d8re","slide":23,"bbox":[1216,0,1.4,720]}
+{"kind":"shape","id":"sh/4jep4nqt","slide":23,"bbox":[0,0,1280,1.4]}
+{"kind":"shape","id":"sh/3i5obi98","slide":23,"bbox":[0,64,1280,1.4]}
+{"kind":"shape","id":"sh/ihw72dsn","slide":23,"bbox":[0,128,1280,1.4]}
+{"kind":"shape","id":"sh/d87qhsra","slide":23,"bbox":[0,192,1280,1.4]}
+{"kind":"shape","id":"sh/s7yp8nqp","slide":23,"bbox":[0,256,1280,1.4]}
+{"kind":"shape","id":"sh/r6p8fi9k","slide":23,"bbox":[0,320,1280,1.4]}
+{"kind":"shape","id":"sh/qlg76d8z","slide":23,"bbox":[0,384,1280,1.4]}
+{"kind":"shape","id":"sh/1crqlsrm","slide":23,"bbox":[0,448,1280,1.4]}
+{"kind":"shape","id":"sh/0bipc7q1","slide":23,"bbox":[0,512,1280,1.4]}
+{"kind":"shape","id":"sh/yhs36p8j","slide":23,"bbox":[0,576,1280,1.4]}
+{"kind":"shape","id":"sh/ji14fup4","slide":23,"bbox":[0,640,1280,1.4]}
+{"kind":"shape","id":"sh/kja58zqp","slide":23,"bbox":[0,704,1280,1.4]}
+{"kind":"shape","id":"sh/lkjmh47u","slide":23,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/6lcna9of","slide":23,"text":"JUDEX / AIG-CPAP","textPreview":"JUDEX / AIG-CPAP","textChars":16,"textLines":1,"bbox":[58,28,360,22]}
+{"kind":"textbox","id":"sh/7ml4jep0","slide":23,"text":"23","textPreview":"23","textChars":2,"textLines":1,"bbox":[1160,26,60,24]}
+{"kind":"textbox","id":"sh/8nu5cj6l","slide":23,"text":"Key innovations combine offline AI, graph reasoning, and evidence-backed scoring","textPreview":"Key innovations combine offline AI, graph reasoning, and evidence-backed scoring","textChars":80,"textLines":1,"bbox":[58,58,1080,48]}
+{"kind":"shape","id":"sh/to3ml476","slide":23,"bbox":[58,118,1164,1.4]}
+{"kind":"shape","id":"sh/upcne9or","slide":23,"bbox":[72,145,520,88]}
+{"kind":"textbox","id":"sh/vql4nepc","slide":23,"text":"Offline AI","textPreview":"Offline AI","textChars":10,"textLines":1,"bbox":[90,159,486,30]}
+{"kind":"textbox","id":"sh/36h47ehg","slide":23,"text":"Open-source large language models run through Ollama for air-gapped government deployments.","textPreview":"Open-source large language models run through Ollama for air-gapped government deployments.","textChars":91,"textLines":1,"bbox":[90,195,484,28]}
+{"kind":"shape","id":"sh/2583y9gv","slide":23,"bbox":[642,145,520,88]}
+{"kind":"textbox","id":"sh/p8jmtoz6","slide":23,"text":"Knowledge Graph","textPreview":"Knowledge Graph","textChars":15,"textLines":1,"bbox":[660,159,486,30]}
+{"kind":"textbox","id":"sh/47al0jy1","slide":23,"text":"Neo4j unifies assets, relationships, findings, and asset criticality mappings.","textPreview":"Neo4j unifies assets, relationships, findings, and asset criticality mappings.","textChars":78,"textLines":1,"bbox":[660,195,484,28]}
+{"kind":"shape","id":"sh/ra14vyhc","slide":23,"bbox":[72,263,520,88]}
+{"kind":"textbox","id":"sh/q9sn2tgr","slide":23,"text":"Explainable AI","textPreview":"Explainable AI","textChars":14,"textLines":1,"bbox":[90,277,486,30]}
+{"kind":"textbox","id":"sh/dcjmxozi","slide":23,"text":"Risk scores include full evidence traces to artifacts, graph nodes, and agent findings.","textPreview":"Risk scores include full evidence traces to artifacts, graph nodes, and agent findings.","textChars":87,"textLines":1,"bbox":[90,313,484,28]}
+{"kind":"shape","id":"sh/cba54jyx","slide":23,"bbox":[642,263,520,88]}
+{"kind":"textbox","id":"sh/7ex4zuh8","slide":23,"text":"Cross-domain reasoning","textPreview":"Cross-domain reasoning","textChars":22,"textLines":1,"bbox":[660,277,486,30]}
+{"kind":"textbox","id":"sh/6do3qp0n","slide":23,"text":"Multi-hop graph traversal identifies compound risks that isolated tools miss.","textPreview":"Multi-hop graph traversal identifies compound risks that isolated tools miss.","textChars":77,"textLines":1,"bbox":[660,313,484,28]}
+{"kind":"shape","id":"sh/w729kra9","slide":23,"bbox":[72,381,520,88]}
+{"kind":"textbox","id":"sh/x8badwbu","slide":23,"text":"Government deployment","textPreview":"Government deployment","textChars":21,"textLines":1,"bbox":[90,395,486,30]}
+{"kind":"textbox","id":"sh/a5kri1s3","slide":23,"text":"Docker Compose private-server deployment keeps government data inside organizational boundaries.","textPreview":"Docker Compose private-server deployment keeps government data inside organizational boundaries.","textChars":96,"textLines":1,"bbox":[90,431,484,28]}
+{"kind":"shape","id":"sh/b6tsb6to","slide":23,"bbox":[642,381,520,88]}
+{"kind":"textbox","id":"sh/o329grax","slide":23,"text":"Multi-agent system","textPreview":"Multi-agent system","textChars":18,"textLines":1,"bbox":[660,395,486,30]}
+{"kind":"textbox","id":"sh/94ba9wbi","slide":23,"text":"Seven domain agents analyze technical and non-technical evidence concurrently.","textPreview":"Seven domain agents analyze technical and non-technical evidence concurrently.","textChars":78,"textLines":1,"bbox":[660,431,484,28]}
+{"kind":"shape","id":"sh/m10rehs7","slide":23,"bbox":[72,499,520,88]}
+{"kind":"textbox","id":"sh/n29s7mts","slide":23,"text":"Evidence-backed scoring","textPreview":"Evidence-backed scoring","textChars":23,"textLines":1,"bbox":[90,513,486,30]}
+{"kind":"textbox","id":"sh/8zmtcbah","slide":23,"text":"Confidence combines source reliability, corroboration, KG validation, and optional admin confirmation.","textPreview":"Confidence combines source reliability, corroboration, KG validation, and optional admin confirmation.","textChars":102,"textLines":1,"bbox":[90,549,484,28]}
+{"kind":"notes","id":"nt/m3oelx","slide":23,"text":"[Sources]\nSource: Final Report.docx, AI Government Cybersecurity Posture Assessment Platform (AIG-CPAP)."}
+{"kind":"slide","id":"sl/vpxqsy","slide":24,"title":"JUDEX / AIG-CPAP","textShapes":17}
+{"kind":"shape","id":"sh/h8batk3i","slide":24,"bbox":[0,0,1.4,720]}
+{"kind":"shape","id":"sh/u50ri5k7","slide":24,"bbox":[64,0,1.4,720]}
+{"kind":"shape","id":"sh/v69sralc","slide":24,"bbox":[128,0,1.4,720]}
+{"kind":"shape","id":"sh/4b29of29","slide":24,"bbox":[192,0,1.4,720]}
+{"kind":"shape","id":"sh/5cbaxk3u","slide":24,"bbox":[256,0,1.4,720]}
+{"kind":"shape","id":"sh/i9krm5k3","slide":24,"bbox":[320,0,1.4,720]}
+{"kind":"shape","id":"sh/jatsvalo","slide":24,"bbox":[384,0,1.4,720]}
+{"kind":"shape","id":"sh/szm9sz25","slide":24,"bbox":[448,0,1.4,720]}
+{"kind":"shape","id":"sh/t0va143q","slide":24,"bbox":[512,0,1.4,720]}
+{"kind":"shape","id":"sh/hor6lwn6","slide":24,"bbox":[576,0,1.4,720]}
+{"kind":"shape","id":"sh/gny5crml","slide":24,"bbox":[640,0,1.4,720]}
+{"kind":"shape","id":"sh/fmpojm50","slide":24,"bbox":[704,0,1.4,720]}
+{"kind":"shape","id":"sh/ulgnah4v","slide":24,"bbox":[768,0,1.4,720]}
+{"kind":"shape","id":"sh/psr6pw3i","slide":24,"bbox":[832,0,1.4,720]}
+{"kind":"shape","id":"sh/4ri5grmx","slide":24,"bbox":[896,0,1.4,720]}
+{"kind":"shape","id":"sh/3q9on65c","slide":24,"bbox":[960,0,1.4,720]}
+{"kind":"shape","id":"sh/2p0ne14r","slide":24,"bbox":[1024,0,1.4,720]}
+{"kind":"shape","id":"sh/5wnmdcny","slide":24,"bbox":[1088,0,1.4,720]}
+{"kind":"shape","id":"sh/kve547md","slide":24,"bbox":[1152,0,1.4,720]}
+{"kind":"shape","id":"sh/wfi507u9","slide":24,"bbox":[1216,0,1.4,720]}
+{"kind":"shape","id":"sh/x0r6tcvu","slide":24,"bbox":[0,0,1280,1.4]}
+{"kind":"shape","id":"sh/ad0nyxcj","slide":24,"bbox":[0,64,1280,1.4]}
+{"kind":"shape","id":"sh/be9or2do","slide":24,"bbox":[0,128,1280,1.4]}
+{"kind":"shape","id":"sh/k3254rul","slide":24,"bbox":[0,192,1280,1.4]}
+{"kind":"shape","id":"sh/l4b6xwv6","slide":24,"bbox":[0,256,1280,1.4]}
+{"kind":"shape","id":"sh/y10n2hcf","slide":24,"bbox":[0,320,1280,1.4]}
+{"kind":"shape","id":"sh/j2tovmd0","slide":24,"bbox":[0,384,1280,1.4]}
+{"kind":"shape","id":"sh/87258ruh","slide":24,"bbox":[0,448,1280,1.4]}
+{"kind":"shape","id":"sh/t8b61wv2","slide":24,"bbox":[0,512,1280,1.4]}
+{"kind":"shape","id":"sh/32x8rqx4","slide":24,"bbox":[0,576,1280,1.4]}
+{"kind":"shape","id":"sh/i1orylwz","slide":24,"bbox":[0,640,1280,1.4]}
+{"kind":"shape","id":"sh/54fqt0fa","slide":24,"bbox":[0,704,1280,1.4]}
+{"kind":"shape","id":"sh/43690vep","slide":24,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/vyd8nqx8","slide":24,"text":"JUDEX / AIG-CPAP","textPreview":"JUDEX / AIG-CPAP","textChars":16,"textLines":1,"bbox":[58,28,360,22]}
+{"kind":"textbox","id":"sh/ux47ulwn","slide":24,"text":"24","textPreview":"24","textChars":2,"textLines":1,"bbox":[1160,26,60,24]}
+{"kind":"textbox","id":"sh/h0vqpgfe","slide":24,"text":"Expected benefits turn assessment work into prioritized government action","textPreview":"Expected benefits turn assessment work into prioritized government action","textChars":73,"textLines":1,"bbox":[58,58,1080,48]}
+{"kind":"shape","id":"sh/gzm9wvet","slide":24,"bbox":[58,118,1164,1.4]}
+{"kind":"textbox","id":"sh/fuh8zaxc","slide":24,"text":"■","textPreview":"■","textChars":1,"textLines":1,"bbox":[90,147,20,22]}
+{"kind":"textbox","id":"sh/et8r65wr","slide":24,"text":"Reduced manual effort through automated ingestion, preprocessing, agent analysis, deduplication, and graph fusion.","textPreview":"Reduced manual effort through automated ingestion, preprocessing, agent analysis, deduplication, and graph fusion.","textChars":114,"textLines":1,"bbox":[118,145,1052,70]}
+{"kind":"textbox","id":"sh/mhobu9sb","slide":24,"text":"■","textPreview":"■","textChars":1,"textLines":1,"bbox":[90,211,20,22]}
+{"kind":"textbox","id":"sh/n2xcnetw","slide":24,"text":"Faster assessments from seven parallel AI agents and shared JSON evidence format.","textPreview":"Faster assessments from seven parallel AI agents and shared JSON evidence format.","textChars":81,"textLines":1,"bbox":[118,209,1052,70]}
+{"kind":"textbox","id":"sh/o36dwja1","slide":24,"text":"■","textPreview":"■","textChars":1,"textLines":1,"bbox":[90,275,20,22]}
+{"kind":"textbox","id":"sh/94fupobm","slide":24,"text":"Better attack-path visibility through Neo4j multi-hop traversal from internet-facing entry points to sensitive assets.","textPreview":"Better attack-path visibility through Neo4j multi-hop traversal from internet-facing entry points to sensitive assets.","textChars":118,"textLines":1,"bbox":[118,273,1052,70]}
+{"kind":"textbox","id":"sh/ed4bqpsz","slide":24,"text":"■","textPreview":"■","textChars":1,"textLines":1,"bbox":[90,339,20,22]}
+{"kind":"textbox","id":"sh/zedczutk","slide":24,"text":"Improved compliance through mappings to NIST SP 800-53, ISO/IEC 27001, NISPG, CIS Controls, and OWASP ASVS.","textPreview":"Improved compliance through mappings to NIST SP 800-53, ISO/IEC 27001, NISPG, CIS Controls, and OWASP ASVS.","textChars":107,"textLines":1,"bbox":[118,337,1052,70]}
+{"kind":"textbox","id":"sh/0fmtsza5","slide":24,"text":"■","textPreview":"■","textChars":1,"textLines":1,"bbox":[90,403,20,22]}
+{"kind":"textbox","id":"sh/1gful4bq","slide":24,"text":"Executive dashboards and department-level risk scores for leadership decision support.","textPreview":"Executive dashboards and department-level risk scores for leadership decision support.","textChars":86,"textLines":1,"bbox":[118,401,1052,70]}
+{"kind":"textbox","id":"sh/y98v2tsj","slide":24,"text":"■","textPreview":"■","textChars":1,"textLines":1,"bbox":[90,467,20,22]}
+{"kind":"textbox","id":"sh/jahcvyto","slide":24,"text":"Prioritized remediation using asset criticality, dependency impact, risk reduction potential, and implementation effort.","textPreview":"Prioritized remediation using asset criticality, dependency impact, risk reduction potential, and implementation effort.","textChars":120,"textLines":1,"bbox":[118,465,1052,70]}
+{"kind":"textbox","id":"sh/tg36hczi","slide":24,"text":"■","textPreview":"■","textChars":1,"textLines":1,"bbox":[90,531,20,22]}
+{"kind":"textbox","id":"sh/sfu58ryx","slide":24,"text":"Government-ready offline deployment using Docker Compose and Ollama.","textPreview":"Government-ready offline deployment using Docker Compose and Ollama.","textChars":68,"textLines":1,"bbox":[118,529,1052,70]}
+{"kind":"notes","id":"nt/vpxqsy","slide":24,"text":"[Sources]\nSource: Final Report.docx, AI Government Cybersecurity Posture Assessment Platform (AIG-CPAP)."}
+{"kind":"slide","id":"sl/3bhd4j","slide":25,"title":"JUDEX / AIG-CPAP","textShapes":13}
+{"kind":"shape","id":"sh/jqlc7itw","slide":25,"bbox":[0,0,1.4,720]}
+{"kind":"shape","id":"sh/4redgnah","slide":25,"bbox":[64,0,1.4,720]}
+{"kind":"shape","id":"sh/5snu9sb2","slide":25,"bbox":[128,0,1.4,720]}
+{"kind":"shape","id":"sh/ulcvadsf","slide":25,"bbox":[192,0,1.4,720]}
+{"kind":"shape","id":"sh/vmlc3ytk","slide":25,"bbox":[256,0,1.4,720]}
+{"kind":"shape","id":"sh/wnudc3a5","slide":25,"bbox":[320,0,1.4,720]}
+{"kind":"shape","id":"sh/ho3u58bq","slide":25,"bbox":[384,0,1.4,720]}
+{"kind":"shape","id":"sh/mxsb6ts3","slide":25,"bbox":[448,0,1.4,720]}
+{"kind":"shape","id":"sh/7y1czyto","slide":25,"bbox":[512,0,1.4,720]}
+{"kind":"shape","id":"sh/n6hgje1s","slide":25,"bbox":[576,0,1.4,720]}
+{"kind":"shape","id":"sh/m5ozq907","slide":25,"bbox":[640,0,1.4,720]}
+{"kind":"shape","id":"sh/98zylojy","slide":25,"bbox":[704,0,1.4,720]}
+{"kind":"shape","id":"sh/o7qhsjid","slide":25,"bbox":[768,0,1.4,720]}
+{"kind":"shape","id":"sh/bahgny14","slide":25,"bbox":[832,0,1.4,720]}
+{"kind":"shape","id":"sh/a98zut0j","slide":25,"bbox":[896,0,1.4,720]}
+{"kind":"shape","id":"sh/xczyp8ju","slide":25,"bbox":[960,0,1.4,720]}
+{"kind":"shape","id":"sh/wbqhw3ip","slide":25,"bbox":[1024,0,1.4,720]}
+{"kind":"shape","id":"sh/rexgbu1k","slide":25,"bbox":[1088,0,1.4,720]}
+{"kind":"shape","id":"sh/qd4fipkf","slide":25,"bbox":[1152,0,1.4,720]}
+{"kind":"shape","id":"sh/utcjqxkn","slide":25,"bbox":[1216,0,1.4,720]}
+{"kind":"shape","id":"sh/vulkj2l8","slide":25,"bbox":[0,0,1280,1.4]}
+{"kind":"shape","id":"sh/gvu1s72t","slide":25,"bbox":[0,64,1280,1.4]}
+{"kind":"shape","id":"sh/hw32lc3e","slide":25,"bbox":[0,128,1280,1.4]}
+{"kind":"shape","id":"sh/65cjmxkr","slide":25,"bbox":[0,192,1280,1.4]}
+{"kind":"shape","id":"sh/76lkf2lc","slide":25,"bbox":[0,256,1280,1.4]}
+{"kind":"shape","id":"sh/87u1o72x","slide":25,"bbox":[0,320,1280,1.4]}
+{"kind":"shape","id":"sh/t832hs32","slide":25,"bbox":[0,384,1280,1.4]}
+{"kind":"shape","id":"sh/y1sjidkf","slide":25,"bbox":[0,448,1280,1.4]}
+{"kind":"shape","id":"sh/j210bil0","slide":25,"bbox":[0,512,1280,1.4]}
+{"kind":"shape","id":"sh/1wrmhgni","slide":25,"bbox":[0,576,1280,1.4]}
+{"kind":"shape","id":"sh/0vy5ovmx","slide":25,"bbox":[0,640,1280,1.4]}
+{"kind":"shape","id":"sh/fup4fq5s","slide":25,"bbox":[0,704,1280,1.4]}
+{"kind":"shape","id":"sh/etgnml47","slide":25,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/ds7mdgnm","slide":25,"text":"JUDEX / AIG-CPAP","textPreview":"JUDEX / AIG-CPAP","textChars":16,"textLines":1,"bbox":[58,28,360,22]}
+{"kind":"textbox","id":"sh/srylkbm1","slide":25,"text":"25","textPreview":"25","textChars":2,"textLines":1,"bbox":[1160,26,60,24]}
+{"kind":"textbox","id":"sh/rqp4b65g","slide":25,"text":"Conclusion","textPreview":"Conclusion","textChars":10,"textLines":1,"bbox":[58,58,1080,48]}
+{"kind":"shape","id":"sh/qpg3i14v","slide":25,"bbox":[58,118,1164,1.4]}
+{"kind":"textbox","id":"sh/5o7m9wna","slide":25,"text":"■","textPreview":"■","textChars":1,"textLines":1,"bbox":[90,152,20,22]}
+{"kind":"textbox","id":"sh/4nelgrm5","slide":25,"text":"AIG-CPAP addresses fragmented government cybersecurity assessment by fusing evidence across source code, infrastructure, APIs, networks, identities, documents, and event logs.","textPreview":"AIG-CPAP addresses fragmented government cybersecurity assessment by fusing evidence across source code, infrastructure, APIs, networks, ...","textChars":175,"textLines":1,"bbox":[118,150,1022,84]}
+{"kind":"textbox","id":"sh/4rqdgfm1","slide":25,"text":"■","textPreview":"■","textChars":1,"textLines":1,"bbox":[90,230,20,22]}
+{"kind":"textbox","id":"sh/5szup0nm","slide":25,"text":"The approach combines seven AI agents, a multi-agent coordinator, a Neo4j Cyber Knowledge Graph, evidence confidence scoring, attack-path reasoning, and an explainable risk engine.","textPreview":"The approach combines seven AI agents, a multi-agent coordinator, a Neo4j Cyber Knowledge Graph, evidence confidence scoring, attack-path...","textChars":180,"textLines":1,"bbox":[118,228,1022,84]}
+{"kind":"textbox","id":"sh/i5ove54v","slide":25,"text":"■","textPreview":"■","textChars":1,"textLines":1,"bbox":[90,308,20,22]}
+{"kind":"textbox","id":"sh/j6xcna5g","slide":25,"text":"The technology stack includes Qwen 3 Instruct, Qwen2.5-Coder, DeepSeek-Coder, Tree-sitter, BGE-M3, PostgreSQL/pgvector, Neo4j, Ollama, FastAPI, React, Docker Compose, and WeasyPrint.","textPreview":"The technology stack includes Qwen 3 Instruct, Qwen2.5-Coder, DeepSeek-Coder, Tree-sitter, BGE-M3, PostgreSQL/pgvector, Neo4j, Ollama, Fa...","textChars":182,"textLines":1,"bbox":[118,306,1022,84]}
+{"kind":"textbox","id":"sh/svqdkfmx","slide":25,"text":"■","textPreview":"■","textChars":1,"textLines":1,"bbox":[90,386,20,22]}
+{"kind":"textbox","id":"sh/twzutkni","slide":25,"text":"Expected impact: auditable risk scores, compound-risk detection, compliance-mapped reports, executive dashboards, department-level scoring, and phased remediation roadmaps for government deployments.","textPreview":"Expected impact: auditable risk scores, compound-risk detection, compliance-mapped reports, executive dashboards, department-level scorin...","textChars":199,"textLines":1,"bbox":[118,384,1022,84]}
+{"kind":"textbox","id":"sh/6t8vi547","slide":25,"text":"■","textPreview":"■","textChars":1,"textLines":1,"bbox":[90,464,20,22]}
+{"kind":"textbox","id":"sh/ruhcra5s","slide":25,"text":"Future scope is not separately specified in the report.","textPreview":"Future scope is not separately specified in the report.","textChars":55,"textLines":1,"bbox":[118,462,1022,84]}
+{"kind":"notes","id":"nt/3bhd4j","slide":25,"text":"[Sources]\nSource: Final Report.docx, AI Government Cybersecurity Posture Assessment Platform (AIG-CPAP)."}
+{"kind":"slide","id":"sl/0ituhu","slide":26,"title":"JUDEX / AIG-CPAP","textShapes":18}
+{"kind":"shape","id":"sh/32tsjelc","slide":26,"bbox":[0,0,1.4,720]}
+{"kind":"shape","id":"sh/o329cjmx","slide":26,"bbox":[64,0,1.4,720]}
+{"kind":"shape","id":"sh/p4bal43i","slide":26,"bbox":[128,0,1.4,720]}
+{"kind":"shape","id":"sh/qpkre943","slide":26,"bbox":[192,0,1.4,720]}
+{"kind":"shape","id":"sh/bqtsnel8","slide":26,"bbox":[256,0,1.4,720]}
+{"kind":"shape","id":"sh/cr29gjmt","slide":26,"bbox":[320,0,1.4,720]}
+{"kind":"shape","id":"sh/dsvapo3e","slide":26,"bbox":[384,0,1.4,720]}
+{"kind":"shape","id":"sh/6t0rip4j","slide":26,"bbox":[448,0,1.4,720]}
+{"kind":"shape","id":"sh/ru98bul4","slide":26,"bbox":[512,0,1.4,720]}
+{"kind":"shape","id":"sh/bed0jyt8","slide":26,"bbox":[576,0,1.4,720]}
+{"kind":"shape","id":"sh/ad4jatsn","slide":26,"bbox":[640,0,1.4,720]}
+{"kind":"shape","id":"sh/xgfil8by","slide":26,"bbox":[704,0,1.4,720]}
+{"kind":"shape","id":"sh/cfm1c3at","slide":26,"bbox":[768,0,1.4,720]}
+{"kind":"shape","id":"sh/nad0fytw","slide":26,"bbox":[832,0,1.4,720]}
+{"kind":"shape","id":"sh/294z6tsb","slide":26,"bbox":[896,0,1.4,720]}
+{"kind":"shape","id":"sh/pcvihob2","slide":26,"bbox":[960,0,1.4,720]}
+{"kind":"shape","id":"sh/obm18jah","slide":26,"bbox":[1024,0,1.4,720]}
+{"kind":"shape","id":"sh/fmt0bet0","slide":26,"bbox":[1088,0,1.4,720]}
+{"kind":"shape","id":"sh/elkz29sf","slide":26,"bbox":[1152,0,1.4,720]}
+{"kind":"shape","id":"sh/ihkju9w7","slide":26,"bbox":[1216,0,1.4,720]}
+{"kind":"shape","id":"sh/3itkneds","slide":26,"bbox":[0,0,1280,1.4]}
+{"kind":"shape","id":"sh/4j21wjed","slide":26,"bbox":[0,64,1280,1.4]}
+{"kind":"shape","id":"sh/5kb2povy","slide":26,"bbox":[0,128,1280,1.4]}
+{"kind":"shape","id":"sh/qlkjytwj","slide":26,"bbox":[0,192,1280,1.4]}
+{"kind":"shape","id":"sh/rmtkredo","slide":26,"bbox":[0,256,1280,1.4]}
+{"kind":"shape","id":"sh/sn210je9","slide":26,"bbox":[0,320,1280,1.4]}
+{"kind":"shape","id":"sh/d8v2tovu","slide":26,"bbox":[0,384,1280,1.4]}
+{"kind":"shape","id":"sh/e94j2twf","slide":26,"bbox":[0,448,1280,1.4]}
+{"kind":"shape","id":"sh/fadkvyd0","slide":26,"bbox":[0,512,1280,1.4]}
+{"kind":"shape","id":"sh/p4fmlsf2","slide":26,"bbox":[0,576,1280,1.4]}
+{"kind":"shape","id":"sh/o36lsnyh","slide":26,"bbox":[0,640,1280,1.4]}
+{"kind":"shape","id":"sh/n2x4jixw","slide":26,"bbox":[0,704,1280,1.4]}
+{"kind":"shape","id":"sh/2ho3qdgr","slide":26,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/x8zmpcfe","slide":26,"text":"JUDEX / AIG-CPAP","textPreview":"JUDEX / AIG-CPAP","textChars":16,"textLines":1,"bbox":[58,28,360,22]}
+{"kind":"textbox","id":"sh/c765w7yt","slide":26,"text":"26","textPreview":"26","textChars":2,"textLines":1,"bbox":[1160,26,60,24]}
+{"kind":"textbox","id":"sh/b6x4n2x8","slide":26,"text":"References","textPreview":"References","textChars":10,"textLines":1,"bbox":[58,58,1080,48]}
+{"kind":"shape","id":"sh/a5onuxgn","slide":26,"bbox":[58,118,1164,1.4]}
+{"kind":"textbox","id":"sh/lczmtcfa","slide":26,"text":"[1] P. Falcarin and F. Dainese, \"Building a Cybersecurity Knowledge Graph with CyberGraph,\" Proc. ACM/IEEE EnCyCriS/SVM, 2024, pp. 29-36, doi: 10.1145/3643662.3643962.","textPreview":"[1] P. Falcarin and F. Dainese, \"Building a Cybersecurity Knowledge Graph with CyberGraph,\" Proc. ACM/IEEE EnCyCriS/SVM, 2024, pp. 29-36,...","textChars":167,"textLines":1,"bbox":[58,140,570,52]}
+{"kind":"textbox","id":"sh/kbq507yp","slide":26,"text":"[2] H. Li, Z. Shi, C. Pan, D. Zhao, and N. Sun, \"Cybersecurity knowledge graphs construction and quality assessment,\" Complex & Intelligent Systems, vol. 10, pp. 1201-1217, 2024, doi: 10.1007/s40747-023-01205-1.","textPreview":"[2] H. Li, Z. Shi, C. Pan, D. Zhao, and N. Sun, \"Cybersecurity knowledge graphs construction and quality assessment,\" Complex & Intellige...","textChars":211,"textLines":1,"bbox":[58,202,570,52]}
+{"kind":"textbox","id":"sh/wrupsbix","slide":26,"text":"[3] \"Practical Applications of Cyber Security: A Research Paper on Knowledge Graphs for Real-World Security Solutions,\" Proc. 2024 IEEE Conf. Publ., 2024.","textPreview":"[3] \"Practical Applications of Cyber Security: A Research Paper on Knowledge Graphs for Real-World Security Solutions,\" Proc. 2024 IEEE C...","textChars":154,"textLines":1,"bbox":[58,264,570,52]}
+{"kind":"textbox","id":"sh/hs3qlgzi","slide":26,"text":"[4] \"Time-Aware Cybersecurity Knowledge Graph Reasoning Method for Vulnerability Analysis (TCGFormer),\" IEEE Journals & Magazine, 2025.","textPreview":"[4] \"Time-Aware Cybersecurity Knowledge Graph Reasoning Method for Vulnerability Analysis (TCGFormer),\" IEEE Journals & Magazine, 2025.","textChars":135,"textLines":1,"bbox":[58,326,570,52]}
+{"kind":"textbox","id":"sh/u5s7q10r","slide":26,"text":"[5] X. Zhao, R. Jiang, Y. Han, A. Li, and Z. Peng, \"A survey on cybersecurity knowledge graph construction,\" Computers & Security, vol. 136, p. 103524, 2024, doi: 10.1016/j.cose.2023.103524.","textPreview":"[5] X. Zhao, R. Jiang, Y. Han, A. Li, and Z. Peng, \"A survey on cybersecurity knowledge graph construction,\" Computers & Security, vol. 1...","textChars":190,"textLines":1,"bbox":[58,388,570,52]}
+{"kind":"textbox","id":"sh/v61oj6hc","slide":26,"text":"[6] I. Koufos et al., \"Towards the Automation of Attack Graph-Based Risk Assessment with OSCAL,\" DCAI 2024, LNNS vol. 1198, Springer, 2025, doi: 10.1007/978-3-031-76459-2_30.","textPreview":"[6] I. Koufos et al., \"Towards the Automation of Attack Graph-Based Risk Assessment with OSCAL,\" DCAI 2024, LNNS vol. 1198, Springer, 202...","textChars":174,"textLines":1,"bbox":[58,450,570,52]}
+{"kind":"textbox","id":"sh/83apobi1","slide":26,"text":"[7] H. Jabbar, S. Al-Janabi, and F. Syms, \"AI-integrated cyber security risk management framework for IT projects,\" Proc. IJCC, IEEE, 2024, pp. 76-81, doi: 10.1109/IJCC64742.2024.10847294.","textPreview":"[7] H. Jabbar, S. Al-Janabi, and F. Syms, \"AI-integrated cyber security risk management framework for IT projects,\" Proc. IJCC, IEEE, 202...","textChars":188,"textLines":1,"bbox":[58,512,570,52]}
+{"kind":"textbox","id":"sh/94j6hgzm","slide":26,"text":"[8] \"Cloud Security Posture Management: Automating Risk Detection, Compliance Enforcement, and Vulnerability Remediation in Cloud Infrastructure,\" Proc. 2025 IEEE Conf. Publ., 2025.","textPreview":"[8] \"Cloud Security Posture Management: Automating Risk Detection, Compliance Enforcement, and Vulnerability Remediation in Cloud Infrast...","textChars":181,"textLines":1,"bbox":[58,574,570,52]}
+{"kind":"textbox","id":"sh/m1s7m10v","slide":26,"text":"[9] I. H. Sarker et al., \"Explainable AI for cybersecurity automation, intelligence and trustworthiness in digital twin,\" ICT Express, vol. 10, no. 4, pp. 935-958, 2024, doi: 10.1016/j.icte.2024.05.007.","textPreview":"[9] I. H. Sarker et al., \"Explainable AI for cybersecurity automation, intelligence and trustworthiness in digital twin,\" ICT Express, vo...","textChars":202,"textLines":1,"bbox":[668,140,570,52]}
+{"kind":"textbox","id":"sh/721of6hg","slide":26,"text":"[10] \"A comprehensive review of explainable AI in cybersecurity: Decoding the black box,\" Computers & Security, 2025.","textPreview":"[10] \"A comprehensive review of explainable AI in cybersecurity: Decoding the black box,\" Computers & Security, 2025.","textChars":117,"textLines":1,"bbox":[668,202,570,52]}
+{"kind":"textbox","id":"sh/szep0vy5","slide":26,"text":"[11] \"Cybersecurity in the age of generative AI: A systematic taxonomy of AI-powered vulnerability assessment and risk management,\" Future Generation Computer Systems, 2025.","textPreview":"[11] \"Cybersecurity in the age of generative AI: A systematic taxonomy of AI-powered vulnerability assessment and risk management,\" Futur...","textChars":173,"textLines":1,"bbox":[668,264,570,52]}
+{"kind":"textbox","id":"sh/t0nqt0zq","slide":26,"text":"[12] \"Empowering cybersecurity analysis: Unifying CVE, CWE, and CPE through knowledge graphs,\" Computers & Security, 2025, doi: 10.1016/j.cose.2025.104158.","textPreview":"[12] \"Empowering cybersecurity analysis: Unifying CVE, CWE, and CPE through knowledge graphs,\" Computers & Security, 2025, doi: 10.1016/j...","textChars":155,"textLines":1,"bbox":[668,326,570,52]}
+{"kind":"textbox","id":"sh/nupszu1s","slide":26,"text":"[13] P. Nandiya et al., \"BRIDG-ICS: AI-grounded knowledge graphs for intelligent threat analytics in Industry 5.0 cyber-physical systems,\" Cybersecurity, vol. 9, 2026, doi: 10.1186/s42400-026-00597-0.","textPreview":"[13] P. Nandiya et al., \"BRIDG-ICS: AI-grounded knowledge graphs for intelligent threat analytics in Industry 5.0 cyber-physical systems,...","textChars":200,"textLines":1,"bbox":[668,388,570,52]}
+{"kind":"textbox","id":"sh/2tgrqpk7","slide":26,"text":"[14] Y. Ren et al., \"CSKG4APT: A cybersecurity knowledge graph for advanced persistent threat organization attribution,\" IEEE TKDE, vol. 35, no. 6, pp. 5695-5709, 2023, doi: 10.1109/TKDE.2022.3175378.","textPreview":"[14] Y. Ren et al., \"CSKG4APT: A cybersecurity knowledge graph for advanced persistent threat organization attribution,\" IEEE TKDE, vol. ...","textChars":200,"textLines":1,"bbox":[668,450,570,52]}
+{"kind":"textbox","id":"sh/pw7a14jy","slide":26,"text":"[15] \"AI-driven threat detection and response framework for protecting U.S. critical infrastructure from cyberattacks,\" Int. Cybersecurity Law Rev., Springer, 2026, doi: 10.1365/s43439-026-00169-5.","textPreview":"[15] \"AI-driven threat detection and response framework for protecting U.S. critical infrastructure from cyberattacks,\" Int. Cybersecurit...","textChars":197,"textLines":1,"bbox":[668,512,570,52]}
+{"kind":"notes","id":"nt/0ituhu","slide":26,"text":"[Sources]\nSource: Final Report.docx, AI Government Cybersecurity Posture Assessment Platform (AIG-CPAP)."}

@@ -1,0 +1,14 @@
+# Default LightGBM configuration and search parameters
+
+params:
+  n_estimators: 500
+  num_leaves: 31
+  learning_rate: 0.05
+  subsample: 0.8
+  colsample_bytree: 0.8
+  min_child_samples: 20
+  reg_alpha: 1.0e-5
+  reg_lambda: 1.0e-5
+  random_state: 42
+  metric: "auc"
+  verbose: -1

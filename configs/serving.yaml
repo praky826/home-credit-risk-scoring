@@ -1,0 +1,10 @@
+# Serving configurations for FastAPI layer
+
+host: "0.0.0.0"
+port: 8000
+model_type: "xgboost"
+registry_model_name: "home_credit_default_risk"
+registry_stage: "Production"
+reference_stats_path: "data/drift/reference_stats.json"
+drift_threshold: 0.2
+rolling_window_size: 100

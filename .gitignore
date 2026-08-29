@@ -4,10 +4,20 @@
 # Environment variables
 .env
 
-# Python cache
+# Python cache & test artifacts
 __pycache__/
 *.py[cod]
 *.pyo
+.pytest_cache/
+.coverage
+htmlcov/
+.codex-build/
+
+# Node.js & Frontend
+node_modules/
+frontend/node_modules/
+frontend/dist/
+*.tsbuildinfo
 
 # Data
 data/raw/
@@ -19,7 +29,7 @@ data/drift/
 mlruns/
 mlflow_artifacts/
 
-# Model artifacts
+# Model artifacts & Large data
 *.pkl
 *.pt
 *.parquet
@@ -31,4 +41,4 @@ mlflow_artifacts/
 .vscode/
 
 # Jupyter
-.ipynb_checkpoints/
+.ipynb_checkpoints/

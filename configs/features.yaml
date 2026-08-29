@@ -1,0 +1,8 @@
+# Configuration for feature engineering pipeline
+# Toggle auxiliary table features on or off
+
+use_bureau: true
+use_previous_app: true
+use_pos_cash: true
+use_installments: true
+use_credit_card: true

@@ -1,0 +1,50 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# Install system deps
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    libgomp1 \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy and install Python deps (serving only - no training deps)
+COPY requirements.txt .
+RUN pip install --no-cache-dir --extra-index-url https://download.pytorch.org/whl/cpu \
+    fastapi==0.110.3 \
+    uvicorn==0.29.0 \
+    pydantic==2.7.4 \
+    lightgbm==4.3.0 \
+    xgboost==2.0.3 \
+    torch==2.3.1+cpu \
+    pandas==2.2.2 \
+    numpy==1.26.4 \
+    scikit-learn==1.4.2 \
+    joblib==1.4.2 \
+    boto3==1.34.162 \
+    pyyaml==6.0.1
+
+# Copy application code
+COPY src/ src/
+COPY configs/ configs/
+COPY data/processed/feature_names.json data/processed/
+COPY data/drift/reference_stats.json data/drift/
+
+# Copy model artifact
+COPY mlflow_artifacts/ mlflow_artifacts/
+
+# Expose port
+EXPOSE 8080
+
+# Environment variables (overridden at runtime)
+ENV MODEL_TYPE=xgboost
+ENV REGISTRY_MODEL_NAME=home_credit_default_risk
+ENV REGISTRY_STAGE=Production
+ENV MODEL_VERSION=unknown
+
+# Healthcheck
+HEALTHCHECK --interval=30s --timeout=10s --start-period=20s --retries=3 \
+  CMD curl -f http://localhost:8080/health || exit 1
+
+# Run
+CMD ["uvicorn", "src.serving.app:app", "--host", "0.0.0.0", "--port", "8080", "--workers", "1"]

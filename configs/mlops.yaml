@@ -1,0 +1,20 @@
+# Configuration for MLOps layer (MLflow, AWS, Drift parameters)
+
+mlflow:
+  tracking_uri: "mlruns"
+  experiment_trees: "home_credit_trees"
+  experiment_nn: "home_credit_nn"
+  registry_model_name: "home_credit_default_risk"
+
+aws:
+  region: "us-east-1"
+  s3_bucket: "home-credit-mlops"
+  s3_model_prefix: "models"
+  ecr_repo: "home-credit-serving"
+  sns_drift_arn: ""
+
+drift:
+  psi_threshold: 0.2
+  alert_cooldown_seconds: 3600
+  bins: 10
+  eps: 1.0e-6

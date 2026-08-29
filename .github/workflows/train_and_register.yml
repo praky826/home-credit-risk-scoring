@@ -1,0 +1,85 @@
+name: Training Pipeline
+
+on:
+  workflow_dispatch:
+    inputs:
+      model_type:
+        description: 'Model to train'
+        required: true
+        default: 'lgbm'
+        type: choice
+        options: [xgboost, lgbm, mlp, entity_embedding, tab_transformer, all]
+      tune:
+        description: 'Run hyperparameter tuning'
+        required: false
+        default: false
+        type: boolean
+  schedule:
+    - cron: '0 2 * * 1' # Every Monday at 2am UTC (weekly retraining)
+
+jobs:
+  train:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements-dev.txt
+
+      - name: Configure credentials
+        run: |
+          echo "KAGGLE_USERNAME=${{ secrets.KAGGLE_USERNAME }}" >> .env
+          echo "KAGGLE_KEY=${{ secrets.KAGGLE_KEY }}" >> .env
+          echo "MLFLOW_TRACKING_URI=${{ secrets.MLFLOW_TRACKING_URI }}" >> .env
+          echo "AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}" >> .env
+          echo "AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}" >> .env
+
+      - name: Download data
+        run: |
+          bash scripts/download_data.sh
+
+      - name: Build features
+        run: |
+          python -m src.features.pipeline
+
+      - name: Train model
+        env:
+          MODEL_TYPE: ${{ github.event.inputs.model_type || 'lgbm' }}
+          TUNE_FLAG: ${{ github.event.inputs.tune == 'true' && '--tune' || '' }}
+        run: |
+          if [ "$MODEL_TYPE" = "all" ]; then
+            bash scripts/train_all.sh
+          else
+            python -m src.models.train --model $MODEL_TYPE $TUNE_FLAG
+          fi
+
+      - name: Run comparison
+        if: ${{ github.event.inputs.model_type == 'all' || github.event.schedule != '' }}
+        run: |
+          python -m src.evaluation.comparison
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v2
+
+      - name: Build and Push Docker image
+        env:
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          ECR_REPOSITORY: home-credit-serving
+          IMAGE_TAG: latest
+        run: |
+          docker build -f docker/Dockerfile.serving -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG -t $ECR_REGISTRY/$ECR_REPOSITORY:${{ github.run_id }} .
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY:${{ github.run_id }}
