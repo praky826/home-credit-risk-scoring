@@ -30,12 +30,12 @@ def test_pipeline_execution():
     train_df = pd.read_parquet(train_path)
     test_df = pd.read_parquet(test_path)
     
-    assert "SK_ID_CURR" in train_df.columns
+    assert "loan_id" in train_df.columns
     assert "TARGET" in train_df.columns
-    assert "SK_ID_CURR" in test_df.columns
+    assert "loan_id" in test_df.columns
     assert "TARGET" not in test_df.columns
-    assert train_df.shape[0] == 500
-    assert test_df.shape[0] == 100
+    assert train_df.shape[0] > 1000
+    assert test_df.shape[0] > 100
 
     # Load JSON metadata
     with open(feat_names_path, "r") as f:
@@ -49,9 +49,12 @@ def test_pipeline_execution():
     assert isinstance(cat_indices, list)
     assert isinstance(cat_cards, dict)
     
-    # Feature names should not contain SK_ID_CURR or TARGET
-    assert "SK_ID_CURR" not in feature_names
+    # Feature names should not contain identifier or target columns
+    assert "loan_id" not in feature_names
     assert "TARGET" not in feature_names
+    assert "loan_amnt" in feature_names
+    assert "annual_inc" in feature_names
+    assert "fico_avg" in feature_names
     
     # All categorical index positions should map to elements in feature_names
     for idx in cat_indices:

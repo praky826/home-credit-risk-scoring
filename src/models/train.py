@@ -20,8 +20,10 @@ def load_data(
     See EXPERIMENT_DESIGN.md for split strategy.
     """
     df = pd.read_parquet(features_path)
-    # Ensure sorted by SK_ID_CURR ascending
-    df = df.sort_values("SK_ID_CURR").reset_index(drop=True)
+    id_col = "loan_id" if "loan_id" in df.columns else "SK_ID_CURR"
+    # Processed LendingClub features are already sorted temporally by issue_d
+    # before issue_d is dropped. Home Credit falls back to SK_ID_CURR order.
+    df = df.sort_values(id_col).reset_index(drop=True)
 
     train_idx_path = os.path.join(splits_dir, "train_idx.npy")
     val_idx_path = os.path.join(splits_dir, "val_idx.npy")
@@ -32,10 +34,20 @@ def load_data(
         train_idx = np.load(train_idx_path)
         val_idx = np.load(val_idx_path)
         test_idx = np.load(test_idx_path)
+        current_ids = set(df[id_col].values)
+        saved_ids = set(train_idx) | set(val_idx) | set(test_idx)
+        matched_ids = saved_ids.intersection(current_ids)
+        coverage = len(matched_ids) / max(len(current_ids), 1)
+        if coverage < 0.95:
+            print("Existing split indices do not match the processed dataset. Recreating splits...")
+            train_idx = val_idx = test_idx = None
     else:
+        train_idx = val_idx = test_idx = None
+
+    if train_idx is None or val_idx is None or test_idx is None:
         print(f"Creating new time-based split indices in {splits_dir}...")
         os.makedirs(splits_dir, exist_ok=True)
-        sk_ids = df["SK_ID_CURR"].values
+        sk_ids = df[id_col].values
         n = len(sk_ids)
         
         n_train = int(0.80 * n)
@@ -49,10 +61,10 @@ def load_data(
         np.save(val_idx_path, val_idx)
         np.save(test_idx_path, test_idx)
 
-    # Split dataset based on SK_ID_CURR indices
-    train_df = df[df["SK_ID_CURR"].isin(train_idx)].set_index("SK_ID_CURR")
-    val_df = df[df["SK_ID_CURR"].isin(val_idx)].set_index("SK_ID_CURR")
-    test_df = df[df["SK_ID_CURR"].isin(test_idx)].set_index("SK_ID_CURR")
+    # Split dataset based on stable application/loan IDs
+    train_df = df[df[id_col].isin(train_idx)].set_index(id_col)
+    val_df = df[df[id_col].isin(val_idx)].set_index(id_col)
+    test_df = df[df[id_col].isin(test_idx)].set_index(id_col)
 
     y_train = train_df["TARGET"]
     X_train = train_df.drop(columns=["TARGET"])
@@ -90,9 +102,9 @@ def train_and_log(
     mlflow.set_tracking_uri("mlruns")
     if experiment_name is None:
         if model_type in ["xgboost", "lgbm"]:
-            experiment_name = "home_credit_trees"
+            experiment_name = "lendingclub_trees"
         else:
-            experiment_name = "home_credit_nn"
+            experiment_name = "lendingclub_nn"
     
     mlflow.set_experiment(experiment_name)
 
@@ -121,11 +133,11 @@ def train_and_log(
     # Train model
     print(f"Fitting {model_type} model (tuning={tune})...")
     # For quick testing, we can limit trials in tuning if needed (defaults to 50)
-    n_trials = 50
+    n_trials = int(os.environ.get("TUNING_TRIALS", "50"))
     # If we are in a testing or mock environment, let's limit tuning trials to 5 to run quickly
     # (Checking if dataset size is small as a proxy for mock environment)
     if len(X_train) < 1000:
-        n_trials = 3
+        n_trials = min(n_trials, 3)
         print(f"Small dataset detected. Limiting tuning to {n_trials} trials.")
 
     model.fit(X_train, y_train, X_val, y_val, tune=tune, n_trials=n_trials)

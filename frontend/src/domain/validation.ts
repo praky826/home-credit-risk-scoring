@@ -31,7 +31,7 @@ function setPositiveError(
   }
 }
 
-function validateScore(
+function validateFico(
   errors: ValidationErrors,
   field: keyof ApplicantFormValues,
   value: string,
@@ -39,51 +39,71 @@ function validateScore(
 ) {
   const parsed = parseOptionalNumber(value);
   if (parsed === undefined) {
+    // Optional in Alternative / Cashflow-First mode
     return;
   }
 
-  if (!Number.isFinite(parsed) || parsed < 0 || parsed > 1) {
-    errors[field] = `${label} must be between 0 and 1.`;
+  if (!Number.isFinite(parsed) || parsed < 300 || parsed > 850) {
+    errors[field] = `${label} must be between 300 and 850.`;
   }
 }
 
 export function validateApplicantForm(values: ApplicantFormValues): ValidationErrors {
   const errors: ValidationErrors = {};
 
-  setPositiveError(errors, "ageYears", values.ageYears, "Age", true);
   setPositiveError(errors, "annualIncome", values.annualIncome, "Annual income", true);
   setPositiveError(errors, "loanAmount", values.loanAmount, "Loan amount", true);
+  setPositiveError(errors, "term", values.term, "Loan term", true);
+  setPositiveError(errors, "installment", values.installment, "Monthly installment", false);
+  setPositiveError(errors, "dti", values.dti, "Debt-to-income ratio", true);
 
-  const age = parseOptionalNumber(values.ageYears);
-  const yearsEmployed = parseOptionalNumber(values.yearsEmployed);
+  validateFico(errors, "ficoRangeLow", values.ficoRangeLow, "FICO low");
+  validateFico(errors, "ficoRangeHigh", values.ficoRangeHigh, "FICO high");
 
-  if (age !== undefined && (age < 18 || age > 100)) {
-    errors.ageYears = "Age must be between 18 and 100.";
+  const loanAmount = parseOptionalNumber(values.loanAmount);
+  if (loanAmount !== undefined) {
+    if (loanAmount < 500) {
+      errors.loanAmount = "Minimum unsecured loan amount is $500.";
+    } else if (loanAmount > 40000) {
+      errors.loanAmount = "Loan amount cannot exceed $40,000 (LendingClub maximum limit).";
+    }
   }
 
-  if (yearsEmployed === undefined) {
-    errors.yearsEmployed = "Years employed is required.";
-  } else if (!Number.isFinite(yearsEmployed) || yearsEmployed < 0) {
-    errors.yearsEmployed = "Years employed cannot be negative.";
-  } else if (age !== undefined && yearsEmployed > age - 14) {
-    errors.yearsEmployed = "Years employed cannot be greater than working age.";
+  const dti = parseOptionalNumber(values.dti);
+  if (dti !== undefined && (dti < 0 || dti > 100)) {
+    errors.dti = "Debt-to-income ratio must be between 0% and 100%.";
   }
 
-  validateScore(errors, "externalScore1", values.externalScore1, "Credit bureau score 1");
-  validateScore(errors, "externalScore2", values.externalScore2, "Credit bureau score 2");
-  validateScore(errors, "externalScore3", values.externalScore3, "Credit bureau score 3");
-
-  setPositiveError(errors, "annuityAmount", values.annuityAmount, "Annuity amount");
-  setPositiveError(errors, "goodsPrice", values.goodsPrice, "Goods price");
-
-  const childrenCount = parseOptionalNumber(values.childrenCount);
-  if (childrenCount !== undefined && (!Number.isInteger(childrenCount) || childrenCount < 0)) {
-    errors.childrenCount = "Number of children must be a whole number 0 or greater.";
+  const term = parseOptionalNumber(values.term);
+  if (term !== undefined && term !== 36 && term !== 60) {
+    errors.term = "Loan term must be 36 or 60 months.";
   }
 
-  const familyMembers = parseOptionalNumber(values.familyMembers);
-  if (familyMembers !== undefined && familyMembers < 0) {
-    errors.familyMembers = "Family members cannot be negative.";
+  const ficoLow = parseOptionalNumber(values.ficoRangeLow);
+  const ficoHigh = parseOptionalNumber(values.ficoRangeHigh);
+  if (ficoLow !== undefined && ficoHigh !== undefined && ficoLow > ficoHigh) {
+    errors.ficoRangeLow = "FICO low cannot be greater than FICO high.";
+  }
+
+  const empLength = parseOptionalNumber(values.empLength);
+  if (empLength !== undefined && (!Number.isFinite(empLength) || empLength < 0 || empLength > 10)) {
+    errors.empLength = "Employment length must be between 0 and 10 years.";
+  }
+
+  const integerFields: Array<[keyof ApplicantFormValues, string]> = [
+    ["delinq2Yrs", "Delinquencies"],
+    ["inquiriesLast6Months", "Inquiries"],
+    ["publicRecords", "Public records"],
+    ["openAccounts", "Open accounts"],
+    ["totalAccounts", "Total accounts"],
+    ["mortgageAccounts", "Mortgage accounts"],
+    ["publicRecordBankruptcies", "Public bankruptcies"],
+  ];
+  for (const [field, label] of integerFields) {
+    const value = parseOptionalNumber(values[field]);
+    if (value !== undefined && (!Number.isInteger(value) || value < 0)) {
+      errors[field] = `${label} must be a whole number 0 or greater.`;
+    }
   }
 
   return errors;

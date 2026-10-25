@@ -48,19 +48,19 @@ def main():
         print(f"Kaggle authentication failed: {e}", file=sys.stderr)
         sys.exit(1)
 
-    competition = "home-credit-default-risk"
-    raw_dir = "data/raw"
+    dataset = os.environ.get("KAGGLE_DATASET", "wordsforthewise/lending-club")
+    raw_dir = os.environ.get("RAW_DATA_DIR", "data/raw/lendingclub")
     os.makedirs(raw_dir, exist_ok=True)
 
-    print(f"Downloading competition files for '{competition}'...")
+    print(f"Downloading Kaggle dataset '{dataset}'...")
     try:
-        api.competition_download_files(competition, path=raw_dir)
+        api.dataset_download_files(dataset, path=raw_dir)
         print("Download completed successfully.")
     except Exception as e:
         print(f"Error downloading dataset: {e}", file=sys.stderr)
         sys.exit(1)
 
-    zip_path = os.path.join(raw_dir, f"{competition}.zip")
+    zip_path = os.path.join(raw_dir, dataset.split("/")[-1] + ".zip")
     if os.path.exists(zip_path):
         print(f"Extracting {zip_path} to {raw_dir}...")
         try:

@@ -12,3 +12,6 @@ params:
   random_state: 42
   metric: "auc"
   verbose: -1
+  device_type: "gpu"
+  gpu_platform_id: 0
+  gpu_device_id: 0

@@ -13,46 +13,45 @@ function optionalInteger(value: string): number | undefined {
   return parsed === undefined ? undefined : Math.round(parsed);
 }
 
-function yesNoToBinary(value: "" | "Y" | "N"): number | undefined {
-  if (value === "") {
-    return undefined;
-  }
-
-  return value === "Y" ? 1 : 0;
-}
-
-function genderToCode(value: "" | "F" | "M"): number | undefined {
-  if (value === "") {
-    return undefined;
-  }
-
-  return value === "M" ? 1 : 0;
-}
-
 export function mapFormToPredictPayload(values: ApplicantFormValues): PredictPayload {
   const payload: PredictPayload = {
-    AMT_CREDIT: Number(values.loanAmount),
-    AMT_INCOME_TOTAL: Number(values.annualIncome),
-    DAYS_BIRTH: -Math.round(Number(values.ageYears) * 365),
-    DAYS_EMPLOYED: -Math.round(Number(values.yearsEmployed) * 365),
+    loan_amnt: Number(values.loanAmount),
+    annual_inc: Number(values.annualIncome),
+    term: Number(values.term),
+    installment: Number(values.installment),
+    dti: Number(values.dti),
   };
 
+  const ficoLow = optionalNumber(values.ficoRangeLow);
+  if (ficoLow !== undefined) {
+    payload.fico_range_low = ficoLow;
+  }
+  const ficoHigh = optionalNumber(values.ficoRangeHigh);
+  if (ficoHigh !== undefined) {
+    payload.fico_range_high = ficoHigh;
+  }
+
   const optionalFields: Partial<PredictPayload> = {
-    SK_ID_CURR: optionalInteger(values.customerId),
-    EXT_SOURCE_2: optionalNumber(values.externalScore2),
-    AMT_ANNUITY: optionalNumber(values.annuityAmount),
-    AMT_GOODS_PRICE: optionalNumber(values.goodsPrice),
-    EXT_SOURCE_1: optionalNumber(values.externalScore1),
-    EXT_SOURCE_3: optionalNumber(values.externalScore3),
-    CODE_GENDER: genderToCode(values.gender),
-    FLAG_OWN_CAR: yesNoToBinary(values.ownsCar),
-    FLAG_OWN_REALTY: yesNoToBinary(values.ownsProperty),
-    CNT_CHILDREN: optionalInteger(values.childrenCount),
-    CNT_FAM_MEMBERS: optionalNumber(values.familyMembers),
+    loan_id: optionalInteger(values.loanId),
+    emp_length: optionalNumber(values.empLength),
+    home_ownership: values.homeOwnership || undefined,
+    verification_status: values.verificationStatus || undefined,
+    purpose: values.purpose || undefined,
+    delinq_2yrs: optionalInteger(values.delinq2Yrs),
+    inq_last_6mths: optionalInteger(values.inquiriesLast6Months),
+    pub_rec: optionalInteger(values.publicRecords),
+    revol_bal: optionalNumber(values.revolvingBalance),
+    revol_util: optionalNumber(values.revolvingUtilization),
+    open_acc: optionalInteger(values.openAccounts),
+    total_acc: optionalInteger(values.totalAccounts),
+    mort_acc: optionalInteger(values.mortgageAccounts),
+    pub_rec_bankruptcies: optionalInteger(values.publicRecordBankruptcies),
   };
 
   for (const [key, value] of Object.entries(optionalFields)) {
-    if (value !== undefined && Number.isFinite(value)) {
+    if (typeof value === "string" && value.trim() !== "") {
+      payload[key as keyof PredictPayload] = value as never;
+    } else if (typeof value === "number" && Number.isFinite(value)) {
       payload[key as keyof PredictPayload] = value as never;
     }
   }

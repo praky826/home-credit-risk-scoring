@@ -1,22 +1,49 @@
 import os
 import json
 from typing import Optional, Dict, Any
-from pydantic import BaseModel, Field, create_model
+from pydantic import BaseModel, ConfigDict, Field, create_model
 
 # 1. Base Responses
 class HealthResponse(BaseModel):
+    model_config = ConfigDict(protected_namespaces=())
+
     status: str
     model_loaded: bool
     model_version: str
-    model_name: Optional[str] = "XGBoost Risk Classifier (Production Champion)"
+    model_name: Optional[str] = "LendingClub XGBoost Default Risk Classifier"
     model_type: Optional[str] = "xgboost"
     model_stage: Optional[str] = "Production"
 
+class PredictionWarning(BaseModel):
+    code: str
+    field: Optional[str] = None
+    message: str
+
+class FeatureLookupMetadata(BaseModel):
+    customer_id: Optional[int] = None
+    found: bool = False
+    source: Optional[str] = None
+
+class SolvencyDiagnostics(BaseModel):
+    repayment_coverage_ratio: float
+    disposable_monthly_cashflow: float
+    debt_service_burden_pct: float
+    salary_multiplier: float
+    amortized_installment: float
+    policy_knockout: bool = False
+    policy_reasons: list[str] = []
+
 class PredictResponse(BaseModel):
     default_probability: float = Field(..., ge=0.0, le=1.0)
+    raw_model_probability: Optional[float] = None
+    calibration_method: Optional[str] = None
+    decision_label: Optional[str] = None
     model_version: str
-    model_name: Optional[str] = "XGBoost Risk Classifier (Production Champion)"
+    model_name: Optional[str] = "LendingClub XGBoost Default Risk Classifier"
     request_id: str
+    feature_lookup: Optional[FeatureLookupMetadata] = None
+    solvency: Optional[SolvencyDiagnostics] = None
+    warnings: list[PredictionWarning] = []
 
 class DriftResponse(BaseModel):
     psi_values: Dict[str, float]
@@ -25,6 +52,8 @@ class DriftResponse(BaseModel):
     threshold: float
 
 class ModelBenchmarkItem(BaseModel):
+    model_config = ConfigDict(protected_namespaces=())
+
     model_id: str
     name: str
     architecture: str
@@ -49,6 +78,8 @@ class SelectionRationaleItem(BaseModel):
     details: str
 
 class ModelComparisonResponse(BaseModel):
+    model_config = ConfigDict(protected_namespaces=())
+
     champion_model_id: str
     champion_model_name: str
     models: list[ModelBenchmarkItem]
@@ -58,12 +89,14 @@ class ModelComparisonResponse(BaseModel):
 
 # 2. Dynamic PredictRequest Creation
 default_features = [
-    "EXT_SOURCE_1", "EXT_SOURCE_2", "EXT_SOURCE_3", "AMT_ANNUITY",
-    "AMT_GOODS_PRICE", "DAYS_REGISTRATION", "DAYS_ID_PUBLISH", "CODE_GENDER",
-    "NAME_FAMILY_STATUS", "CNT_CHILDREN", "CNT_FAM_MEMBERS", "FLAG_DOCUMENT_3",
-    "OBS_30_CNT_SOCIAL_CIRCLE", "DEF_30_CNT_SOCIAL_CIRCLE", "OBS_60_CNT_SOCIAL_CIRCLE",
-    "DEF_60_CNT_SOCIAL_CIRCLE", "CREDIT_INCOME_RATIO", "ANNUITY_INCOME_RATIO",
-    "CREDIT_TERM", "DAYS_EMPLOYED_PERCENT", "EMPLOYED_ANOM"
+    "loan_amnt", "term", "installment", "annual_inc", "dti",
+    "fico_range_low", "fico_range_high", "fico_avg", "emp_length",
+    "home_ownership", "verification_status", "purpose", "addr_state",
+    "delinq_2yrs", "inq_last_6mths", "open_acc", "pub_rec", "revol_bal",
+    "revol_util", "total_acc", "initial_list_status", "application_type",
+    "mort_acc", "pub_rec_bankruptcies", "loan_income_ratio",
+    "installment_income_ratio", "revol_balance_income_ratio",
+    "credit_history_years", "issue_year", "issue_month"
 ]
 
 feature_names_path = "data/processed/feature_names.json"
@@ -79,11 +112,14 @@ else:
 
 # Create fields dictionary for Pydantic model
 fields = {
-    "SK_ID_CURR": (Optional[int], Field(default=None, description="Client ID for logging")),
-    "AMT_CREDIT": (float, Field(..., description="Credit amount of the loan")),
-    "AMT_INCOME_TOTAL": (float, Field(..., description="Income of the client")),
-    "DAYS_BIRTH": (int, Field(..., description="Client's age in days (negative)")),
-    "DAYS_EMPLOYED": (int, Field(..., description="How many days before application the person started current job")),
+    "loan_id": (Optional[int], Field(default=None, description="LendingClub loan ID for lookup/logging")),
+    "loan_amnt": (float, Field(..., description="Requested personal loan amount")),
+    "annual_inc": (float, Field(..., description="Self-reported annual income")),
+    "dti": (float, Field(..., description="Debt-to-income ratio")),
+    "term": (Optional[float], Field(default=36.0, description="Loan term in months (36 or 60)")),
+    "installment": (Optional[float], Field(default=None, description="Scheduled monthly installment")),
+    "fico_range_low": (Optional[float], Field(default=None, description="Lower bound of borrower FICO range")),
+    "fico_range_high": (Optional[float], Field(default=None, description="Upper bound of borrower FICO range")),
 }
 
 # Add all other features from feature_names.json as optional floats
@@ -91,9 +127,7 @@ for feat in feature_names:
     if feat not in fields:
         fields[feat] = (Optional[float], Field(default=None))
 
-# Create config class to allow extra parameters
-class CustomConfig:
-    extra = "allow"
+request_model_config = ConfigDict(extra="allow", protected_namespaces=())
 
-PredictRequest = create_model("PredictRequest", __config__=CustomConfig, **fields)
+PredictRequest = create_model("PredictRequest", __config__=request_model_config, **fields)
 print(f"Dynamically registered PredictRequest schema with {len(fields)} fields.")

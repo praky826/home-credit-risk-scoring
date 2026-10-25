@@ -9,6 +9,7 @@ params:
   min_child_weight: 1
   reg_alpha: 1.0e-5
   reg_lambda: 1.0e-5
-  tree_method: "hist" # Standard fast histogram method on CPU/GPU
+  tree_method: "hist"
+  device: "cuda"
   random_state: 42
   eval_metric: "auc"

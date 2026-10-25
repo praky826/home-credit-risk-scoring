@@ -7,11 +7,39 @@ export type HealthResponse = {
   model_stage?: string;
 };
 
+export type PredictionWarning = {
+  code: string;
+  field?: string;
+  message: string;
+};
+
+export type FeatureLookupMetadata = {
+  customer_id?: number;
+  found: boolean;
+  source?: string;
+};
+
+export type SolvencyDiagnostics = {
+  repayment_coverage_ratio: number;
+  disposable_monthly_cashflow: number;
+  debt_service_burden_pct: number;
+  salary_multiplier: number;
+  amortized_installment: number;
+  policy_knockout: boolean;
+  policy_reasons: string[];
+};
+
 export type PredictResponse = {
   default_probability: number;
+  raw_model_probability?: number;
+  calibration_method?: string;
+  decision_label?: string;
   model_version: string;
   model_name?: string;
   request_id: string;
+  feature_lookup?: FeatureLookupMetadata;
+  solvency?: SolvencyDiagnostics;
+  warnings?: PredictionWarning[];
 };
 
 export type DriftResponse = {
@@ -65,30 +93,42 @@ export type ModelComparisonResponse = {
 
 
 export type ApplicantFormValues = {
-  customerId: string;
-  ageYears: string;
+  loanId: string;
   annualIncome: string;
   loanAmount: string;
-  yearsEmployed: string;
-  externalScore2: string;
-  annuityAmount: string;
-  goodsPrice: string;
-  externalScore1: string;
-  externalScore3: string;
-  gender: "" | "F" | "M";
-  ownsCar: "" | "Y" | "N";
-  ownsProperty: "" | "Y" | "N";
-  childrenCount: string;
-  familyMembers: string;
+  term: string;
+  installment: string;
+  dti: string;
+  ficoRangeLow: string;
+  ficoRangeHigh: string;
+  empLength: string;
+  purpose: string;
+  homeOwnership: string;
+  verificationStatus: string;
+  delinq2Yrs: string;
+  inquiriesLast6Months: string;
+  publicRecords: string;
+  revolvingBalance: string;
+  revolvingUtilization: string;
+  openAccounts: string;
+  totalAccounts: string;
+  mortgageAccounts: string;
+  publicRecordBankruptcies: string;
 };
 
 export type OptionalFieldKey =
-  | "goodsPrice"
-  | "gender"
-  | "ownsCar"
-  | "ownsProperty"
-  | "familyMembers"
-  | "childrenCount";
+  | "homeOwnership"
+  | "verificationStatus"
+  | "purpose"
+  | "delinq2Yrs"
+  | "inquiriesLast6Months"
+  | "publicRecords"
+  | "revolvingBalance"
+  | "revolvingUtilization"
+  | "openAccounts"
+  | "totalAccounts"
+  | "mortgageAccounts"
+  | "publicRecordBankruptcies";
 
 export type FieldOption = {
   value: string;
@@ -104,21 +144,27 @@ export type FeatureCatalogItem = {
 };
 
 export type PredictPayload = {
-  SK_ID_CURR?: number;
-  AMT_CREDIT: number;
-  AMT_INCOME_TOTAL: number;
-  DAYS_BIRTH: number;
-  DAYS_EMPLOYED: number;
-  EXT_SOURCE_2?: number;
-  AMT_ANNUITY?: number;
-  AMT_GOODS_PRICE?: number;
-  EXT_SOURCE_1?: number;
-  EXT_SOURCE_3?: number;
-  CODE_GENDER?: number;
-  FLAG_OWN_CAR?: number;
-  FLAG_OWN_REALTY?: number;
-  CNT_CHILDREN?: number;
-  CNT_FAM_MEMBERS?: number;
+  loan_id?: number;
+  loan_amnt: number;
+  annual_inc: number;
+  term: number;
+  installment: number;
+  dti: number;
+  fico_range_low?: number;
+  fico_range_high?: number;
+  emp_length?: number;
+  purpose?: string;
+  home_ownership?: string;
+  verification_status?: string;
+  delinq_2yrs?: number;
+  inq_last_6mths?: number;
+  pub_rec?: number;
+  revol_bal?: number;
+  revol_util?: number;
+  open_acc?: number;
+  total_acc?: number;
+  mort_acc?: number;
+  pub_rec_bankruptcies?: number;
 };
 
 export type RiskLevel = "low" | "review" | "high";

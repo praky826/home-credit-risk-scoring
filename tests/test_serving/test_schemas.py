@@ -18,14 +18,16 @@ def test_schemas_validation():
     # 3. PredictRequest (dynamically created)
     # Correct body
     req_body = {
-        "AMT_CREDIT": 500000.0,
-        "AMT_INCOME_TOTAL": 150000.0,
-        "DAYS_BIRTH": -15000,
-        "DAYS_EMPLOYED": -2000,
-        "EXT_SOURCE_2": 0.5
+        "loan_amnt": 12000.0,
+        "annual_inc": 72000.0,
+        "term": 36,
+        "installment": 390.5,
+        "dti": 18.4,
+        "fico_range_low": 690,
+        "fico_range_high": 694,
     }
     req = PredictRequest(**req_body)
-    assert req.AMT_CREDIT == 500000.0
+    assert req.loan_amnt == 12000.0
     
     # Extra fields should be allowed (config extra='allow')
     req_extra = PredictRequest(**{**req_body, "EXTRA_UNKNOWN_FIELD": "test-val"})
@@ -34,7 +36,8 @@ def test_schemas_validation():
     # Missing required field
     with pytest.raises(ValidationError):
         PredictRequest(
-            AMT_INCOME_TOTAL=150000.0,
-            DAYS_BIRTH=-15000,
-            DAYS_EMPLOYED=-2000
+            annual_inc=72000.0,
+            dti=18.4,
+            fico_range_low=690,
+            fico_range_high=694,
         )

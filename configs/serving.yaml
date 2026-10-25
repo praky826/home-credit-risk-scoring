@@ -2,9 +2,35 @@
 
 host: "0.0.0.0"
 port: 8000
-model_type: "xgboost"
-registry_model_name: "home_credit_default_risk"
+model_type: "lgbm"
+registry_model_name:
 registry_stage: "Production"
+artifact_path: "mlflow_artifacts/model_lgbm_dbe938c8d1d54fb2ba7825282df8448f.pkl"
 reference_stats_path: "data/drift/reference_stats.json"
 drift_threshold: 0.2
 rolling_window_size: 100
+
+probability_calibration:
+  enabled: true
+  method: "scale_pos_weight_unbias"
+  # From first LendingClub temporal train split: negatives / positives ~= 4.29.
+  scale_pos_weight: 4.29
+
+feature_store:
+  enabled: true
+  id_column: "loan_id"
+  train_features_path: "data/processed/train_features.parquet"
+  test_features_path: "data/processed/test_features.parquet"
+
+defaults:
+  clean_credit_history_for_missing_loan: true
+
+decision_thresholds:
+  # Calibrated on the LightGBM holdout distribution after applying
+  # scale_pos_weight_unbias with LendingClub weight 4.29.
+  low_max: 0.15
+  review_max: 0.30
+
+ood:
+  enabled: true
+  warn_only: true

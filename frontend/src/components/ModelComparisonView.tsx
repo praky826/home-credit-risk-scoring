@@ -100,9 +100,9 @@ export function ModelComparisonView({ onBackToChecker }: ModelComparisonViewProp
           <div className="champion-main-info">
             <h3 className="champion-title">{data.champion_model_name}</h3>
             <p className="champion-desc">
-              Selected through rigorous benchmark protocol across 5 candidate architectures on{" "}
-              <strong>307,511</strong> credit applications. Outperforms all neural and tree alternatives in
-              ROC-AUC, Kolmogorov-Smirnov risk separation, and real-time sub-2ms inference SLA.
+              Selected from the first LendingClub tree-model migration pass on{" "}
+              <strong>{data.evaluation_dataset.train_samples?.toLocaleString()}</strong> training loans.
+              Neural models and tuned benchmarks still need to be refreshed before final production claims.
             </p>
           </div>
 
@@ -185,6 +185,7 @@ export function ModelComparisonView({ onBackToChecker }: ModelComparisonViewProp
         </div>
         <p className="table-footnote">
           * Evaluated on holdout test set (30,751 rows, ~8.1% positive default rate) using the standardized 235 engineered features.
+          * First-pass LendingClub evaluation. Final champion status should be confirmed after tuning and calibration review.
         </p>
       </section>
 
@@ -268,7 +269,7 @@ export function ModelComparisonView({ onBackToChecker }: ModelComparisonViewProp
                 <FileCheck size={15} /> Split Construction
               </span>
               <span className="meta-desc">
-                Temporal ordering proxy via ascending application sequence to ensure no future information leakage.
+                {data.evaluation_dataset.evaluation_protocol}
               </span>
             </div>
           </div>

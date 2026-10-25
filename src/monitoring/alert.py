@@ -56,7 +56,7 @@ def check_and_alert(
             sns_client = boto3.client("sns")
             
             message_body = (
-                f"Home Credit Default Risk - Feature Drift Alert\n"
+                f"LendingClub Default Risk - Feature Drift Alert\n"
                 f"-------------------------------------------------\n"
                 f"Alert Type: FEATURE_DRIFT\n"
                 f"Threshold:  {threshold}\n"
@@ -68,7 +68,7 @@ def check_and_alert(
                 
             sns_client.publish(
                 TopicArn=sns_arn,
-                Subject="Home Credit Alert: Feature Drift Detected",
+                Subject="LendingClub Alert: Feature Drift Detected",
                 Message=message_body
             )
             

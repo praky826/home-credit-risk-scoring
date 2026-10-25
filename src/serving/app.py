@@ -5,7 +5,7 @@ from src.serving.router import router
 from src.serving.model_loader import load_model
 
 app = FastAPI(
-    title="Home Credit Default Risk Prediction Service",
+    title="LendingClub Default Risk Prediction Service",
     description="FastAPI service for scoring default risk and detecting feature drift.",
     version="1.0.0"
 )

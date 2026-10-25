@@ -42,6 +42,9 @@ class LGBMModel(BaseModel):
                     "reg_alpha": trial.suggest_float("reg_alpha", 1e-8, 10.0, log=True),
                     "reg_lambda": trial.suggest_float("reg_lambda", 1e-8, 10.0, log=True),
                     "is_unbalance": True,
+                    "device_type": self.config.get("params", {}).get("device_type", "cpu"),
+                    "gpu_platform_id": self.config.get("params", {}).get("gpu_platform_id", 0),
+                    "gpu_device_id": self.config.get("params", {}).get("gpu_device_id", 0),
                     "metric": "auc",
                     "random_state": 42,
                     "verbose": -1,
@@ -70,6 +73,9 @@ class LGBMModel(BaseModel):
             
             best_params = study.best_params
             best_params["is_unbalance"] = True
+            best_params["device_type"] = self.config.get("params", {}).get("device_type", "cpu")
+            best_params["gpu_platform_id"] = self.config.get("params", {}).get("gpu_platform_id", 0)
+            best_params["gpu_device_id"] = self.config.get("params", {}).get("gpu_device_id", 0)
             best_params["metric"] = "auc"
             best_params["random_state"] = 42
             best_params["verbose"] = -1
@@ -87,6 +93,7 @@ class LGBMModel(BaseModel):
             params["n_jobs"] = -1
             
             self.model = lgb.LGBMClassifier(**params)
+            print(f"Training LightGBM with device_type={params.get('device_type', 'cpu')}...")
             self.model.fit(
                 X_train, y_train,
                 eval_set=[(X_val, y_val)],

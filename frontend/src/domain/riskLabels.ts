@@ -1,15 +1,15 @@
 import type { RiskLabel } from "./types";
 
 export function getRiskLabel(probability: number): RiskLabel {
-  if (probability < 0.1) {
+  if (probability < 0.15) {
     return {
       level: "low",
       title: "Low Risk",
-      message: "This application is below the initial review threshold.",
+      message: "This application is within low default probability benchmarks.",
     };
   }
 
-  if (probability <= 0.25) {
+  if (probability <= 0.30) {
     return {
       level: "review",
       title: "Needs Review",

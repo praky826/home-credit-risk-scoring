@@ -5,12 +5,7 @@ import numpy as np
 import pandas as pd
 from pathlib import Path
 
-from src.features.application import build_application_features
-from src.features.bureau import build_bureau_features
-from src.features.previous_app import build_previous_app_features
-from src.features.pos_cash import build_pos_cash_features
-from src.features.installments import build_installment_features
-from src.features.credit_card import build_credit_card_features
+from src.features.lendingclub import build_lendingclub_features
 from src.features.utils import reduce_memory_usage, MedianImputer
 
 def generate_reference_stats(
@@ -22,13 +17,13 @@ def generate_reference_stats(
     For each numeric feature column:
     - Compute mean, std
     - Compute bin_edges = np.percentile(col.dropna(), np.linspace(0, 100, bins+1))
-    Save to output_path as JSON. Skips TARGET and SK_ID_CURR.
+    Save to output_path as JSON. Skips target and identifier columns.
     """
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     
     ref_stats = {}
     for col in train_df.columns:
-        if col in ["TARGET", "SK_ID_CURR"]:
+        if col in ["TARGET", "SK_ID_CURR", "loan_id"]:
             continue
         if pd.api.types.is_numeric_dtype(train_df[col]):
             col_data = train_df[col].dropna()
@@ -63,14 +58,72 @@ def build_all_features(
     output_dir: str = "data/processed"
 ) -> None:
     """
-    Orchestrator. Reads config, calls all feature builders, merges on SK_ID_CURR, saves.
+    Orchestrator. Reads config, builds configured dataset features, and saves artifacts.
     """
     print(f"Loading feature configuration from {config_path}...")
     with open(config_path, "r", encoding="utf-8") as f:
         config = yaml.safe_load(f)
 
+    dataset = config.get("dataset", "lendingclub")
+
+    if dataset == "lendingclub":
+        print("Building LendingClub features...")
+        train_df, test_df = build_lendingclub_features(
+            raw_path=config.get("raw_path", "data/raw/lendingclub/accepted_2007_to_2018Q4.csv"),
+            include_grade_features=config.get("use_grade_features", False),
+            include_interest_rate=config.get("use_interest_rate", False),
+        )
+        print(f"Initial LendingClub train shape: {train_df.shape}, test shape: {test_df.shape}")
+
+        feature_names = [c for c in train_df.columns if c != "TARGET"]
+        # Use the persisted mapping keys as the source of truth. This avoids
+        # stale category metadata when a previous dataset generated artifacts.
+        category_mappings = train_df.attrs.get("category_mappings", {})
+        cat_features = list(category_mappings.keys())
+        cat_feature_indices = [feature_names.index(c) for c in cat_features if c in feature_names]
+        cat_cardinalities = {
+            col: len(mapping)
+            for col, mapping in category_mappings.items()
+            if col in feature_names
+        }
+
+        os.makedirs(output_dir, exist_ok=True)
+
+        print("Saving processed data as Parquet...")
+        train_save = reduce_memory_usage(train_df.reset_index(), verbose=False)
+        test_save = reduce_memory_usage(test_df.reset_index(), verbose=False)
+
+        train_save.to_parquet(os.path.join(output_dir, "train_features.parquet"), index=False)
+        test_save.to_parquet(os.path.join(output_dir, "test_features.parquet"), index=False)
+
+        with open(os.path.join(output_dir, "feature_names.json"), "w", encoding="utf-8") as f:
+            json.dump(feature_names, f, indent=2)
+        with open(os.path.join(output_dir, "cat_feature_indices.json"), "w", encoding="utf-8") as f:
+            json.dump(cat_feature_indices, f, indent=2)
+        with open(os.path.join(output_dir, "cat_cardinalities.json"), "w", encoding="utf-8") as f:
+            json.dump(cat_cardinalities, f, indent=2)
+        with open(os.path.join(output_dir, "category_mappings.json"), "w", encoding="utf-8") as f:
+            json.dump(category_mappings, f, indent=2)
+
+        print("Generating reference stats...")
+        generate_reference_stats(train_df, output_path="data/drift/reference_stats.json")
+
+        print("\n=== Feature Pipeline Summary ===")
+        print(f"Dataset:            LendingClub")
+        print(f"Final Train Shape:  {train_df.shape}")
+        print(f"Final Test Shape:   {test_df.shape}")
+        print(f"Total Features:     {len(feature_names)}")
+        print(f"Saved artifacts to {output_dir}")
+        return
+
     # 1. Call build_application_features() -> (train_df, test_df)
     print("Building application features...")
+    from src.features.application import build_application_features
+    from src.features.bureau import build_bureau_features
+    from src.features.previous_app import build_previous_app_features
+    from src.features.pos_cash import build_pos_cash_features
+    from src.features.installments import build_installment_features
+    from src.features.credit_card import build_credit_card_features
     train_df, test_df = build_application_features()
     print(f"Initial application train shape: {train_df.shape}, test shape: {test_df.shape}")
 
@@ -143,7 +196,7 @@ def build_all_features(
     os.makedirs(output_dir, exist_ok=True)
 
     print("Saving processed data as Parquet...")
-    # Reset index to include SK_ID_CURR in the parquets
+    # Reset index to include the application ID in the parquets
     train_save = train_df.reset_index()
     test_save = test_df.reset_index()
 

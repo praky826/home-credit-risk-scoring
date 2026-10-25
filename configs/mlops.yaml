@@ -2,9 +2,9 @@
 
 mlflow:
   tracking_uri: "mlruns"
-  experiment_trees: "home_credit_trees"
-  experiment_nn: "home_credit_nn"
-  registry_model_name: "home_credit_default_risk"
+  experiment_trees: "lendingclub_trees"
+  experiment_nn: "lendingclub_nn"
+  registry_model_name: "lendingclub_default_risk"
 
 aws:
   region: "us-east-1"

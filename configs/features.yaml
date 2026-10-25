@@ -1,8 +1,14 @@
 # Configuration for feature engineering pipeline
-# Toggle auxiliary table features on or off
 
-use_bureau: true
-use_previous_app: true
-use_pos_cash: true
-use_installments: true
-use_credit_card: true
+dataset: lendingclub
+raw_path: data/raw/lendingclub/accepted_2007_to_2018Q4.csv.gz
+id_column: loan_id
+target_column: TARGET
+split_column: issue_d
+val_size: 0.10
+test_size: 0.10
+
+# These are LendingClub's own underwriting/pricing outputs. Keep disabled for
+# an independent borrower-risk model; enable only for investor-style modeling.
+use_grade_features: false
+use_interest_rate: false

@@ -27,22 +27,35 @@ import type {
   PredictResponse,
 } from "./domain/types";
 
+function calculateAmortizedInstallment(loanAmount: number, termMonths: number, annualApr = 0.115): number {
+  if (loanAmount <= 0 || termMonths <= 0) return 0;
+  const monthlyRate = annualApr / 12;
+  const factor = Math.pow(1 + monthlyRate, termMonths);
+  return Math.round((loanAmount * (monthlyRate * factor) / (factor - 1)) * 100) / 100;
+}
+
 const initialValues: ApplicantFormValues = {
-  customerId: "999999",
-  ageYears: "41",
-  annualIncome: "150000",
-  loanAmount: "500000",
-  yearsEmployed: "5.5",
-  externalScore2: "0.5",
-  annuityAmount: "",
-  goodsPrice: "",
-  externalScore1: "",
-  externalScore3: "",
-  gender: "",
-  ownsCar: "",
-  ownsProperty: "",
-  childrenCount: "",
-  familyMembers: "",
+  loanId: "999999",
+  annualIncome: "72000",
+  loanAmount: "12000",
+  term: "36",
+  installment: "395.79",
+  dti: "18.4",
+  ficoRangeLow: "",
+  ficoRangeHigh: "",
+  empLength: "5",
+  purpose: "debt_consolidation",
+  homeOwnership: "RENT",
+  verificationStatus: "",
+  delinq2Yrs: "0",
+  inquiriesLast6Months: "1",
+  publicRecords: "0",
+  revolvingBalance: "",
+  revolvingUtilization: "42.3",
+  openAccounts: "",
+  totalAccounts: "",
+  mortgageAccounts: "",
+  publicRecordBankruptcies: "",
 };
 
 function App() {
@@ -61,15 +74,14 @@ function App() {
 
 
   const modelReady = Boolean(health?.model_loaded);
-  const missingRecommendedCount = [
-    values.annuityAmount,
-    values.externalScore1,
-    values.externalScore2,
-    values.externalScore3,
-  ].filter((value) => value.trim() === "").length;
+  const missingRecommendedCount = [values.empLength, values.purpose, values.homeOwnership, values.revolvingUtilization].filter(
+    (value) => value.trim() === "",
+  ).length;
   const estimateStrength = missingRecommendedCount === 0 ? "Stronger estimate" : "Basic estimate";
   const availableOptionalFields = optionalFeatureCatalog.filter(
-    (feature) => !selectedOptionalFields.includes(feature.key),
+    (feature) =>
+      !selectedOptionalFields.includes(feature.key) &&
+      !["purpose", "homeOwnership"].includes(feature.key),
   );
   const riskLabel = useMemo(
     () => (prediction ? getRiskLabel(prediction.default_probability) : null),
@@ -111,8 +123,22 @@ function App() {
   }
 
   function updateField<K extends keyof ApplicantFormValues>(field: K, value: ApplicantFormValues[K]) {
-    setValues((current) => ({ ...current, [field]: value }));
-    setErrors((current) => ({ ...current, [field]: undefined }));
+    setValues((current) => {
+      const next = { ...current, [field]: value };
+      if (field === "loanAmount" || field === "term") {
+        const loan = Number(field === "loanAmount" ? value : next.loanAmount);
+        const term = Number(field === "term" ? value : next.term);
+        if (loan > 0 && term > 0) {
+          next.installment = String(calculateAmortizedInstallment(loan, term));
+        }
+      }
+      return next;
+    });
+    setErrors((current) => ({
+      ...current,
+      [field]: undefined,
+      ...(field === "loanAmount" || field === "term" ? { installment: undefined } : {}),
+    }));
   }
 
   function addOptionalField(fieldKey: OptionalFieldKey) {
@@ -159,7 +185,7 @@ function App() {
       <header className="topbar">
         <div>
           <p className="eyebrow">Production ML Suite</p>
-          <h1>Home Credit Risk Intelligence</h1>
+          <h1>LendingClub Risk Intelligence</h1>
         </div>
         <div className="topbar-right">
           <nav className="nav-tabs" aria-label="Main Navigation">
@@ -198,12 +224,41 @@ function App() {
             </div>
 
             <div className="field-grid">
-              <Field label="Customer ID" value={values.customerId} error={errors.customerId} onChange={(value) => updateField("customerId", value)} />
-              <Field label="Age" value={values.ageYears} error={errors.ageYears} required onChange={(value) => updateField("ageYears", value)} />
-              <Field label="Annual income" value={values.annualIncome} error={errors.annualIncome} required onChange={(value) => updateField("annualIncome", value)} />
-              <Field label="Requested loan amount" value={values.loanAmount} error={errors.loanAmount} required onChange={(value) => updateField("loanAmount", value)} />
-              <Field label="Years employed" value={values.yearsEmployed} error={errors.yearsEmployed} required onChange={(value) => updateField("yearsEmployed", value)} />
+              <Field label="Annual income ($)" value={values.annualIncome} error={errors.annualIncome} required onChange={(value) => updateField("annualIncome", value)} />
+              <Field label="Requested loan amount ($500 - $40,000)" value={values.loanAmount} error={errors.loanAmount} required onChange={(value) => updateField("loanAmount", value)} />
+              <SelectField
+                label="Loan term"
+                value={values.term}
+                options={[
+                  { label: "36 months", value: "36" },
+                  { label: "60 months", value: "60" },
+                ]}
+                onChange={(value) => updateField("term", value)}
+              />
+              <Field
+                label="Monthly installment ($)"
+                value={values.installment}
+                error={errors.installment}
+                hint="Auto-amortized baseline payment"
+                onChange={(value) => updateField("installment", value)}
+              />
+              <Field label="Debt-to-income ratio (DTI %)" value={values.dti} error={errors.dti} required onChange={(value) => updateField("dti", value)} />
+              <Field label="Loan ID (Lookup)" value={values.loanId} error={errors.loanId} onChange={(value) => updateField("loanId", value)} />
             </div>
+
+            <section className="quality-section">
+              <div>
+                <p className="eyebrow">Traditional Credit Bureau (Optional)</p>
+                <h3>Credit Scores</h3>
+              </div>
+              <p className="quality-copy">
+                Optional for collateral-free cashflow underwriting. Leave blank if evaluating thin-file or unbanked borrowers.
+              </p>
+              <div className="field-grid">
+                <Field label="FICO range low (300 - 850)" value={values.ficoRangeLow} error={errors.ficoRangeLow} onChange={(value) => updateField("ficoRangeLow", value)} />
+                <Field label="FICO range high (300 - 850)" value={values.ficoRangeHigh} error={errors.ficoRangeHigh} onChange={(value) => updateField("ficoRangeHigh", value)} />
+              </div>
+            </section>
 
             <section className="quality-section">
               <div>
@@ -212,10 +267,20 @@ function App() {
               </div>
               <p className="quality-copy">These are optional, but they help the backend build stronger derived features.</p>
               <div className="field-grid">
-                <Field label="Annuity amount (Loan payment)" value={values.annuityAmount} error={errors.annuityAmount} onChange={(value) => updateField("annuityAmount", value)} />
-                <Field label="Credit Bureau Score 1 (Alternative, 0.0 - 1.0)" value={values.externalScore1} error={errors.externalScore1} onChange={(value) => updateField("externalScore1", value)} />
-                <Field label="Credit Bureau Score 2 (Primary, 0.0 - 1.0)" value={values.externalScore2} error={errors.externalScore2} onChange={(value) => updateField("externalScore2", value)} />
-                <Field label="Credit Bureau Score 3 (Secondary, 0.0 - 1.0)" value={values.externalScore3} error={errors.externalScore3} onChange={(value) => updateField("externalScore3", value)} />
+                <Field label="Employment length" value={values.empLength} error={errors.empLength} onChange={(value) => updateField("empLength", value)} />
+                <SelectField
+                  label="Loan purpose"
+                  value={values.purpose}
+                  options={optionalFeatureCatalog.find((item) => item.key === "purpose")?.options ?? []}
+                  onChange={(value) => updateField("purpose", value)}
+                />
+                <SelectField
+                  label="Home ownership"
+                  value={values.homeOwnership}
+                  options={optionalFeatureCatalog.find((item) => item.key === "homeOwnership")?.options ?? []}
+                  onChange={(value) => updateField("homeOwnership", value)}
+                />
+                <Field label="Revolving utilization" value={values.revolvingUtilization} error={errors.revolvingUtilization} onChange={(value) => updateField("revolvingUtilization", value)} />
               </div>
             </section>
 
@@ -277,10 +342,68 @@ function App() {
               <p className="eyebrow">Risk estimate</p>
               {prediction && riskLabel ? (
                 <>
-                  <h2>{riskLabel.title}</h2>
+                  <div className="risk-header-row">
+                    <h2>{prediction.decision_label || riskLabel.title}</h2>
+                    {prediction.feature_lookup && (
+                      <span className={`lookup-badge ${prediction.feature_lookup.found ? "found" : "synthetic"}`}>
+                        {prediction.feature_lookup.found
+                          ? `Record Found (ID ${prediction.feature_lookup.customer_id})`
+                          : "Synthetic Profile"}
+                      </span>
+                    )}
+                  </div>
                   <p className="probability">{formatProbability(prediction.default_probability)}</p>
                   <p className="muted">{riskLabel.message}</p>
                   <p className="estimate-note">{estimateStrength}</p>
+
+                  {prediction.solvency && (
+                    <div className="solvency-panel" style={{ marginTop: "1rem", padding: "0.85rem", background: "#f8fafc", borderRadius: "8px", border: "1px solid #e2e8f0" }}>
+                      <div style={{ fontSize: "0.75rem", fontWeight: 700, textTransform: "uppercase", color: "#64748b", marginBottom: "0.5rem" }}>
+                        Cashflow & Solvency Breakdown
+                      </div>
+                      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.5rem", fontSize: "0.8rem" }}>
+                        <div>
+                          <span style={{ color: "#64748b" }}>Disposable Cashflow: </span>
+                          <strong style={{ color: prediction.solvency.disposable_monthly_cashflow < 0 ? "#dc2626" : "#16a34a" }}>
+                            ${prediction.solvency.disposable_monthly_cashflow.toLocaleString()}/mo
+                          </strong>
+                        </div>
+                        <div>
+                          <span style={{ color: "#64748b" }}>Debt Service Burden: </span>
+                          <strong style={{ color: prediction.solvency.debt_service_burden_pct > 40 ? "#dc2626" : "#334155" }}>
+                            {prediction.solvency.debt_service_burden_pct.toFixed(1)}%
+                          </strong>
+                        </div>
+                        <div>
+                          <span style={{ color: "#64748b" }}>Repayment Coverage: </span>
+                          <strong style={{ color: prediction.solvency.repayment_coverage_ratio < 1.0 ? "#dc2626" : "#334155" }}>
+                            {prediction.solvency.repayment_coverage_ratio.toFixed(2)}x
+                          </strong>
+                        </div>
+                        <div>
+                          <span style={{ color: "#64748b" }}>Salary Multiplier: </span>
+                          <strong style={{ color: prediction.solvency.salary_multiplier > 2.5 ? "#d97706" : "#334155" }}>
+                            {prediction.solvency.salary_multiplier.toFixed(2)}x
+                          </strong>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {prediction.warnings && prediction.warnings.length > 0 && (
+                    <div className="ood-warnings-panel">
+                      <div className="ood-warnings-title">
+                        <AlertTriangle size={14} />
+                        <span>Underwriting Diagnostics</span>
+                      </div>
+                      {prediction.warnings.map((w, idx) => (
+                        <div key={idx} className="ood-warning-item">
+                          {w.field ? <strong>{w.field}: </strong> : null}
+                          {w.message}
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </>
               ) : (
                 <>
@@ -304,7 +427,7 @@ function App() {
                 label="Model"
                 value={
                   modelReady
-                    ? health?.model_name || "XGBoost Risk Classifier (Production Champion)"
+                    ? health?.model_name || "LendingClub XGBoost Default Risk Classifier"
                     : healthError
                     ? "Offline"
                     : "Degraded"
@@ -322,13 +445,40 @@ function App() {
                 <div className="technical-content">
                   <StatusLine
                     label="Model name"
-                    value={prediction?.model_name || health?.model_name || "XGBoost Risk Classifier (Production Champion)"}
+                    value={prediction?.model_name || health?.model_name || "LendingClub XGBoost Default Risk Classifier"}
                   />
                   <StatusLine label="Model version" value={prediction?.model_version || health?.model_version || "Unavailable"} />
                   <StatusLine label="Model type" value={health?.model_type ? health.model_type.toUpperCase() : "XGBOOST GBDT"} />
                   <StatusLine label="Registry stage" value={health?.model_stage || "Production"} />
                   <StatusLine label="Request ID" value={prediction?.request_id || "No request yet"} />
-                  <StatusLine label="Raw probability" value={prediction ? String(prediction.default_probability) : "No request yet"} />
+                  <StatusLine
+                    label="Calibrated probability"
+                    value={prediction ? formatProbability(prediction.default_probability) : "No request yet"}
+                  />
+                  <StatusLine
+                    label="Raw tree probability"
+                    value={
+                      prediction?.raw_model_probability != null
+                        ? `${(prediction.raw_model_probability * 100).toFixed(2)}%`
+                        : "No request yet"
+                    }
+                  />
+                  <StatusLine
+                    label="Calibration method"
+                    value={prediction?.calibration_method || "scale_pos_weight_unbias"}
+                  />
+                  <StatusLine
+                    label="Decision label"
+                    value={prediction?.decision_label || "Pending"}
+                  />
+                  <StatusLine
+                    label="Feature baseline"
+                    value={
+                      prediction?.feature_lookup?.found
+                        ? `Feature Store (${prediction.feature_lookup.source})`
+                        : "Clean-slate defaults"
+                    }
+                  />
                   <StatusLine label="Drift records" value={drift ? String(drift.n_records_evaluated) : "Unavailable"} />
                   <StatusLine label="Drift threshold" value={drift ? String(drift.threshold) : "Unavailable"} />
                   {drift && <TopPsiValues values={drift.psi_values} />}
@@ -356,10 +506,11 @@ type FieldProps = {
   value: string;
   error?: string;
   required?: boolean;
+  hint?: string;
   onChange: (value: string) => void;
 };
 
-function Field({ label, value, error, required, onChange }: FieldProps) {
+function Field({ label, value, error, required, hint, onChange }: FieldProps) {
   return (
     <label className="field">
       <span>
@@ -367,6 +518,7 @@ function Field({ label, value, error, required, onChange }: FieldProps) {
         {required && <strong> *</strong>}
       </span>
       <input value={value} inputMode="decimal" onChange={(event) => onChange(event.target.value)} />
+      {hint && !error && <small style={{ color: "#64748b", fontSize: "0.75rem", marginTop: "2px" }}>{hint}</small>}
       {error && <small>{error}</small>}
     </label>
   );

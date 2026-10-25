@@ -63,7 +63,7 @@ def compute_all_psi(
     for col, stats in reference_stats.items():
         if col in current_df.columns:
             # Skip non-numeric or targets if present
-            if col in ["TARGET", "SK_ID_CURR"]:
+            if col in ["TARGET", "SK_ID_CURR", "loan_id"]:
                 continue
             current_vals = current_df[col].dropna().values
             if len(current_vals) > 0 and "percentiles" in stats:

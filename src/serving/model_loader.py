@@ -10,17 +10,17 @@ from mlflow.tracking import MlflowClient
 
 _model = None
 _model_version = ""
-_model_name = "XGBoost Risk Classifier (Production Champion)"
+_model_name = "LendingClub XGBoost Default Risk Classifier"
 _model_type = "xgboost"
 _model_stage = "Production"
 
 def _format_display_name(m_type: str, stage: str = "Production") -> str:
     type_labels = {
-        "xgboost": "XGBoost Risk Classifier (Production Champion)",
-        "lgbm": "LightGBM Gradient Booster (Production Candidate)",
-        "entity_embedding": "Entity Embedding Neural Network",
-        "mlp": "Multi-Layer Perceptron (Baseline NN)",
-        "tab_transformer": "TabTransformer Attention Model",
+        "xgboost": "LendingClub XGBoost Default Risk Classifier",
+        "lgbm": "LendingClub LightGBM Default Risk Classifier",
+        "entity_embedding": "LendingClub Entity Embedding Neural Network",
+        "mlp": "LendingClub Multi-Layer Perceptron",
+        "tab_transformer": "LendingClub TabTransformer Model",
     }
     base = type_labels.get(m_type.lower(), f"{m_type.capitalize()} Risk Model")
     if stage and stage != "Production":
@@ -174,4 +174,3 @@ def get_model_info() -> dict[str, Any]:
         "model_stage": get_model_stage(),
         "model_loaded": _model is not None,
     }
-

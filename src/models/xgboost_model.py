@@ -47,6 +47,7 @@ class XGBoostModel(BaseModel):
                     "reg_alpha": trial.suggest_float("reg_alpha", 1e-8, 10.0, log=True),
                     "reg_lambda": trial.suggest_float("reg_lambda", 1e-8, 10.0, log=True),
                     "tree_method": self.config.get("params", {}).get("tree_method", "hist"),
+                    "device": self.config.get("params", {}).get("device", "cpu"),
                     "random_state": 42,
                     "eval_metric": "auc",
                     "scale_pos_weight": scale_pos_weight,
@@ -77,6 +78,7 @@ class XGBoostModel(BaseModel):
             
             best_params = study.best_params
             best_params["tree_method"] = self.config.get("params", {}).get("tree_method", "hist")
+            best_params["device"] = self.config.get("params", {}).get("device", "cpu")
             best_params["random_state"] = 42
             best_params["eval_metric"] = "auc"
             # Recalculate scale_pos_weight on combined dataset
@@ -99,6 +101,7 @@ class XGBoostModel(BaseModel):
             params["n_jobs"] = -1
             
             self.model = xgb.XGBClassifier(**params)
+            print(f"Training XGBoost with device={params.get('device', 'cpu')}...")
             self.model.fit(
                 X_train, y_train,
                 eval_set=[(X_val, y_val)],

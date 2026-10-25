@@ -1,145 +1,201 @@
-# Home Credit Default Risk — Machine Learning & Production Scoring Suite
+# LendingClub Default Risk - Machine Learning & Production Scoring Suite
 
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.111-009688.svg?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
-[![React](https://img.shields.io/badge/React-19-61DAFB.svg?logo=react&logoColor=black)](https://react.dev)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.7-3178C6.svg?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
-[![XGBoost](https://img.shields.io/badge/XGBoost-2.0-EB5424.svg?logo=xgboost&logoColor=white)](https://xgboost.readthedocs.io)
-[![MLflow](https://img.shields.io/badge/MLflow-2.14-0194E2.svg?logo=mlflow&logoColor=white)](https://mlflow.org)
-[![Docker](https://img.shields.io/badge/Docker-Ready-2496ED.svg?logo=docker&logoColor=white)](https://www.docker.com)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+An end-to-end credit risk scoring system for unsecured LendingClub personal-loan default prediction. The project keeps the original production ML architecture: feature engineering, model training, evaluation, FastAPI serving, PSI drift monitoring, tests, Docker support, and a React underwriter frontend.
 
-An end-to-end, production-grade credit risk scoring system built on the **Home Credit Default Risk** dataset (307,511 loan applications). Features an automated feature engineering pipeline, rigorous multi-model benchmarking (GBDTs vs. Tabular Deep Learning), statistical validation (Wilcoxon signed-rank tests), real-time population stability index (PSI) drift detection, and an interactive loan underwriter frontend.
+## Current Status
 
----
+- Active dataset: LendingClub accepted loans from Kaggle `wordsforthewise/lending-club`.
+- Active raw file: `data/raw/lendingclub/accepted_2007_to_2018Q4.csv.gz`.
+- Active target: `TARGET=1` for final bad outcomes such as `Charged Off` or `Default`; `TARGET=0` for `Fully Paid`.
+- Active feature count: 30 LendingClub origination and engineered features.
+- Current local serving model: XGBoost artifact at `mlflow_artifacts/model_xgboost_213ee9bcca664eb78cfb4bb7d6de27f5.pkl`.
 
-## 🌟 Key Highlights
+## First-Pass Results
 
-- **Production Champion Model**: Optuna-tuned **XGBoost Classifier** achieving **0.78084 Test ROC-AUC** and **0.42753 KS Statistic** with **sub-2ms CPU inference latency**.
-- **Comprehensive 5-Model Benchmark**: Rigorous comparative study evaluating Gradient Boosted Decision Trees (XGBoost, LightGBM) against Tabular Deep Learning architectures (Entity Embeddings, MLP, TabTransformer).
-- **Loan Underwriter Workspace**: Clean, responsive React + TypeScript interface for real-time risk assessment, loan quality estimation, and system health tracking.
-- **Model Governance Dashboard**: Embedded frontend benchmark viewer displaying side-by-side metric tables, statistical significance matrices, and model selection rationales.
-- **Real-Time PSI Drift Monitoring**: Rolling-window drift detection comparing production traffic distributions against reference baseline statistics with alerting hooks.
+These are migration smoke-test results, not final tuned benchmark claims.
 
----
+| Model | Validation ROC-AUC | Test ROC-AUC | Test KS | Test Brier | Status |
+|---|---:|---:|---:|---:|---|
+| Entity Embedding | 0.70184 | 0.70679 | 0.29967 | 0.26739 | Neural challenger |
+| LightGBM | 0.70358 | 0.70616 | 0.29888 | 0.24802 | Production champion |
+| XGBoost | 0.70291 | 0.70487 | 0.29824 | 0.24073 | GPU baseline |
+| MLP | 0.69435 | 0.69755 | 0.28861 | 0.23261 | Neural baseline |
+| TabTransformer | 0.65182 | 0.65670 | 0.22281 | 0.21660 | Experimental neural model |
 
-## 📊 Model Benchmark & Comparison
+Training split used 970,631 rows, validation used 121,328 rows, and holdout test used 121,330 rows.
 
-All models were evaluated on the exact same temporal holdout test set (30,751 rows, ~8.1% positive default rate) using **235 engineered features**:
+## Feature Contract
 
-| Rank | Model Architecture | Test ROC-AUC | KS Statistic | Brier Score | Calib. Slope | Latency (CPU) | Production Status |
-| :---: | :--- | :---: | :---: | :---: | :---: | :---: | :--- |
-| 🥇 | **XGBoost Classifier** | **0.78084** | **0.42753** | 0.17519 | 0.35894 | **~1.2 ms** | **Production Champion** |
-| 🥈 | **LightGBM Booster** | 0.77810 | 0.42641 | **0.17258** | 0.34641 | **~1.0 ms** | Production Runner-up |
-| 🥉 | **Entity Embedding Network** | 0.76804 | 0.41592 | 0.20476 | 0.32133 | ~4.5 ms | Deep Learning Champion |
-| 4 | **Multi-Layer Perceptron (MLP)** | 0.70078 | 0.29616 | 0.21878 | 0.31383 | ~3.8 ms | Deep Learning Baseline |
-| 5 | **TabTransformer Network** | 0.67678 | 0.26067 | 0.22255 | 0.30194 | ~14.2 ms | Experimental Transformer |
+The model uses LendingClub application/origination fields such as:
 
-### 🏆 Why XGBoost Was Selected for Production
-
-1. **Maximum Discriminatory Power**: Delivered the highest ROC-AUC and maximum Kolmogorov-Smirnov separation (KS = 0.4275), minimizing bad-debt write-offs while maximizing approval volume for creditworthy applicants.
-2. **Tabular Inductive Biases**: Tree ensembles natively partition unnormalized skewed credit distributions, irregular scales, multi-table aggregations, and high missingness without artificial manifold smoothing assumptions required by neural networks.
-3. **Sub-2ms Inference SLA**: Compact compiled binary trees score requests in ~1.2ms on standard CPU server hardware, eliminating expensive GPU infrastructure dependencies.
-4. **Explainability & Fair Lending**: Exact split gains and TreeSHAP compatibility guarantee regulatory compliance (e.g. ECOA, FCRA adverse action notices).
-5. **Statistical Significance**: Pairwise Wilcoxon signed-rank tests confirmed statistically significant performance advantages ($p < 0.001$ over neural models; $p = 0.042$ over LightGBM).
-
----
-
-## 🏗️ System Architecture
-
-```
-home-credit-risk-scoring/
-├── configs/                  # Model & serving YAML configurations
-│   ├── serving.yaml          # Host, port, drift threshold, rolling window
-│   ├── xgboost.yaml          # XGBoost hyperparameters
-│   ├── lgbm.yaml             # LightGBM hyperparameters
-│   └── ...
-├── data/                     # Raw, processed, split datasets (gitignored)
-├── frontend/                 # React 19 + TypeScript + Vite UI
-│   ├── src/
-│   │   ├── api/client.ts     # FastAPI fetch client
-│   │   ├── components/       # ModelComparisonView dashboard & forms
-│   │   ├── domain/           # Types, feature catalogs, validation rules
-│   │   └── styles/global.css # Responsive design system
-│   └── package.json
-├── src/                      # Backend Python package
-│   ├── features/             # Multi-table feature pipeline (Bureau, POS, Cards, Installments)
-│   ├── models/               # XGBoost, LightGBM, MLP, EntityEmbedding, TabTransformer
-│   ├── evaluation/           # Metrics, ROC/PR curves, Wilcoxon significance tests
-│   ├── monitoring/           # Population Stability Index (PSI) drift monitoring
-│   └── serving/              # FastAPI application, schemas, router, model loader
-├── tests/                    # Pytest test suite (features, models, serving)
-├── requirements.txt          # Production dependencies
-└── README.md
+```text
+loan_amnt
+term
+installment
+annual_inc
+dti
+fico_range_low
+fico_range_high
+emp_length
+home_ownership
+verification_status
+purpose
+addr_state
+delinq_2yrs
+inq_last_6mths
+open_acc
+pub_rec
+revol_bal
+revol_util
+total_acc
+mort_acc
+pub_rec_bankruptcies
 ```
 
----
+The feature builder also creates:
 
-## 🚀 Quickstart Guide
-
-### 1. Clone Repository
-```bash
-git clone https://github.com/praky826/home-credit-risk-scoring.git
-cd home-credit-risk-scoring
+```text
+fico_avg
+loan_income_ratio
+installment_income_ratio
+revol_balance_income_ratio
+credit_history_years
+issue_year
+issue_month
 ```
 
-### 2. Python Environment Setup
+Post-origination repayment and recovery columns are excluded to avoid leakage.
+
+## Project Structure
+
+```text
+configs/                  Model, feature, serving, and MLOps configuration
+data/raw/lendingclub/      LendingClub Kaggle files
+data/processed/            Generated feature matrix and metadata
+src/features/              LendingClub feature builder plus legacy modules
+src/models/                XGBoost, LightGBM, MLP, entity embedding, TabTransformer wrappers
+src/evaluation/            Metrics and plots
+src/monitoring/            PSI drift monitoring and alerting
+src/serving/               FastAPI prediction service
+frontend/                  React + TypeScript underwriting UI
+tests/                     Feature, model, serving, and monitoring tests
+```
+
+## Setup
+
 ```powershell
-# Create virtual environment
 python -m venv .venv
-
-# Activate on Windows PowerShell
 .venv\Scripts\Activate.ps1
-
-# Install dependencies
-pip install -r requirements.txt
-pip install -r requirements-dev.txt
+python -m pip install -r requirements.txt
+python -m pip install -r requirements-dev.txt
+python -m pip install kaggle
 ```
 
-### 3. Start Backend FastAPI Service
+## Download Data
+
+Configure Kaggle credentials, then run:
+
 ```powershell
-$env:PYTHONPATH="."
-.venv\Scripts\python -m uvicorn src.serving.app:app --host 0.0.0.0 --port 8000 --reload
+.\.venv\Scripts\kaggle.exe datasets download -d wordsforthewise/lending-club -p data/raw/lendingclub --unzip
 ```
-- **API Endpoint:** `http://127.0.0.1:8000`
-- **Interactive Swagger Docs:** `http://127.0.0.1:8000/docs`
-- **Health Status:** `GET http://127.0.0.1:8000/health`
-- **Model Comparison API:** `GET http://127.0.0.1:8000/model-comparison`
 
-### 4. Start Frontend Web Application
-In a separate terminal:
-```bash
-npm --prefix frontend install
-npm --prefix frontend run dev
+The active config expects:
+
+```text
+data/raw/lendingclub/accepted_2007_to_2018Q4.csv.gz
 ```
-- Open `http://localhost:5173` in your browser.
 
----
-
-## 🧪 Testing & Validation
-
-Run unit and integration tests across data features and FastAPI serving endpoints:
+## Build Features
 
 ```powershell
 $env:PYTHONPATH="."
-.venv\Scripts\pytest tests/test_serving/
+.venv\Scripts\python -m src.features.pipeline
 ```
 
-Build and validate frontend TypeScript bundle:
-```bash
+Generated artifacts:
+
+```text
+data/processed/train_features.parquet
+data/processed/test_features.parquet
+data/processed/feature_names.json
+data/processed/category_mappings.json
+data/drift/reference_stats.json
+```
+
+## Train Models
+
+```powershell
+$env:PYTHONPATH="."
+.venv\Scripts\python -m src.models.train --model xgboost
+.venv\Scripts\python -m src.models.train --model lgbm
+```
+
+For final metrics, rerun tree models with tuning:
+
+```powershell
+.venv\Scripts\python -m src.models.train --model xgboost --tune
+.venv\Scripts\python -m src.models.train --model lgbm --tune
+```
+
+## Run Backend
+
+```powershell
+$env:PYTHONPATH="."
+.venv\Scripts\python -m uvicorn src.serving.app:app --host 127.0.0.1 --port 8080 --reload
+```
+
+Endpoints:
+
+```text
+GET  http://127.0.0.1:8080/health
+POST http://127.0.0.1:8080/predict
+GET  http://127.0.0.1:8080/drift
+GET  http://127.0.0.1:8080/model-comparison
+```
+
+Example prediction payload:
+
+```json
+{
+  "loan_amnt": 12000,
+  "annual_inc": 72000,
+  "term": 36,
+  "installment": 390.5,
+  "dti": 18.4,
+  "fico_range_low": 690,
+  "fico_range_high": 694,
+  "emp_length": 5,
+  "purpose": "debt_consolidation",
+  "home_ownership": "RENT",
+  "revol_util": 42.3
+}
+```
+
+## Run Frontend
+
+```powershell
+$env:VITE_API_BASE_URL="http://127.0.0.1:8080"
+npm --prefix frontend run dev -- --host 127.0.0.1
+```
+
+Open:
+
+```text
+http://127.0.0.1:5173/
+```
+
+## Test
+
+```powershell
+$env:PYTHONPATH="."
+.venv\Scripts\pytest -q
 npm --prefix frontend run build
 ```
 
----
+Current local verification:
 
-## 🐳 Docker Deployment
-
-Run the complete scoring stack via Docker Compose:
-
-```bash
-docker-compose -f docker/docker-compose.yml up --build
+```text
+26 Python tests passed
+Frontend production build passed
+Live FastAPI prediction passed
 ```
-
----
-
-## 📜 License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
