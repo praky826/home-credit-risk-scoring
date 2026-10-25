@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { getModelComparison } from "../api/client";
 import { defaultModelComparison } from "../domain/modelComparisonData";
+import { getComparisonChampion, getSelectedModel } from "../domain/modelSelection";
 import type { ModelBenchmarkItem, ModelComparisonResponse } from "../domain/types";
 
 type ModelComparisonViewProps = {
@@ -55,7 +56,9 @@ export function ModelComparisonView({ onBackToChecker }: ModelComparisonViewProp
     return true;
   });
 
-  const champion = data.models.find((m) => m.is_champion) || data.models[0];
+  const champion = getComparisonChampion(data);
+  const selectedModel = getSelectedModel(null, data);
+  const championConfigured = Boolean(champion && selectedModel.isConfigured);
 
   return (
     <div className="comparison-container">
@@ -84,29 +87,29 @@ export function ModelComparisonView({ onBackToChecker }: ModelComparisonViewProp
       </div>
 
       {/* Production Champion Hero Banner */}
-      <section className="champion-card">
+      <section className={`champion-card ${!championConfigured ? "champion-card-empty" : ""}`}>
         <div className="champion-badge-row">
           <span className="champion-pill">
             <Award size={16} />
-            <span>Production Champion</span>
+            <span>{championConfigured ? "Production Champion" : "No production model selected"}</span>
           </span>
           <span className="live-status-pill">
-            <CheckCircle2 size={15} />
-            <span>Serving Active</span>
+            {championConfigured ? <CheckCircle2 size={15} /> : <ShieldCheck size={15} />}
+            <span>{championConfigured ? "Serving Active" : "Serving unavailable"}</span>
           </span>
         </div>
 
         <div className="champion-body">
           <div className="champion-main-info">
-            <h3 className="champion-title">{data.champion_model_name}</h3>
+            <h3 className="champion-title">{championConfigured ? selectedModel.name : "No production model selected"}</h3>
             <p className="champion-desc">
-              Selected from the first LendingClub tree-model migration pass on{" "}
-              <strong>{data.evaluation_dataset.train_samples?.toLocaleString()}</strong> training loans.
-              Neural models and tuned benchmarks still need to be refreshed before final production claims.
+              {championConfigured
+                ? `Selected from the current benchmark on ${data.evaluation_dataset.train_samples?.toLocaleString() ?? "the available"} training loans.`
+                : "Comparison data does not identify a production champion. Review model registration before serving risk estimates."}
             </p>
           </div>
 
-          <div className="champion-metrics-grid">
+          {champion && <div className="champion-metrics-grid">
             <div className="metric-box highlight">
               <span className="metric-box-label">Test ROC-AUC</span>
               <strong className="metric-box-val">{champion.roc_auc.toFixed(5)}</strong>
@@ -127,8 +130,17 @@ export function ModelComparisonView({ onBackToChecker }: ModelComparisonViewProp
               <strong className="metric-box-val">{champion.brier_score.toFixed(4)}</strong>
               <span className="metric-box-sub">High Calibration Fidelity</span>
             </div>
-          </div>
+          </div>}
         </div>
+      </section>
+
+      <section className="selection-summary" aria-label="Selection summary">
+        <strong>Selection summary</strong>
+        <span>
+          {championConfigured
+            ? `${selectedModel.shortName} is the current champion because it balances ranking performance, calibration, and inference latency.`
+            : "No selection summary is available until a production champion is configured."}
+        </span>
       </section>
 
       {/* Benchmark Table Section */}
@@ -168,17 +180,17 @@ export function ModelComparisonView({ onBackToChecker }: ModelComparisonViewProp
             <thead>
               <tr>
                 <th>Model & Architecture</th>
-                <th className="num-col">ROC-AUC</th>
-                <th className="num-col">KS Stat</th>
-                <th className="num-col">Brier Score</th>
-                <th className="num-col">Calib. Slope</th>
-                <th className="num-col">Latency</th>
+                <th className="num-col" title="How well the model ranks higher-risk loans above lower-risk loans">ROC-AUC<br /><small>Higher is better</small></th>
+                <th className="num-col" title="How clearly the model separates likely defaults from non-defaults">KS Stat<br /><small>Higher is better</small></th>
+                <th className="num-col" title="How accurate predicted probabilities are">Brier Score<br /><small>Lower is better</small></th>
+                <th className="num-col" title="How closely predicted risk matches observed risk">Calib. Slope<br /><small>Closer to 1</small></th>
+                <th className="num-col" title="Time required to generate one prediction">Latency<br /><small>Lower is better</small></th>
                 <th>Status</th>
               </tr>
             </thead>
             <tbody>
               {filteredModels.map((item) => (
-                <ModelRow key={item.model_id} model={item} />
+                <ModelRow key={item.model_id} model={item} isChampion={item.model_id === data.champion_model_id} />
               ))}
             </tbody>
           </table>
@@ -194,7 +206,7 @@ export function ModelComparisonView({ onBackToChecker }: ModelComparisonViewProp
         <div className="panel-header">
           <div>
             <p className="eyebrow">Decision Rationale</p>
-            <h3>Why XGBoost Was Selected for Production</h3>
+            <h3>Why {selectedModel.shortName} Was Selected for Production</h3>
           </div>
         </div>
 
@@ -279,20 +291,20 @@ export function ModelComparisonView({ onBackToChecker }: ModelComparisonViewProp
   );
 }
 
-function ModelRow({ model }: { model: ModelBenchmarkItem }) {
+function ModelRow({ model, isChampion }: { model: ModelBenchmarkItem; isChampion: boolean }) {
   return (
-    <tr className={`model-row ${model.is_champion ? "is-champion-row" : ""}`}>
+    <tr className={`model-row ${isChampion ? "is-champion-row" : ""}`}>
       <td>
         <div className="model-name-cell">
           <div className="name-and-badge">
             <span className="model-main-name">{model.name}</span>
-            {model.is_champion && <span className="winner-tag">Champion</span>}
+            {isChampion && <span className="winner-tag">Production champion</span>}
           </div>
           <small className="model-arch-text">{model.architecture}</small>
         </div>
       </td>
       <td className="num-col">
-        <strong className={model.is_champion ? "metric-highlight" : ""}>
+        <strong className={isChampion ? "metric-highlight" : ""}>
           {model.roc_auc.toFixed(5)}
         </strong>
       </td>
@@ -303,18 +315,26 @@ function ModelRow({ model }: { model: ModelBenchmarkItem }) {
       <td>
         <span
           className={`status-pill ${
-            model.is_champion
+            isChampion
               ? "status-champion"
               : model.status.includes("Runner")
               ? "status-runner"
               : "status-other"
           }`}
         >
-          {model.status}
+          {isChampion ? "Production champion" : normalizeStatus(model.status)}
         </span>
       </td>
     </tr>
   );
+}
+
+function normalizeStatus(status: string): string {
+  const normalized = status.toLowerCase();
+  if (normalized.includes("experimental")) return "Experimental";
+  if (normalized.includes("challenger") || normalized.includes("runner")) return "Challenger";
+  if (normalized.includes("baseline")) return "Baseline";
+  return "Challenger";
 }
 
 function RationaleCard({ item, index }: { item: { title: string; summary: string; details: string }; index: number }) {

@@ -74,6 +74,11 @@ export function validateApplicantForm(values: ApplicantFormValues): ValidationEr
     errors.dti = "Debt-to-income ratio must be between 0% and 100%.";
   }
 
+  const revolvingUtilization = parseOptionalNumber(values.revolvingUtilization);
+  if (revolvingUtilization !== undefined && (revolvingUtilization < 0 || revolvingUtilization > 100)) {
+    errors.revolvingUtilization = "Revolving utilization must be between 0% and 100%.";
+  }
+
   const term = parseOptionalNumber(values.term);
   if (term !== undefined && term !== 36 && term !== 60) {
     errors.term = "Loan term must be 36 or 60 months.";

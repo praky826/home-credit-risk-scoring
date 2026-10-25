@@ -1,20 +1,34 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import {
   AlertTriangle,
   Award,
+  BarChart3,
+  BadgeCheck,
+  CalendarDays,
   CheckCircle2,
+  Check,
   ChevronDown,
   ChevronUp,
+  Circle,
+  FileText,
+  Gauge,
   HeartPulse,
   LayoutGrid,
   Loader2,
   Plus,
+  RefreshCw,
+  RotateCcw,
+  Save,
+  ShieldAlert,
+  UserRound,
+  WalletCards,
   X,
 } from "lucide-react";
 import { getDrift, getHealth, predictRisk } from "./api/client";
 import { ModelComparisonView } from "./components/ModelComparisonView";
 import { optionalFeatureCatalog } from "./domain/featureCatalog";
 import { mapFormToPredictPayload } from "./domain/inputMapping";
+import { getSelectedModel } from "./domain/modelSelection";
 import { formatProbability, getRiskLabel } from "./domain/riskLabels";
 import { hasValidationErrors, validateApplicantForm, type ValidationErrors } from "./domain/validation";
 import type {
@@ -71,9 +85,22 @@ function App() {
   const [isPredicting, setIsPredicting] = useState(false);
   const [selectedOptionalFields, setSelectedOptionalFields] = useState<OptionalFieldKey[]>([]);
   const [showTechnical, setShowTechnical] = useState(false);
+  const resultRef = useRef<HTMLElement>(null);
+  const formRef = useRef<HTMLFormElement>(null);
+  const [riskOutdated, setRiskOutdated] = useState(false);
+  const [lastCalculatedAt, setLastCalculatedAt] = useState<Date | null>(null);
+  const [draftMessage, setDraftMessage] = useState("");
+  const [officerDecision, setOfficerDecision] = useState<"approve" | "refer" | "decline" | "">("");
+  const [overrideReason, setOverrideReason] = useState("");
+  const [decisionMessage, setDecisionMessage] = useState("");
 
 
   const modelReady = Boolean(health?.model_loaded);
+  const validationErrors = validateApplicantForm(values);
+  const requiredFields = ["annualIncome", "loanAmount", "term", "dti"] as const;
+  const completedRequiredCount = requiredFields.filter((field) => values[field].trim() !== "" && !validationErrors[field]).length;
+  const formReady = !hasValidationErrors(validationErrors);
+  const selectedModel = getSelectedModel(health);
   const missingRecommendedCount = [values.empLength, values.purpose, values.homeOwnership, values.revolvingUtilization].filter(
     (value) => value.trim() === "",
   ).length;
@@ -87,6 +114,9 @@ function App() {
     () => (prediction ? getRiskLabel(prediction.default_probability) : null),
     [prediction],
   );
+  const recommendation = riskLabel?.level === "low" ? "approve" : riskLabel?.level === "high" ? "decline" : riskLabel ? "refer" : "";
+  const decisionRequiresReason = Boolean(recommendation && officerDecision && officerDecision !== recommendation);
+  const workflowStage = !prediction ? (formReady ? 0 : 1) : riskOutdated ? 1 : officerDecision ? 3 : 2;
 
   useEffect(() => {
     refreshHealth();
@@ -132,13 +162,14 @@ function App() {
           next.installment = String(calculateAmortizedInstallment(loan, term));
         }
       }
+      const nextErrors = validateApplicantForm(next);
+      setErrors(nextErrors);
       return next;
     });
-    setErrors((current) => ({
-      ...current,
-      [field]: undefined,
-      ...(field === "loanAmount" || field === "term" ? { installment: undefined } : {}),
-    }));
+    if (prediction) {
+      setRiskOutdated(true);
+      setDecisionMessage("");
+    }
   }
 
   function addOptionalField(fieldKey: OptionalFieldKey) {
@@ -160,6 +191,9 @@ function App() {
     setErrors(nextErrors);
 
     if (hasValidationErrors(nextErrors)) {
+      requestAnimationFrame(() => {
+        formRef.current?.querySelector<HTMLElement>('[aria-invalid="true"]')?.focus();
+      });
       return;
     }
 
@@ -171,6 +205,12 @@ function App() {
       const payload = mapFormToPredictPayload(values);
       const response = await predictRisk(payload);
       setPrediction(response);
+      setRiskOutdated(false);
+      setLastCalculatedAt(new Date());
+      setOfficerDecision("");
+      setOverrideReason("");
+      setDecisionMessage("");
+      requestAnimationFrame(() => resultRef.current?.focus());
       await refreshDrift(1);
     } catch (error) {
       const message = error instanceof Error ? error.message : "Prediction failed.";
@@ -178,6 +218,27 @@ function App() {
     } finally {
       setIsPredicting(false);
     }
+  }
+
+  function resetApplication() {
+    setValues(initialValues);
+    setErrors({});
+    setPrediction(null);
+    setRiskOutdated(false);
+    setLastCalculatedAt(null);
+    setOfficerDecision("");
+    setOverrideReason("");
+    setDecisionMessage("");
+    setDraftMessage("");
+  }
+
+  function saveDraft() {
+    setDraftMessage(`Draft saved at ${new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}.`);
+  }
+
+  function saveDecision() {
+    if (!officerDecision || (decisionRequiresReason && !overrideReason.trim())) return;
+    setDecisionMessage(`Decision recorded: ${decisionLabel(officerDecision)}.`);
   }
 
   return (
@@ -213,19 +274,48 @@ function App() {
       {activeTab === "comparison" ? (
         <ModelComparisonView onBackToChecker={() => setActiveTab("checker")} />
       ) : (
-        <section className="workspace">
-          <form className="panel form-panel" onSubmit={handleSubmit}>
+        <>
+          <section className="lookup-bar panel">
+            <div className="lookup-label">
+              <FileText size={18} />
+              <div>
+                <strong>Application lookup</strong>
+                <span>Use the loan ID to anchor this review.</span>
+              </div>
+            </div>
+            <div className="lookup-controls">
+              <input aria-label="Loan ID lookup" value={values.loanId} inputMode="numeric" onChange={(event) => updateField("loanId", event.target.value)} />
+              <button type="button" className="secondary-button" onClick={() => setDraftMessage("Lookup is ready for a connected application record.")}>
+                <RefreshCw size={16} /> Find application
+              </button>
+            </div>
+          </section>
+          <WorkflowStepper activeStage={workflowStage} />
+          <section className="workspace">
+          <form ref={formRef} className="panel form-panel" onSubmit={handleSubmit} noValidate>
             <div className="panel-header">
               <div>
-                <p className="eyebrow">Applicant</p>
-                <h2>Application Details</h2>
+                <p className="eyebrow">Applicant profile</p>
+                <h2><UserRound size={19} /> Loan application</h2>
               </div>
-              <span className="required-note">Required fields marked</span>
+              <span className="required-note"><strong>*</strong> Required</span>
+            </div>
+
+            <div className="applicant-overview">
+              <div className="applicant-identity">
+                <span className="applicant-avatar">{values.loanId.slice(-2) || "LC"}</span>
+                <div><strong>Application {values.loanId || "unassigned"}</strong><span>Loan review workspace</span></div>
+              </div>
+              <div className="overview-metrics">
+                <OverviewMetric icon={<WalletCards size={16} />} label="Requested loan" value={currency(values.loanAmount)} />
+                <OverviewMetric icon={<CalendarDays size={16} />} label="Term" value={`${values.term || "-"} months`} />
+                <OverviewMetric icon={<Gauge size={16} />} label="DTI" value={values.dti ? `${values.dti}%` : "-"} />
+              </div>
             </div>
 
             <div className="field-grid">
-              <Field label="Annual income ($)" value={values.annualIncome} error={errors.annualIncome} required onChange={(value) => updateField("annualIncome", value)} />
-              <Field label="Requested loan amount ($500 - $40,000)" value={values.loanAmount} error={errors.loanAmount} required onChange={(value) => updateField("loanAmount", value)} />
+              <Field label="Annual income (USD)" value={values.annualIncome} error={errors.annualIncome} required prefix="$" onChange={(value) => updateField("annualIncome", value)} />
+              <Field label="Requested loan amount (USD)" value={values.loanAmount} error={errors.loanAmount} required prefix="$" onChange={(value) => updateField("loanAmount", value)} />
               <SelectField
                 label="Loan term"
                 value={values.term}
@@ -236,17 +326,17 @@ function App() {
                 onChange={(value) => updateField("term", value)}
               />
               <Field
-                label="Monthly installment ($)"
+                label="Calculated monthly payment (USD)"
                 value={values.installment}
                 error={errors.installment}
                 hint="Auto-amortized baseline payment"
-                onChange={(value) => updateField("installment", value)}
+                readOnly
               />
-              <Field label="Debt-to-income ratio (DTI %)" value={values.dti} error={errors.dti} required onChange={(value) => updateField("dti", value)} />
+              <Field label="Debt-to-income ratio (%)" value={values.dti} error={errors.dti} required suffix="%" onChange={(value) => updateField("dti", value)} />
               <Field label="Loan ID (Lookup)" value={values.loanId} error={errors.loanId} onChange={(value) => updateField("loanId", value)} />
             </div>
 
-            <section className="quality-section">
+            <section className="quality-section section-card">
               <div>
                 <p className="eyebrow">Traditional Credit Bureau (Optional)</p>
                 <h3>Credit Scores</h3>
@@ -255,19 +345,19 @@ function App() {
                 Optional for collateral-free cashflow underwriting. Leave blank if evaluating thin-file or unbanked borrowers.
               </p>
               <div className="field-grid">
-                <Field label="FICO range low (300 - 850)" value={values.ficoRangeLow} error={errors.ficoRangeLow} onChange={(value) => updateField("ficoRangeLow", value)} />
-                <Field label="FICO range high (300 - 850)" value={values.ficoRangeHigh} error={errors.ficoRangeHigh} onChange={(value) => updateField("ficoRangeHigh", value)} />
+                <Field label="FICO score range - low" value={values.ficoRangeLow} error={errors.ficoRangeLow} onChange={(value) => updateField("ficoRangeLow", value)} />
+                <Field label="FICO score range - high" value={values.ficoRangeHigh} error={errors.ficoRangeHigh} onChange={(value) => updateField("ficoRangeHigh", value)} />
               </div>
             </section>
 
-            <section className="quality-section">
+            <section className="quality-section section-card">
               <div>
                 <p className="eyebrow">Recommended</p>
                 <h3>Better estimate inputs</h3>
               </div>
               <p className="quality-copy">These are optional, but they help the backend build stronger derived features.</p>
               <div className="field-grid">
-                <Field label="Employment length" value={values.empLength} error={errors.empLength} onChange={(value) => updateField("empLength", value)} />
+                <Field label="Employment length (years)" value={values.empLength} error={errors.empLength} onChange={(value) => updateField("empLength", value)} />
                 <SelectField
                   label="Loan purpose"
                   value={values.purpose}
@@ -280,15 +370,15 @@ function App() {
                   options={optionalFeatureCatalog.find((item) => item.key === "homeOwnership")?.options ?? []}
                   onChange={(value) => updateField("homeOwnership", value)}
                 />
-                <Field label="Revolving utilization" value={values.revolvingUtilization} error={errors.revolvingUtilization} onChange={(value) => updateField("revolvingUtilization", value)} />
+                <Field label="Revolving utilization (%)" value={values.revolvingUtilization} error={errors.revolvingUtilization} suffix="%" onChange={(value) => updateField("revolvingUtilization", value)} />
               </div>
             </section>
 
-            <section className="optional-section">
+            <section className="optional-section section-card">
               <div className="optional-header">
                 <div>
                   <p className="eyebrow">Optional inputs</p>
-                  <h3>Add more details</h3>
+                  <h3>Loan context</h3>
                 </div>
                 <label className="add-input-control">
                   <Plus size={18} />
@@ -297,7 +387,7 @@ function App() {
                     disabled={availableOptionalFields.length === 0}
                     onChange={(event) => addOptionalField(event.target.value as OptionalFieldKey)}
                   >
-                    <option value="">{availableOptionalFields.length === 0 ? "All inputs added" : "Add input"}</option>
+                    <option value="">{availableOptionalFields.length === 0 ? "All inputs added" : "Add optional details"}</option>
                     {availableOptionalFields.map((feature) => (
                       <option key={feature.key} value={feature.key}>
                         {feature.label}
@@ -329,17 +419,67 @@ function App() {
               )}
             </section>
 
+            <section className="credit-signals section-card">
+              <div className="panel-header compact">
+                <div><p className="eyebrow">Credit profile</p><h3><BarChart3 size={17} /> Credit signals</h3></div>
+                <BadgeCheck size={19} className="signal-icon" />
+              </div>
+              <div className="signal-grid">
+                <SignalCard label="Revolving utilization" value={values.revolvingUtilization ? `${values.revolvingUtilization}%` : "Not supplied"} note="Current revolving credit use" />
+                <SignalCard label="FICO range" value={values.ficoRangeLow || values.ficoRangeHigh ? `${values.ficoRangeLow || "-"} - ${values.ficoRangeHigh || "-"}` : "Not supplied"} note="Traditional credit profile" />
+                <SignalCard label="Recent delinquencies" value={values.delinq2Yrs || "0"} note="Reported in the last 2 years" />
+              </div>
+            </section>
+
+            <p className="readiness-note" aria-live="polite">
+              {isPredicting
+                ? "Checking risk estimate..."
+                : predictError
+                ? "Unable to check risk - try again."
+                : !modelReady
+                ? selectedModel.name
+                : !formReady
+                ? `${completedRequiredCount} of ${requiredFields.length} required fields complete`
+                : prediction
+                ? "Risk estimate ready"
+                : "Ready to check risk"}
+            </p>
             {predictError && <p className="error-banner">{predictError}</p>}
 
-            <button className="primary-button" type="submit" disabled={!modelReady || isPredicting}>
+            <button className="primary-button" type="submit" disabled={!modelReady || !formReady || isPredicting}>
               {isPredicting ? <Loader2 className="spin" size={18} /> : <HeartPulse size={18} />}
               {isPredicting ? "Checking" : "Check Risk"}
             </button>
+            <div className="form-actions">
+              <button type="button" className="secondary-button" onClick={saveDraft}>
+                <Save size={16} /> Save draft
+              </button>
+              <button type="button" className="text-button" onClick={resetApplication}>
+                <RotateCcw size={15} /> Reset changes
+              </button>
+            </div>
+            {draftMessage && <p className="success-note" aria-live="polite"><CheckCircle2 size={15} /> {draftMessage}</p>}
           </form>
 
           <aside className="result-stack">
-            <section className={`panel result-panel ${riskLabel ? `risk-${riskLabel.level}` : ""}`}>
+            <section className="panel summary-panel">
+              <div className="panel-header compact">
+                <div>
+                  <p className="eyebrow">Application summary</p>
+                  <h2><UserRound size={17} /> Loan {values.loanId || "unassigned"}</h2>
+                </div>
+                <span className="summary-stage">{workflowLabel(workflowStage)}</span>
+              </div>
+              <div className="summary-grid">
+                <SummaryItem label="Requested amount" value={currency(values.loanAmount)} />
+                <SummaryItem label="Term / payment" value={`${values.term || "-"} mo / ${currency(values.installment)}`} />
+                <SummaryItem label="Income / DTI" value={`${currency(values.annualIncome)} / ${values.dti || "-"}%`} />
+                <SummaryItem label="FICO range" value={values.ficoRangeLow || values.ficoRangeHigh ? `${values.ficoRangeLow || "-"} - ${values.ficoRangeHigh || "-"}` : "Not supplied"} />
+              </div>
+            </section>
+            <section className={`panel result-panel ${riskLabel ? `risk-${riskLabel.level}` : ""}`} ref={resultRef} tabIndex={-1} aria-live="polite">
               <p className="eyebrow">Risk estimate</p>
+              {riskOutdated && <div className="warning-chip"><ShieldAlert size={15} /> Risk assessment needs updating</div>}
               {prediction && riskLabel ? (
                 <>
                   <div className="risk-header-row">
@@ -354,6 +494,8 @@ function App() {
                   </div>
                   <p className="probability">{formatProbability(prediction.default_probability)}</p>
                   <p className="muted">{riskLabel.message}</p>
+                  <div className="recommendation-row"><span>Recommended action</span><strong>{decisionLabel(recommendation)}</strong></div>
+                  {lastCalculatedAt && <p className="freshness-note">Calculated just now · {selectedModel.shortName}</p>}
                   <p className="estimate-note">{estimateStrength}</p>
 
                   {prediction.solvency && (
@@ -407,11 +549,14 @@ function App() {
                 </>
               ) : (
                 <>
-                  <h2>Ready for a check</h2>
-                  <p className="muted">Enter applicant details and run a risk estimate.</p>
+                  <h2>{!modelReady ? "Service unavailable" : formReady ? "Ready to check risk" : "Complete the required fields"}</h2>
+                  <p className="muted">{!modelReady ? "The production model is not available." : `Complete ${requiredFields.length - completedRequiredCount} required field${requiredFields.length - completedRequiredCount === 1 ? "" : "s"} to calculate risk.`}</p>
+                  <div className="requirement-list">{requiredFields.map((field) => <span key={field}>{values[field].trim() && !validationErrors[field] ? <CheckCircle2 size={14} /> : <Circle size={14} />} {requiredFieldLabel(field)}</span>)}</div>
                 </>
               )}
             </section>
+
+            {prediction && !riskOutdated && riskLabel && <DecisionPanel recommendation={recommendation} decision={officerDecision} overrideReason={overrideReason} decisionRequiresReason={decisionRequiresReason} decisionMessage={decisionMessage} onDecisionChange={setOfficerDecision} onReasonChange={setOverrideReason} onSave={saveDecision} />}
 
             <section className="panel status-panel">
               <div className="panel-header compact">
@@ -430,10 +575,10 @@ function App() {
                     ? health?.model_name || "LendingClub XGBoost Default Risk Classifier"
                     : healthError
                     ? "Offline"
-                    : "Degraded"
+                    : "No production model selected"
                 }
               />
-              <StatusLine label="Drift" value={drift ? (drift.alert ? "Needs technical review" : "Normal") : driftMessage || "Not checked yet"} />
+              <StatusLine label="Drift" value={drift ? (drift.alert ? "Review needed" : "Healthy") : driftMessage || "Drift check has not run"} />
             </section>
 
             <section className="panel technical-panel">
@@ -445,11 +590,11 @@ function App() {
                 <div className="technical-content">
                   <StatusLine
                     label="Model name"
-                    value={prediction?.model_name || health?.model_name || "LendingClub XGBoost Default Risk Classifier"}
+                    value={prediction?.model_name || selectedModel.name}
                   />
                   <StatusLine label="Model version" value={prediction?.model_version || health?.model_version || "Unavailable"} />
-                  <StatusLine label="Model type" value={health?.model_type ? health.model_type.toUpperCase() : "XGBOOST GBDT"} />
-                  <StatusLine label="Registry stage" value={health?.model_stage || "Production"} />
+                  <StatusLine label="Model type" value={health?.model_type ? health.model_type.toUpperCase() : "Unavailable"} />
+                  <StatusLine label="Registry stage" value={health?.model_stage || selectedModel.status} />
                   <StatusLine label="Request ID" value={prediction?.request_id || "No request yet"} />
                   <StatusLine
                     label="Calibrated probability"
@@ -494,7 +639,8 @@ function App() {
               )}
             </section>
           </aside>
-        </section>
+          </section>
+        </>
       )}
 
     </main>
@@ -507,17 +653,24 @@ type FieldProps = {
   error?: string;
   required?: boolean;
   hint?: string;
-  onChange: (value: string) => void;
+  prefix?: string;
+  suffix?: string;
+  readOnly?: boolean;
+  onChange?: (value: string) => void;
 };
 
-function Field({ label, value, error, required, hint, onChange }: FieldProps) {
+function Field({ label, value, error, required, hint, prefix, suffix, readOnly, onChange }: FieldProps) {
   return (
     <label className="field">
       <span>
         {label}
         {required && <strong> *</strong>}
       </span>
-      <input value={value} inputMode="decimal" onChange={(event) => onChange(event.target.value)} />
+      <span className="input-shell">
+        {prefix && <span className="input-affix">{prefix}</span>}
+        <input value={value} inputMode="decimal" readOnly={readOnly} aria-invalid={Boolean(error)} onChange={(event) => onChange?.(event.target.value)} />
+        {suffix && <span className="input-affix">{suffix}</span>}
+      </span>
       {hint && !error && <small style={{ color: "#64748b", fontSize: "0.75rem", marginTop: "2px" }}>{hint}</small>}
       {error && <small>{error}</small>}
     </label>
@@ -613,6 +766,66 @@ function TopPsiValues({ values }: { values: Record<string, number> }) {
       ))}
     </div>
   );
+}
+
+function currency(value: string): string {
+  const parsed = Number(value);
+  return Number.isFinite(parsed) && parsed > 0 ? `$${parsed.toLocaleString(undefined, { maximumFractionDigits: 2 })}` : "-";
+}
+
+function decisionLabel(decision: string): string {
+  if (decision === "approve") return "Approve";
+  if (decision === "decline") return "Decline";
+  if (decision === "refer") return "Refer for review";
+  return "Pending";
+}
+
+function workflowLabel(stage: number): string {
+  return ["Draft", "Details complete", "Risk assessed", "Decision recorded"][stage] ?? "Draft";
+}
+
+function requiredFieldLabel(field: "annualIncome" | "loanAmount" | "term" | "dti"): string {
+  return { annualIncome: "Income", loanAmount: "Loan amount", term: "Loan term", dti: "Debt-to-income ratio" }[field];
+}
+
+function SummaryItem({ label, value }: { label: string; value: string }) {
+  return <div className="summary-item"><span>{label}</span><strong>{value}</strong></div>;
+}
+
+function OverviewMetric({ icon, label, value }: { icon: React.ReactNode; label: string; value: string }) {
+  return <div className="overview-metric"><span className="metric-icon">{icon}</span><span>{label}</span><strong>{value}</strong></div>;
+}
+
+function SignalCard({ label, value, note }: { label: string; value: string; note: string }) {
+  return <div className="signal-card"><span className="metric-icon"><BarChart3 size={15} /></span><div><strong>{value}</strong><span>{label}</span><small>{note}</small></div></div>;
+}
+
+function WorkflowStepper({ activeStage }: { activeStage: number }) {
+  const stages = ["Draft", "Details complete", "Risk assessed", "Decision"];
+  return <nav className="workflow-stepper" aria-label="Application workflow">{stages.map((stage, index) => <div key={stage} className={`workflow-step ${index <= activeStage ? "complete" : ""} ${index === activeStage ? "current" : ""}`}><span className="workflow-dot">{index < activeStage ? <Check size={14} /> : index + 1}</span><span>{stage}</span>{index < stages.length - 1 && <span className="workflow-line" />}</div>)}</nav>;
+}
+
+type DecisionPanelProps = {
+  recommendation: string;
+  decision: "approve" | "refer" | "decline" | "";
+  overrideReason: string;
+  decisionRequiresReason: boolean;
+  decisionMessage: string;
+  onDecisionChange: (decision: "approve" | "refer" | "decline") => void;
+  onReasonChange: (reason: string) => void;
+  onSave: () => void;
+};
+
+function DecisionPanel({ recommendation, decision, overrideReason, decisionRequiresReason, decisionMessage, onDecisionChange, onReasonChange, onSave }: DecisionPanelProps) {
+  const decisionOptions: Array<"approve" | "refer" | "decline"> = ["approve", "refer", "decline"];
+  return <section className="panel decision-panel" aria-live="polite">
+    <div className="panel-header compact"><div><p className="eyebrow">Officer decision</p><h2>Record an action</h2></div><ShieldAlert size={19} /></div>
+    <p className="recommendation-copy">System recommendation: <strong>{decisionLabel(recommendation)}</strong></p>
+    <div className="decision-options">{decisionOptions.map((option) => <button key={option} type="button" className={`decision-button decision-${option} ${decision === option ? "selected" : ""}`} onClick={() => onDecisionChange(option)}>{option === recommendation && <CheckCircle2 size={15} />} {decisionLabel(option)}</button>)}</div>
+    {decisionRequiresReason && <label className="field override-field"><span>Reason for override <strong>*</strong></span><textarea value={overrideReason} onChange={(event) => onReasonChange(event.target.value)} placeholder="Explain why the officer decision differs from the system recommendation." rows={3} /></label>}
+    <button type="button" className="primary-button" disabled={!decision || (decisionRequiresReason && !overrideReason.trim())} onClick={onSave}><Save size={17} /> Save decision</button>
+    {decisionMessage && <p className="success-note"><CheckCircle2 size={15} /> {decisionMessage}</p>}
+  </section>;
 }
 
 export default App;
