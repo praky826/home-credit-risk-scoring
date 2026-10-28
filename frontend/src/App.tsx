@@ -31,6 +31,10 @@ import { mapFormToPredictPayload } from "./domain/inputMapping";
 import { getSelectedModel } from "./domain/modelSelection";
 import { formatProbability, getRiskLabel } from "./domain/riskLabels";
 import { hasValidationErrors, validateApplicantForm, type ValidationErrors } from "./domain/validation";
+import { useAuth } from "./auth/AuthProvider";
+import { normalizeLoanId } from "./domain/loanId";
+import { loadApplicationState, saveDecision as persistDecision, saveDraft as persistDraft } from "./persistence/underwritingRepository";
+import type { DecisionAuditEvent, DecisionValue, PersistedDecision } from "./persistence/types";
 import type {
   ApplicantFormValues,
   DriftResponse,
@@ -72,7 +76,10 @@ const initialValues: ApplicantFormValues = {
   publicRecordBankruptcies: "",
 };
 
+const workflowStageNames = ["draft", "details_complete", "risk_assessed", "decision_recorded"] as const;
+
 function App() {
+  const { signOut } = useAuth();
   const [activeTab, setActiveTab] = useState<"checker" | "comparison">("checker");
   const [values, setValues] = useState<ApplicantFormValues>(initialValues);
   const [errors, setErrors] = useState<ValidationErrors>({});
@@ -93,6 +100,12 @@ function App() {
   const [officerDecision, setOfficerDecision] = useState<"approve" | "refer" | "decline" | "">("");
   const [overrideReason, setOverrideReason] = useState("");
   const [decisionMessage, setDecisionMessage] = useState("");
+  const [persistedDecision, setPersistedDecision] = useState<PersistedDecision | null>(null);
+  const [decisionHistory, setDecisionHistory] = useState<DecisionAuditEvent[]>([]);
+  const [isLoadingApplication, setIsLoadingApplication] = useState(false);
+  const [isSavingDraft, setIsSavingDraft] = useState(false);
+  const [isSavingDecision, setIsSavingDecision] = useState(false);
+  const [persistenceError, setPersistenceError] = useState("");
 
 
   const modelReady = Boolean(health?.model_loaded);
@@ -120,6 +133,7 @@ function App() {
 
   useEffect(() => {
     refreshHealth();
+    void restoreApplication(initialValues.loanId);
   }, []);
 
   async function refreshHealth() {
@@ -149,6 +163,34 @@ function App() {
       } else {
         setDriftMessage("System drift status is unavailable.");
       }
+    }
+  }
+
+  async function restoreApplication(rawLoanId: string) {
+    let loanId: string;
+    try {
+      loanId = normalizeLoanId(rawLoanId);
+    } catch (error) {
+      setPersistenceError(error instanceof Error ? error.message : "Enter a valid loan ID.");
+      return;
+    }
+
+    setIsLoadingApplication(true);
+    setPersistenceError("");
+    try {
+      const state = await loadApplicationState(loanId);
+      setValues((current) => state.draft ? state.draft.formValues : { ...current, loanId });
+      setPrediction(state.draft?.riskIsStale ? null : state.draft?.riskResult ?? null);
+      setRiskOutdated(Boolean(state.draft?.riskIsStale));
+      setPersistedDecision(state.decision);
+      setDecisionHistory(state.history);
+      setOfficerDecision(state.decision?.officerDecision ?? "");
+      setOverrideReason(state.decision?.overrideReason ?? "");
+      setDecisionMessage(state.decision ? "Previous decision found." : "");
+    } catch (error) {
+      setPersistenceError(error instanceof Error ? error.message : "Unable to load saved application state.");
+    } finally {
+      setIsLoadingApplication(false);
     }
   }
 
@@ -232,13 +274,46 @@ function App() {
     setDraftMessage("");
   }
 
-  function saveDraft() {
-    setDraftMessage(`Draft saved at ${new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}.`);
+  async function saveDraft() {
+    setIsSavingDraft(true);
+    setPersistenceError("");
+    try {
+      const saved = await persistDraft({
+        loanId: values.loanId,
+        formValues: values,
+        workflowStage: workflowStageNames[workflowStage],
+        riskResult: prediction,
+        riskIsStale: riskOutdated || !prediction,
+      });
+      setDraftMessage(`Draft saved at ${new Date(saved.updatedAt).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}.`);
+    } catch (error) {
+      setPersistenceError(error instanceof Error ? error.message : "Unable to save draft. Try again.");
+    } finally {
+      setIsSavingDraft(false);
+    }
   }
 
-  function saveDecision() {
-    if (!officerDecision || (decisionRequiresReason && !overrideReason.trim())) return;
-    setDecisionMessage(`Decision recorded: ${decisionLabel(officerDecision)}.`);
+  async function saveDecision() {
+    if (!officerDecision || !prediction || !recommendation || (decisionRequiresReason && !overrideReason.trim())) return;
+    setIsSavingDecision(true);
+    setPersistenceError("");
+    try {
+      const saved = await persistDecision({
+        loanId: values.loanId,
+        systemRecommendation: recommendation as DecisionValue,
+        officerDecision: officerDecision as DecisionValue,
+        overrideReason: decisionRequiresReason ? overrideReason : null,
+        prediction,
+      });
+      setPersistedDecision(saved);
+      setDecisionMessage(saved.decisionVersion > 1 ? "Decision updated." : "Decision saved successfully.");
+      const refreshed = await loadApplicationState(values.loanId);
+      setDecisionHistory(refreshed.history);
+    } catch (error) {
+      setPersistenceError(error instanceof Error ? error.message : "Unable to save decision. Try again.");
+    } finally {
+      setIsSavingDecision(false);
+    }
   }
 
   return (
@@ -268,6 +343,7 @@ function App() {
             </button>
           </nav>
           <HealthBadge health={health} error={healthError} onRefresh={refreshHealth} />
+          <button type="button" className="logout-button" onClick={signOut}>Sign out</button>
         </div>
       </header>
 
@@ -285,8 +361,8 @@ function App() {
             </div>
             <div className="lookup-controls">
               <input aria-label="Loan ID lookup" value={values.loanId} inputMode="numeric" onChange={(event) => updateField("loanId", event.target.value)} />
-              <button type="button" className="secondary-button" onClick={() => setDraftMessage("Lookup is ready for a connected application record.")}>
-                <RefreshCw size={16} /> Find application
+              <button type="button" className="secondary-button" onClick={() => void restoreApplication(values.loanId)} disabled={isLoadingApplication}>
+                <RefreshCw size={16} className={isLoadingApplication ? "spin" : ""} /> {isLoadingApplication ? "Loading" : "Find application"}
               </button>
             </div>
           </section>
@@ -451,14 +527,15 @@ function App() {
               {isPredicting ? "Checking" : "Check Risk"}
             </button>
             <div className="form-actions">
-              <button type="button" className="secondary-button" onClick={saveDraft}>
-                <Save size={16} /> Save draft
+              <button type="button" className="secondary-button" onClick={() => void saveDraft()} disabled={isSavingDraft}>
+                <Save size={16} /> {isSavingDraft ? "Saving" : "Save draft"}
               </button>
               <button type="button" className="text-button" onClick={resetApplication}>
                 <RotateCcw size={15} /> Reset changes
               </button>
             </div>
             {draftMessage && <p className="success-note" aria-live="polite"><CheckCircle2 size={15} /> {draftMessage}</p>}
+            {persistenceError && <p className="error-banner" role="alert">{persistenceError}</p>}
           </form>
 
           <aside className="result-stack">
@@ -556,7 +633,8 @@ function App() {
               )}
             </section>
 
-            {prediction && !riskOutdated && riskLabel && <DecisionPanel recommendation={recommendation} decision={officerDecision} overrideReason={overrideReason} decisionRequiresReason={decisionRequiresReason} decisionMessage={decisionMessage} onDecisionChange={setOfficerDecision} onReasonChange={setOverrideReason} onSave={saveDecision} />}
+            {persistedDecision && (!prediction || riskOutdated) && <PersistedDecisionCard decision={persistedDecision} history={decisionHistory} />}
+            {prediction && !riskOutdated && riskLabel && <DecisionPanel recommendation={recommendation} decision={officerDecision} overrideReason={overrideReason} decisionRequiresReason={decisionRequiresReason} decisionMessage={decisionMessage} isSaving={isSavingDecision} persistedDecision={persistedDecision} history={decisionHistory} onDecisionChange={setOfficerDecision} onReasonChange={setOverrideReason} onSave={() => void saveDecision()} />}
 
             <section className="panel status-panel">
               <div className="panel-header compact">
@@ -792,6 +870,21 @@ function SummaryItem({ label, value }: { label: string; value: string }) {
   return <div className="summary-item"><span>{label}</span><strong>{value}</strong></div>;
 }
 
+function PersistedDecisionCard({ decision, history }: { decision: PersistedDecision; history: DecisionAuditEvent[] }) {
+  return <section className="panel persisted-decision-panel" aria-live="polite">
+    <p className="eyebrow">Saved underwriting decision</p>
+    <h2>Previous decision found</h2>
+    <div className="persisted-decision-details">
+      <SummaryItem label="Officer decision" value={decisionLabel(decision.officerDecision)} />
+      <SummaryItem label="System recommendation" value={decisionLabel(decision.systemRecommendation)} />
+      <SummaryItem label="Decision recorded" value={new Date(decision.updatedAt).toLocaleString()} />
+      <SummaryItem label="Decision version" value={String(decision.decisionVersion)} />
+    </div>
+    {decision.overrideReason && <p className="persisted-override"><strong>Override reason:</strong> {decision.overrideReason}</p>}
+    {history.length > 1 && <p className="muted">This loan has {history.length} recorded decision events.</p>}
+  </section>;
+}
+
 function OverviewMetric({ icon, label, value }: { icon: React.ReactNode; label: string; value: string }) {
   return <div className="overview-metric"><span className="metric-icon">{icon}</span><span>{label}</span><strong>{value}</strong></div>;
 }
@@ -811,20 +904,25 @@ type DecisionPanelProps = {
   overrideReason: string;
   decisionRequiresReason: boolean;
   decisionMessage: string;
+  isSaving: boolean;
+  persistedDecision: PersistedDecision | null;
+  history: DecisionAuditEvent[];
   onDecisionChange: (decision: "approve" | "refer" | "decline") => void;
   onReasonChange: (reason: string) => void;
   onSave: () => void;
 };
 
-function DecisionPanel({ recommendation, decision, overrideReason, decisionRequiresReason, decisionMessage, onDecisionChange, onReasonChange, onSave }: DecisionPanelProps) {
+function DecisionPanel({ recommendation, decision, overrideReason, decisionRequiresReason, decisionMessage, isSaving, persistedDecision, history, onDecisionChange, onReasonChange, onSave }: DecisionPanelProps) {
   const decisionOptions: Array<"approve" | "refer" | "decline"> = ["approve", "refer", "decline"];
   return <section className="panel decision-panel" aria-live="polite">
     <div className="panel-header compact"><div><p className="eyebrow">Officer decision</p><h2>Record an action</h2></div><ShieldAlert size={19} /></div>
     <p className="recommendation-copy">System recommendation: <strong>{decisionLabel(recommendation)}</strong></p>
     <div className="decision-options">{decisionOptions.map((option) => <button key={option} type="button" className={`decision-button decision-${option} ${decision === option ? "selected" : ""}`} onClick={() => onDecisionChange(option)}>{option === recommendation && <CheckCircle2 size={15} />} {decisionLabel(option)}</button>)}</div>
+    {persistedDecision && <div className="persisted-decision"><strong>Previous decision found</strong><span>{decisionLabel(persistedDecision.officerDecision)} · saved {new Date(persistedDecision.updatedAt).toLocaleString()}</span>{persistedDecision.overrideReason && <span>Override: {persistedDecision.overrideReason}</span>}</div>}
     {decisionRequiresReason && <label className="field override-field"><span>Reason for override <strong>*</strong></span><textarea value={overrideReason} onChange={(event) => onReasonChange(event.target.value)} placeholder="Explain why the officer decision differs from the system recommendation." rows={3} /></label>}
-    <button type="button" className="primary-button" disabled={!decision || (decisionRequiresReason && !overrideReason.trim())} onClick={onSave}><Save size={17} /> Save decision</button>
+    <button type="button" className="primary-button" disabled={!decision || isSaving || (decisionRequiresReason && !overrideReason.trim())} onClick={onSave}><Save size={17} /> {isSaving ? "Saving decision" : "Save decision"}</button>
     {decisionMessage && <p className="success-note"><CheckCircle2 size={15} /> {decisionMessage}</p>}
+    {history.length > 1 && <details className="decision-history"><summary>Decision history ({history.length})</summary>{history.map((event) => <div key={event.id}><strong>{event.eventType === "created" ? "Created" : "Updated"}</strong><span>{new Date(event.createdAt).toLocaleString()}</span></div>)}</details>}
   </section>;
 }
 

@@ -3,6 +3,7 @@
 
 # Environment variables
 .env
+frontend/.env.local
 
 # Python cache & test artifacts
 __pycache__/
@@ -41,4 +42,4 @@ mlflow_artifacts/
 .vscode/
 
 # Jupyter
-.ipynb_checkpoints/
+.ipynb_checkpoints/
