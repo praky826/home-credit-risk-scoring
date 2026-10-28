@@ -1,4 +1,5 @@
 import uvicorn
+import os
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from src.serving.router import router
@@ -10,12 +11,18 @@ app = FastAPI(
     version="1.0.0"
 )
 
+allowed_frontend_origins = [
+    origin.strip()
+    for origin in os.environ.get(
+        "ALLOWED_FRONTEND_ORIGINS",
+        "http://localhost:5173,http://127.0.0.1:5173",
+    ).split(",")
+    if origin.strip()
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173",
-        "http://127.0.0.1:5173",
-    ],
+    allow_origins=allowed_frontend_origins,
     allow_credentials=False,
     allow_methods=["GET", "POST", "OPTIONS"],
     allow_headers=["Content-Type"],
